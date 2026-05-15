@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"d:\\\\litlabs\\\\Tarsha landing page\\\\public\\\\assets\" | Select-Object Name, @{Name=\"SizeKB\";Expression={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Force)",
+      "Bash(Select-Object Name, Mode)",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Filter \"*.tsx\" -File)",
+      "Bash(Select-Object -First 20)",
+      "Bash(Remove-Item \"d:\\\\litlabs\\\\Tarsha landing page\\\\components\\\\ui\\\\FloatingDock.tsx\")"
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+"use client";
+
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { assets } from "@/lib/assets";
+import { cn } from "@/lib/cn";
+import { motion } from "framer-motion";
+import {
+  CalendarCheck,
+  MessageSquareText,
+  PencilLine,
+  PhoneForwarded,
+  type LucideIcon,
+} from "lucide-react";
+import Image from "next/image";
+
+interface Feature {
+  icon: LucideIcon;
+  title: string;
+  body: string;
+  side: "left" | "right";
+  position: "top" | "bottom";
+}
+
+const features: Feature[] = [
+  {
+    icon: PencilLine,
+    title: "Take messages",
+    body: "Choose exactly which details Tarsha AI captures from every caller — it lands in your inbox or as a text the moment the call ends.",
+    side: "left",
+    position: "top",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Book appointments",
+    body: "Send callers a one-tap link to your calendar, or let Tarsha AI confirm a time directly. Bookings show up on autopilot.",
+    side: "right",
+    position: "top",
+  },
+  {
+    icon: MessageSquareText,
+    title: "Answer questions",
+    body: "Train Tarsha AI on the questions your business hears every day so customers get instant, accurate answers — no waiting, no hold music.",
+    side: "left",
+    position: "bottom",
+  },
+  {
+    icon: PhoneForwarded,
+    title: "Transfer calls",
+    body: "Need certain callers routed straight to you or a teammate? Tarsha AI sends the right person the right call, every time.",
+    side: "right",
+    position: "bottom",
+  },
+];
+
+export function Features() {
+  return (
+    <section
+      id="features"
+      aria-labelledby="features-heading"
+      className="relative isolate overflow-hidden bg-surface-muted/60 py-16 md:py-20"
+    >
+      <SectionBackdrop />
+
+      <Container>
+        {/* Heading */}
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <ScrollReveal y={12} duration={0.7} amount={0.4}>
+            <Eyebrow asPill className="mb-6">
+              <span className="text-ink-muted">What Tarsha AI does</span>
+            </Eyebrow>
+          </ScrollReveal>
+          <ScrollReveal y={22} duration={0.95} delay={0.07} amount={0.3}>
+            <h2
+              id="features-heading"
+              className="section-heading font-display text-ink"
+            >
+              The smarter AI receptionist
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal y={16} duration={0.8} delay={0.15} amount={0.3}>
+            <p className="mt-5 max-w-xl text-balance text-[16px] leading-[1.65] text-ink-muted md:text-[17px]">
+              Every Tarsha AI call is captured, routed, and handled like your best
+              employee answered — only faster, friendlier, and always on.
+            </p>
+          </ScrollReveal>
+        </div>
+
+        {/* Grid: left cards | phone | right cards */}
+        <div className="relative mt-16 grid grid-cols-1 gap-10 md:mt-20 lg:grid-cols-[1fr_minmax(280px,360px)_1fr] lg:gap-x-12 lg:gap-y-16">
+          {/* Left column (desktop) — top & bottom features */}
+          <div className="order-2 flex flex-col gap-12 lg:order-1 lg:gap-20 lg:pt-8">
+            {features
+              .filter((f) => f.side === "left")
+              .map((f, i) => (
+                <FeatureCard
+                  key={f.title}
+                  feature={f}
+                  delay={0.1 + i * 0.1}
+                  align="right"
+                />
+              ))}
+          </div>
+
+          {/* Phone — center */}
+          <div className="order-1 flex items-center justify-center lg:order-2">
+            <PhoneShowcase />
+          </div>
+
+          {/* Right column (desktop) — top & bottom features */}
+          <div className="order-3 flex flex-col gap-12 lg:gap-20 lg:pt-8">
+            {features
+              .filter((f) => f.side === "right")
+              .map((f, i) => (
+                <FeatureCard
+                  key={f.title}
+                  feature={f}
+                  delay={0.15 + i * 0.1}
+                  align="left"
+                />
+              ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <ScrollReveal y={16} duration={0.7} delay={0.2}>
+          <div className="mt-16 flex justify-center md:mt-20">
+            <Button variant="primary" size="md" icon="arrow">
+              See all features
+            </Button>
+          </div>
+        </ScrollReveal>
+      </Container>
+    </section>
+  );
+}
+
+function FeatureCard({
+  feature,
+  delay,
+  align,
+}: {
+  feature: Feature;
+  delay: number;
+  align: "left" | "right";
+}) {
+  const Icon = feature.icon;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+      className={cn(
+        "group flex flex-col text-center lg:text-left",
+        align === "right" && "lg:items-end lg:text-right",
+      )}
+    >
+      <div
+        className={cn(
+          "flex h-11 w-11 items-center justify-center rounded-2xl bg-surface ring-1 ring-border",
+          "shadow-soft transition-transform duration-300 ease-out group-hover:-translate-y-0.5",
+          "self-center",
+          align === "right" && "lg:self-end",
+          align === "left" && "lg:self-start",
+        )}
+      >
+        <Icon className="h-5 w-5 text-ink" strokeWidth={1.75} />
+      </div>
+      <h3 className="mt-5 font-display text-[20px] font-semibold tracking-[-0.01em] text-ink md:text-[22px]">
+        {feature.title}
+      </h3>
+      <p className="mt-2.5 max-w-sm text-[14.5px] leading-[1.6] text-ink-muted md:text-[15px]">
+        {feature.body}
+      </p>
+    </motion.div>
+  );
+}
+
+function PhoneShowcase() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40, scale: 0.94 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      className="relative mx-auto w-full max-w-[320px] md:max-w-[360px]"
+    >
+      {/* Lime aura behind phone */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(183,255,94,0.45) 0%, rgba(183,255,94,0.15) 40%, rgba(183,255,94,0) 70%)",
+          filter: "blur(20px)",
+          transform: "scale(1.15)",
+        }}
+      />
+
+      {/* Soft pulsing ring */}
+      <motion.div
+        aria-hidden
+        animate={{ scale: [1, 1.04, 1], opacity: [0.55, 0.35, 0.55] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(183,255,94,0.35) 0%, rgba(183,255,94,0) 65%)",
+          filter: "blur(28px)",
+          transform: "scale(1.25)",
+        }}
+      />
+
+      <Image
+        src={assets.featurePhone}
+        alt="Tarsha AI receptionist answering a call in progress, displayed on a smartphone"
+        width={720}
+        height={1480}
+        sizes="(min-width: 1024px) 360px, 320px"
+        className="relative h-auto w-full select-none drop-shadow-[0_24px_48px_rgba(17,17,17,0.18)]"
+      />
+
+      {/* Floating status pills */}
+      <FloatingPill
+        className="left-[-2rem] top-[20%]"
+        delay={0.6}
+        floatDelay={0}
+      >
+        <PillDot color="bg-emerald-500" />
+        <span>Call connected</span>
+      </FloatingPill>
+
+      <FloatingPill
+        className="right-[-2rem] top-[42%] hidden sm:flex"
+        delay={0.9}
+        floatDelay={1.2}
+      >
+        <PillDot color="bg-accent" />
+        <span>Booking confirmed</span>
+      </FloatingPill>
+
+      <FloatingPill
+        className="left-[-2rem] bottom-[5%] hidden sm:flex"
+        delay={1.2}
+        floatDelay={2.4}
+      >
+        <PillDot color="bg-ink" />
+        <span>Voicemail saved</span>
+      </FloatingPill>
+    </motion.div>
+  );
+}
+
+function PillDot({ color }: { color: string }) {
+  return <span className={cn("h-1.5 w-1.5 rounded-full", color)} />;
+}
+
+function FloatingPill({
+  children,
+  className,
+  delay = 0,
+  floatDelay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  floatDelay?: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+      className={cn("absolute z-10", className)}
+    >
+      <motion.div
+        animate={{ y: [0, -4, 0] }}
+        transition={{
+          duration: 3.6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: floatDelay,
+        }}
+        className="flex items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-1.5 text-[12px] font-medium text-ink shadow-soft backdrop-blur-md"
+      >
+        {children}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function SectionBackdrop() {
+  return (
+    <>
+      {/* Soft top vignette so the section feels distinct from hero */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-bg to-transparent"
+      />
+      {/* Subtle dot grid */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 opacity-50"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(17,17,17,0.05) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%)",
+        }}
+      />
+    </>
+  );
+}
