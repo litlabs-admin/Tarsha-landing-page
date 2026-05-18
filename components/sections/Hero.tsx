@@ -127,12 +127,12 @@ export function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="mt-10 flex flex-row flex-wrap items-center justify-center gap-3"
+            className="mt-10 flex flex-row items-center justify-center gap-3"
           >
-            <Button size="lg" variant="primary">
+            <Button size="md" variant="primary" className="sm:h-12 sm:px-6 sm:text-[15px]">
               Get started free
             </Button>
-            <Button size="lg" variant="ghost" icon="arrow">
+            <Button size="md" variant="ghost" icon="arrow" className="sm:h-12 sm:px-6 sm:text-[15px]">
               Book a demo
             </Button>
           </motion.div>
