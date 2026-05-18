@@ -34,6 +34,7 @@ export function PageLoader() {
       const wait = Math.max(0, minHold - elapsed);
       setTimeout(() => {
         setExiting(true);
+        document.body.style.overflow = "";
         // Allow exit animation to play before unmounting
         setTimeout(() => setDone(true), 500);
       }, wait);
