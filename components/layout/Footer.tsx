@@ -175,7 +175,7 @@ function FinalCTA() {
         <ScrollReveal y={20} duration={0.9}>
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5 text-[12px] tracking-[0.04em] text-white/70 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_0_4px_rgba(183,255,94,0.22)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_0_4px_rgba(255,208,0,0.28)]" />
               Ready when you are
             </span>
             <h2 className="font-display font-semibold tracking-[-0.025em] text-white text-[clamp(2rem,4.4vw,3.5rem)] leading-[1.05]">
@@ -186,8 +186,8 @@ function FinalCTA() {
               </span>
               .
             </h2>
-            <p className="mt-6 max-w-xl text-[16px] leading-[1.65] text-white/65 md:text-[17px]">
-              Spin up Tarsha AI in under a day. Live phone coverage, 24/7 — with a
+            <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-white/65 md:text-[18px]">
+              Spin up <span className="text-accent font-semibold">Tarsha AI</span> in under a day. Live phone coverage, 24/7 — with a
               voice your customers will actually thank you for.
             </p>
             <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:gap-3">
@@ -243,16 +243,16 @@ function BrandWordmark() {
               linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0) 18%, rgba(17,17,17,0) 82%, rgba(17,17,17,1) 100%),
               repeating-linear-gradient(
                 90deg,
-                rgba(183,255,94,0) 0px,
-                rgba(183,255,94,0) 96px,
-                rgba(183,255,94,0.55) 96px,
-                rgba(183,255,94,0.55) 104px,
-                rgba(183,255,94,0) 104px,
-                rgba(183,255,94,0) 220px,
-                rgba(183,255,94,0.25) 220px,
-                rgba(183,255,94,0.25) 232px,
-                rgba(183,255,94,0) 232px,
-                rgba(183,255,94,0) 360px
+                rgba(255,208,0,0) 0px,
+                rgba(255,208,0,0) 96px,
+                rgba(255,208,0,0.55) 96px,
+                rgba(255,208,0,0.55) 104px,
+                rgba(255,208,0,0) 104px,
+                rgba(255,208,0,0) 220px,
+                rgba(255,208,0,0.25) 220px,
+                rgba(255,208,0,0.25) 232px,
+                rgba(255,208,0,0) 232px,
+                rgba(255,208,0,0) 360px
               )
             `,
           }}

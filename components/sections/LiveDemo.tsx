@@ -167,7 +167,7 @@ export function LiveDemo() {
                       {industries.find((i) => i.id === activeId)?.scenario}
                     </span>
                   </span>
-                  <span className="ml-auto font-display text-[11px] font-medium tabular-nums text-ink-faint">
+                  <span className="ml-auto font-display text-[11px] font-medium tabular-nums text-ink-muted">
                     {Math.round(progress)}%
                   </span>
                 </motion.div>
@@ -224,7 +224,7 @@ function IndustryCard({
         "group/card relative flex items-center gap-4 overflow-hidden rounded-2xl border bg-surface px-5 py-5 text-left",
         "transition-all duration-300 ease-out focus-ring",
         isActive
-          ? "border-accent shadow-[0_0_0_3px_rgba(183,255,94,0.18),0_8px_24px_rgba(17,17,17,0.08)]"
+          ? "border-accent shadow-[0_0_0_3px_rgba(255,208,0,0.18),0_8px_24px_rgba(24,19,10,0.08)]"
           : "border-border shadow-soft hover:border-ink/20 hover:shadow-lift",
       )}
     >
@@ -240,7 +240,7 @@ function IndustryCard({
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
               background:
-                "radial-gradient(60% 100% at 0% 50%, rgba(183,255,94,0.18) 0%, rgba(183,255,94,0) 70%)",
+                "radial-gradient(60% 100% at 0% 50%, rgba(255,208,0,0.18) 0%, rgba(255,208,0,0) 70%)",
             }}
           />
         )}
@@ -315,7 +315,7 @@ function IndustryCard({
             {industry.label}
           </span>
           <Icon
-            className="h-3.5 w-3.5 text-ink-faint transition-colors duration-300 group-hover/card:text-ink-muted"
+            className="h-3.5 w-3.5 text-ink-muted/60 transition-colors duration-300 group-hover/card:text-ink-muted"
             strokeWidth={1.75}
           />
         </div>

@@ -22,7 +22,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-accent text-accent-ink hover:brightness-95 shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_4px_18px_rgba(183,255,94,0.45)]",
+    "bg-accent text-accent-ink hover:brightness-[0.92] font-semibold shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_4px_18px_rgba(255,208,0,0.45)]",
   ghost:
     "bg-transparent text-ink hover:bg-surface-muted",
   outline:
@@ -56,7 +56,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         whileTap={{ y: 0, scale: 0.985 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
         className={cn(
-          "group/btn inline-flex items-center justify-center gap-2 rounded-full font-medium",
+          "group/btn inline-flex items-center justify-center gap-2 rounded-xl font-medium",
           "transition-colors duration-200 ease-out focus-ring",
           variantStyles[variant],
           sizeStyles[size],

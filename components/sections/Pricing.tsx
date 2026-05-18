@@ -145,7 +145,7 @@ export function Pricing() {
 
         {/* Trust line */}
         <ScrollReveal y={12} duration={0.6} delay={0.2}>
-          <p className="mt-12 text-center text-[13px] text-ink-faint md:mt-14">
+          <p className="mt-12 text-center text-[13px] text-ink-muted md:mt-14">
             No credit card required · Cancel anytime · 14-day free trial on
             every plan
           </p>
@@ -207,7 +207,7 @@ function BillingToggle({
           height="22"
           viewBox="0 0 32 22"
           fill="none"
-          className="text-ink-faint/70"
+          className="text-ink-muted/70"
         >
           <motion.path
             initial={{ pathLength: 0 }}
@@ -236,7 +236,7 @@ function BillingToggle({
         <motion.span
           animate={{
             backgroundColor:
-              billing === "annual" ? "var(--accent)" : "rgba(183,255,94,0.18)",
+              billing === "annual" ? "var(--accent)" : "rgba(255,208,0,0.18)",
             color:
               billing === "annual" ? "var(--accent-ink)" : "var(--ink)",
           }}
@@ -285,7 +285,7 @@ function TierCard({
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
               background:
-                "radial-gradient(60% 50% at 50% 0%, rgba(183,255,94,0.22) 0%, rgba(183,255,94,0) 70%)",
+                "radial-gradient(60% 50% at 50% 0%, rgba(255,208,0,0.22) 0%, rgba(255,208,0,0) 70%)",
             }}
           />
           <div
@@ -293,7 +293,7 @@ function TierCard({
             className="pointer-events-none absolute inset-x-0 top-0 h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent 0%, rgba(183,255,94,0.7) 50%, transparent 100%)",
+                "linear-gradient(90deg, transparent 0%, rgba(255,208,0,0.7) 50%, transparent 100%)",
             }}
           />
         </>
@@ -305,7 +305,7 @@ function TierCard({
           <span
             className={cn(
               "text-[11px] font-semibold uppercase tracking-[0.16em]",
-              isPopular ? "text-accent" : "text-ink-faint",
+              isPopular ? "text-accent" : "text-ink-muted",
             )}
           >
             {tier.name}
@@ -361,7 +361,7 @@ function TierCard({
             <span
               className={cn(
                 "font-display text-[15px] font-medium",
-                isPopular ? "text-white/70" : "text-ink-faint",
+                isPopular ? "text-white/70" : "text-ink-muted",
               )}
             >
               $
@@ -377,7 +377,7 @@ function TierCard({
             <span
               className={cn(
                 "font-display text-[20px] font-medium tabular-nums",
-                isPopular ? "text-white/70" : "text-ink-faint",
+                isPopular ? "text-white/70" : "text-ink-muted",
               )}
             >
               .{cents}
@@ -439,7 +439,7 @@ function TierCard({
         <li
           className={cn(
             "text-[11px] font-semibold uppercase tracking-[0.14em]",
-            isPopular ? "text-white/55" : "text-ink-faint",
+            isPopular ? "text-white/55" : "text-ink-muted",
           )}
         >
           Every plan includes
@@ -466,7 +466,7 @@ function TierCard({
                 <Icon
                   className={cn(
                     "h-3.5 w-3.5 shrink-0",
-                    isPopular ? "text-white/45" : "text-ink-faint",
+                    isPopular ? "text-white/45" : "text-ink-muted",
                   )}
                   strokeWidth={1.75}
                 />

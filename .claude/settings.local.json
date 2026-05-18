@@ -6,7 +6,11 @@
       "Bash(Select-Object Name, Mode)",
       "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Filter \"*.tsx\" -File)",
       "Bash(Select-Object -First 20)",
-      "Bash(Remove-Item \"d:\\\\litlabs\\\\Tarsha landing page\\\\components\\\\ui\\\\FloatingDock.tsx\")"
+      "Bash(Remove-Item \"d:\\\\litlabs\\\\Tarsha landing page\\\\components\\\\ui\\\\FloatingDock.tsx\")",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Depth 3)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(npx tsc *)"
     ]
   }
 }

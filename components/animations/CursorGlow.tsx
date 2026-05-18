@@ -74,7 +74,7 @@ export function CursorGlow({ size = 560, intensity = 1 }: CursorGlowProps) {
           translateX: "-50%",
           translateY: "-50%",
           background:
-            "radial-gradient(closest-side, rgba(183,255,94,0.62) 0%, rgba(183,255,94,0) 65%)",
+            "radial-gradient(closest-side, rgba(255,208,0,0.62) 0%, rgba(255,208,0,0) 65%)",
           opacity: visible ? 0.85 * intensity : 0,
           filter: "blur(42px)",
           mixBlendMode: "multiply",

@@ -28,9 +28,9 @@ const config: Config = {
         tighter2: "-0.03em",
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(17,17,17,0.04), 0 8px 24px rgba(17,17,17,0.06)",
-        lift: "0 4px 12px rgba(17,17,17,0.06), 0 24px 48px rgba(17,17,17,0.10)",
-        card: "0 0 0 1px rgba(231,233,225,0.7), 0 1px 2px rgba(17,17,17,0.04), 0 12px 32px rgba(17,17,17,0.07)",
+        soft: "0 1px 2px rgba(24,19,10,0.04), 0 8px 24px rgba(24,19,10,0.06)",
+        lift: "0 4px 12px rgba(24,19,10,0.06), 0 24px 48px rgba(24,19,10,0.10)",
+        card: "0 0 0 1px rgba(234,216,112,0.5), 0 1px 2px rgba(24,19,10,0.04), 0 12px 32px rgba(24,19,10,0.07)",
       },
       borderRadius: {
         "4xl": "2rem",

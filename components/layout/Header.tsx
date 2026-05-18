@@ -62,7 +62,7 @@ function PlainNavItem({
     <motion.div ref={ref} style={{ scale }}>
       <Link
         href={item.href}
-        className="flex items-center gap-1 rounded-full px-3.5 py-2 text-[14px] font-medium text-ink/80 transition-colors duration-200 hover:bg-ink/5 hover:text-ink"
+        className="flex items-center gap-1 rounded-lg px-3.5 py-2 text-[14px] font-medium text-ink/80 transition-colors duration-200 hover:bg-ink/5 hover:text-ink"
       >
         {item.label}
       </Link>
@@ -99,7 +99,7 @@ function MenuNavItem({
         <Link
           href={item.href}
           className={cn(
-            "flex items-center gap-1 rounded-full px-3.5 py-2",
+            "flex items-center gap-1 rounded-lg px-3.5 py-2",
             "text-[14px] font-medium text-ink/80 transition-colors duration-200",
             "hover:bg-ink/5 hover:text-ink",
             isOpen && "bg-ink/5 text-ink",
@@ -166,7 +166,7 @@ export function Header() {
         className={cn(
           "flex items-center justify-between transition-all duration-400 ease-out",
           scrolled
-            ? "mx-3 h-[60px] max-w-[1180px] rounded-full border border-ink/12 bg-[rgba(250,251,248,0.96)] px-5 shadow-[0_1px_2px_rgba(17,17,17,0.06),0_18px_44px_rgba(17,17,17,0.16),inset_0_1px_0_rgba(255,255,255,0.7),inset_0_0_0_1px_rgba(255,255,255,0.3)] backdrop-blur-2xl md:mx-auto md:px-6"
+            ? "mx-3 h-[60px] max-w-[1180px] rounded-xl border border-[rgba(234,216,112,0.5)] bg-[rgba(255,254,245,0.96)] px-5 shadow-[0_1px_2px_rgba(24,19,10,0.06),0_18px_44px_rgba(24,19,10,0.14),inset_0_1px_0_rgba(255,255,255,0.7),inset_0_0_0_1px_rgba(255,253,240,0.5)] backdrop-blur-2xl md:mx-auto md:px-6"
             : "mx-auto h-[72px] max-w-[1240px] border border-transparent bg-transparent px-6 md:px-10",
         )}
       >
@@ -219,32 +219,37 @@ export function Header() {
           )}
         </nav>
 
-        {/* CTA buttons */}
+        {/* CTA buttons — desktop */}
         <div className="hidden md:flex items-center gap-2">
           <Link
             href="#login"
-            className="rounded-full px-3.5 py-2 text-[14px] font-medium text-ink/80 transition-colors hover:bg-ink/5 hover:text-ink"
+            className="rounded-lg px-3.5 py-2 text-[14px] font-medium text-ink/80 transition-colors hover:bg-ink/5 hover:text-ink"
           >
             Login
           </Link>
           <Button size="sm" variant="primary">
-            Get started
+            Try for free
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-          className="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/80 backdrop-blur-md focus-ring"
-        >
-          {mobileOpen ? (
-            <X className="h-5 w-5" strokeWidth={2} />
-          ) : (
-            <Menu className="h-5 w-5" strokeWidth={2} />
-          )}
-        </button>
+        {/* Mobile: Try for free + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <Button size="sm" variant="primary">
+            Try for free
+          </Button>
+          <button
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface/80 backdrop-blur-md focus-ring"
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" strokeWidth={2} />
+            ) : (
+              <Menu className="h-5 w-5" strokeWidth={2} />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -255,7 +260,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden mx-3 mt-2 overflow-hidden rounded-3xl border border-border bg-bg/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(17,17,17,0.10)]"
+            className="md:hidden mx-3 mt-2 overflow-hidden rounded-2xl border border-border bg-[rgba(255,254,245,0.97)] backdrop-blur-xl shadow-[0_10px_30px_rgba(24,19,10,0.10)]"
           >
             <div className="flex flex-col gap-1 px-4 py-4">
               {navItems.map((item) => (
@@ -268,17 +273,14 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <div className="mt-2 flex items-center gap-2 border-t border-border pt-3">
+              <div className="mt-2 border-t border-border pt-3">
                 <Link
                   href="#login"
                   onClick={() => setMobileOpen(false)}
-                  className="flex-1 rounded-full border border-border bg-surface px-4 py-2.5 text-center text-[14px] font-medium"
+                  className="flex w-full items-center justify-center rounded-xl border border-border bg-surface px-4 py-3 text-[15px] font-medium text-ink/80 hover:bg-surface-muted"
                 >
                   Login
                 </Link>
-                <Button size="md" variant="primary" className="flex-1">
-                  Get started
-                </Button>
               </div>
             </div>
           </motion.div>

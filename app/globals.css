@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --bg: #FAFBF8;
+  --bg: #FFFEF5;
   --surface: #FFFFFF;
-  --surface-muted: #F2F4EE;
-  --ink: #111111;
-  --ink-muted: #5F6368;
-  --ink-faint: #9CA3AF;
-  --accent: #B7FF5E;
-  --accent-ink: #0F1A05;
-  --border: #E7E9E1;
+  --surface-muted: #FFFBEA;
+  --ink: #18130A;
+  --ink-muted: #4A3C10;
+  --ink-faint: #7A6420;
+  --accent: #FFD000;
+  --accent-ink: #18130A;
+  --border: #EAD870;
 }
 
 * {
@@ -25,6 +25,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 17px;
   font-feature-settings: "ss01", "cv11";
   word-spacing: 0.05em;
 }
@@ -50,16 +51,16 @@ body {
 .section-heading {
   font-family: var(--font-satoshi), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   font-weight: 600;
-  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
 }
 
 .eyebrow {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
@@ -104,11 +105,11 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 253, 240, 0.88);
   backdrop-filter: saturate(1.4) blur(14px);
   -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 8px 24px rgba(17, 17, 17, 0.06);
+  border: 1px solid rgba(234, 216, 112, 0.4);
+  box-shadow: 0 1px 2px rgba(24, 19, 10, 0.04), 0 8px 24px rgba(24, 19, 10, 0.06);
 }
 
 .focus-ring {
@@ -127,6 +128,11 @@ a {
 
 html {
   scroll-behavior: auto;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {

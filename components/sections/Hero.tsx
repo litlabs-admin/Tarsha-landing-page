@@ -66,7 +66,7 @@ export function Hero() {
     <section
       id="top"
       aria-labelledby="hero-heading"
-      className="relative isolate overflow-hidden pt-20 md:pt-24 lg:pt-28 pb-12 md:pb-16"
+      className="relative isolate overflow-hidden bg-surface-muted pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-24"
     >
       {/* Ambient backdrop — soft conic gradient + grid */}
       <BackdropOrnaments />
@@ -121,9 +121,9 @@ export function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="mt-9 max-w-[42rem] text-balance text-[17px] leading-[1.65] text-ink-muted md:text-[18px]"
+            className="mt-9 max-w-[42rem] text-balance text-[18px] leading-[1.7] text-ink-muted md:text-[19px]"
           >
-            Tarsha AI is the answering service that keeps your phone covered, so
+            <span className="text-accent font-semibold">Tarsha AI</span> is the answering service that keeps your phone covered, so
             you never miss a lead or leave a customer waiting.
           </motion.p>
 
@@ -141,9 +141,9 @@ export function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="mt-4 text-[13px] text-ink-faint"
+            className="mt-4 text-[13px] text-ink-muted/60"
           >
-            No credit card required · 14-day free trial
+            No credit card required
           </motion.p>
         </motion.div>
 
@@ -210,10 +210,10 @@ function ProductPreviewCard({ onPlay }: { onPlay: () => void }) {
       </div>
 
       {/* Bottom hint strip */}
-      <div className="flex items-center justify-between border-t border-border/70 bg-surface px-5 py-3">
+      <div className="flex items-center justify-between border-t border-border/50 bg-surface px-5 py-3">
         <div className="flex items-center gap-2 text-[13px] text-ink-muted">
-          <Sparkles className="h-3.5 w-3.5 text-ink-muted" strokeWidth={2} />
-          <span>Watch how Tarsha AI handles a real call</span>
+          <Sparkles className="h-3.5 w-3.5 text-accent" strokeWidth={2} />
+          <span>Watch how <span className="text-accent font-semibold">Tarsha AI</span> handles a real call</span>
         </div>
         <div className="flex items-center gap-1.5 text-[12px] font-medium text-ink-muted">
           <span className="flex h-1.5 w-1.5 rounded-full bg-accent ring-2 ring-accent/30" />
@@ -259,24 +259,33 @@ function FloatingChatBubble({ reducedMotion }: { reducedMotion: boolean }) {
 function BackdropOrnaments() {
   return (
     <>
-      {/* Subtle dot grid */}
+      {/* Central yellow radial glow — stronger on light bg */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.5]"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
-          backgroundImage:
-            "radial-gradient(rgba(17,17,17,0.06) 1px, transparent 1px)",
-          backgroundSize: "26px 26px",
-          maskImage:
-            "radial-gradient(ellipse 70% 55% at 50% 25%, black 30%, transparent 70%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 70% 55% at 50% 25%, black 30%, transparent 70%)",
+          background:
+            "radial-gradient(ellipse 90% 65% at 50% -5%, rgba(255,208,0,0.32) 0%, rgba(255,208,0,0.08) 50%, transparent 75%)",
         }}
       />
-      {/* Top fade so header sits on solid bg */}
+      {/* Subtle warm dot grid */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-24 bg-gradient-to-b from-bg to-transparent"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(24,19,10,0.05) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%)",
+        }}
+      />
+      {/* Bottom fade into next section */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-bg to-transparent"
       />
     </>
   );

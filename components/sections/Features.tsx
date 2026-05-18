@@ -28,7 +28,7 @@ const features: Feature[] = [
   {
     icon: PencilLine,
     title: "Take messages",
-    body: "Choose exactly which details Tarsha AI captures from every caller — it lands in your inbox or as a text the moment the call ends.",
+    body: "Choose exactly which details it captures from every caller — it lands in your inbox or as a text the moment the call ends.",
     side: "left",
     position: "top",
   },
@@ -42,7 +42,7 @@ const features: Feature[] = [
   {
     icon: MessageSquareText,
     title: "Answer questions",
-    body: "Train Tarsha AI on the questions your business hears every day so customers get instant, accurate answers — no waiting, no hold music.",
+    body: "Train it on the questions your business hears every day so customers get instant, accurate answers — no waiting, no hold music.",
     side: "left",
     position: "bottom",
   },
@@ -60,7 +60,7 @@ export function Features() {
     <section
       id="features"
       aria-labelledby="features-heading"
-      className="relative isolate overflow-hidden bg-surface-muted/60 py-16 md:py-20"
+      className="relative isolate overflow-hidden bg-bg py-20 md:py-28"
     >
       <SectionBackdrop />
 
@@ -69,7 +69,7 @@ export function Features() {
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <ScrollReveal y={12} duration={0.7} amount={0.4}>
             <Eyebrow asPill className="mb-6">
-              <span className="text-ink-muted">What Tarsha AI does</span>
+              What <span className="text-accent font-bold">Tarsha AI</span> does
             </Eyebrow>
           </ScrollReveal>
           <ScrollReveal y={22} duration={0.95} delay={0.07} amount={0.3}>
@@ -81,8 +81,8 @@ export function Features() {
             </h2>
           </ScrollReveal>
           <ScrollReveal y={16} duration={0.8} delay={0.15} amount={0.3}>
-            <p className="mt-5 max-w-xl text-balance text-[16px] leading-[1.65] text-ink-muted md:text-[17px]">
-              Every Tarsha AI call is captured, routed, and handled like your best
+            <p className="mt-5 max-w-xl text-balance text-[17px] leading-[1.7] text-ink-muted md:text-[18px]">
+              Every call is captured, routed, and handled like your best
               employee answered — only faster, friendlier, and always on.
             </p>
           </ScrollReveal>
@@ -155,17 +155,15 @@ function FeatureCard({
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
       className={cn(
-        "group flex flex-col text-center lg:text-left",
+        "group flex flex-col items-center text-center lg:text-left",
         align === "right" && "lg:items-end lg:text-right",
+        align === "left" && "lg:items-start",
       )}
     >
       <div
         className={cn(
           "flex h-11 w-11 items-center justify-center rounded-2xl bg-surface ring-1 ring-border",
           "shadow-soft transition-transform duration-300 ease-out group-hover:-translate-y-0.5",
-          "self-center",
-          align === "right" && "lg:self-end",
-          align === "left" && "lg:self-start",
         )}
       >
         <Icon className="h-5 w-5 text-ink" strokeWidth={1.75} />
@@ -173,7 +171,7 @@ function FeatureCard({
       <h3 className="mt-5 font-display text-[20px] font-semibold tracking-[-0.01em] text-ink md:text-[22px]">
         {feature.title}
       </h3>
-      <p className="mt-2.5 max-w-sm text-[14.5px] leading-[1.6] text-ink-muted md:text-[15px]">
+      <p className="mt-2.5 max-w-sm text-[15px] leading-[1.65] text-ink-muted md:text-[16px]">
         {feature.body}
       </p>
     </motion.div>
@@ -189,13 +187,13 @@ function PhoneShowcase() {
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       className="relative mx-auto w-full max-w-[320px] md:max-w-[360px]"
     >
-      {/* Lime aura behind phone */}
+      {/* Yellow aura behind phone */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(183,255,94,0.45) 0%, rgba(183,255,94,0.15) 40%, rgba(183,255,94,0) 70%)",
+            "radial-gradient(closest-side, rgba(255,208,0,0.45) 0%, rgba(255,208,0,0.15) 40%, rgba(255,208,0,0) 70%)",
           filter: "blur(20px)",
           transform: "scale(1.15)",
         }}
@@ -209,7 +207,7 @@ function PhoneShowcase() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(183,255,94,0.35) 0%, rgba(183,255,94,0) 65%)",
+            "radial-gradient(closest-side, rgba(255,208,0,0.35) 0%, rgba(255,208,0,0) 65%)",
           filter: "blur(28px)",
           transform: "scale(1.25)",
         }}
@@ -305,10 +303,10 @@ function SectionBackdrop() {
       {/* Subtle dot grid */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-50"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(17,17,17,0.05) 1px, transparent 1px)",
+            "radial-gradient(rgba(24,19,10,0.06) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
           maskImage:
             "radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%)",

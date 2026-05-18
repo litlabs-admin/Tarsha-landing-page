@@ -74,7 +74,7 @@ export function PageLoader() {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(50% 40% at 50% 50%, rgba(183,255,94,0.16) 0%, rgba(183,255,94,0) 70%)",
+                "radial-gradient(50% 40% at 50% 50%, rgba(255,208,0,0.16) 0%, rgba(255,208,0,0) 70%)",
             }}
           />
 

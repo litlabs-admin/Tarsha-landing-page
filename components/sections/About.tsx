@@ -116,13 +116,13 @@ export function About() {
           >
             <span
               aria-hidden
-              className="mb-6 inline-flex h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_0_5px_rgba(183,255,94,0.22)]"
+              className="mb-6 inline-flex h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_0_5px_rgba(255,208,0,0.28)]"
             />
             <h2
               id="about-heading"
-              className="font-display font-semibold tracking-[-0.025em] text-ink text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]"
+              className="font-display font-semibold tracking-[-0.025em] text-ink text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05]"
             >
-              Why we built Tarsha AI.
+              Why we built <span className="text-accent">Tarsha AI</span>.
             </h2>
           </motion.div>
 
@@ -134,7 +134,7 @@ export function About() {
                 className={cn(
                   "font-display font-semibold tracking-[-0.022em]",
                   "text-[clamp(1.625rem,3.2vw,2.625rem)] leading-[1.35]",
-                  "text-left",
+                  "text-center",
                 )}
               >
                 {paragraph.map((seg, segIdx) => {
@@ -190,10 +190,10 @@ export function About() {
   );
 }
 
-// Color constants — warm gray to full ink. Avoids variable references
+// Color constants — warm tan to full ink. Avoids variable references
 // inside useTransform which only accepts resolved values.
-const COLOR_UNREVEALED = "rgb(178, 181, 176)"; // warm gray, visible on --bg
-const COLOR_REVEALED = "rgb(17, 17, 17)";       // --ink
+const COLOR_UNREVEALED = "rgb(180, 155, 80)"; // warm golden tan, visible on --bg
+const COLOR_REVEALED = "rgb(24, 19, 10)";      // --ink
 
 function Word({
   text,

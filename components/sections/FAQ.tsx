@@ -86,7 +86,7 @@ export function FAQ() {
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-20">
           {/* Left — sticky on desktop so the heading stays in view while scrolling answers */}
-          <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2">
+          <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2 text-center lg:text-left">
             <ScrollReveal y={16} duration={0.7}>
               <Eyebrow asPill className="mb-6">
                 <span className="text-ink-muted">Common questions</span>
@@ -101,9 +101,10 @@ export function FAQ() {
               </h2>
             </ScrollReveal>
             <ScrollReveal y={16} duration={0.7} delay={0.1}>
-              <p className="mt-5 max-w-md text-[16px] leading-[1.65] text-ink-muted md:text-[17px]">
-                Quick answers to the questions teams ask before going live with
-                Tarsha AI. Can&apos;t find what you&apos;re looking for?
+              <p className="mt-5 mx-auto max-w-md text-[17px] leading-[1.7] text-ink-muted md:text-[18px] lg:mx-0">
+                Quick answers to the questions teams ask before going live with{" "}
+                <span className="text-accent font-semibold">Tarsha AI</span>.
+                Can&apos;t find what you&apos;re looking for?
               </p>
             </ScrollReveal>
 
@@ -220,7 +221,7 @@ function FAQRow({
         <span
           className={cn(
             "mt-1 inline-block w-7 shrink-0 font-display text-[12px] font-medium tabular-nums tracking-[0.12em] transition-colors duration-300",
-            open ? "text-ink" : "text-ink-faint",
+            open ? "text-ink" : "text-ink-muted/50",
           )}
         >
           {numberLabel}
