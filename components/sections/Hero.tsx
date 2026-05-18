@@ -3,11 +3,9 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { assets, brand } from "@/lib/assets";
+import { brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import { motion, useReducedMotion } from "framer-motion";
-import { Sparkles } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const REVEAL_EASE = [0.22, 1, 0.36, 1] as const;
@@ -64,7 +62,7 @@ export function Hero() {
     <section
       id="top"
       aria-labelledby="hero-heading"
-      className="relative isolate overflow-hidden bg-surface-muted pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-24"
+      className="relative isolate overflow-hidden bg-surface-muted pt-20 md:pt-24 lg:pt-28 pb-10 md:pb-12"
     >
       {/* Ambient backdrop — soft conic gradient + grid */}
       <BackdropOrnaments />
@@ -140,95 +138,9 @@ export function Hero() {
           
         </motion.div>
 
-        {/* Product preview card */}
-        <motion.div
-          initial={{ opacity: 0, y: 56 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1,
-            delay: reducedMotion ? 0 : 0.85,
-            ease: REVEAL_EASE,
-          }}
-          className="relative mx-auto mt-16 max-w-[1080px] md:mt-20"
-        >
-          <ProductPreviewCard />
-
-          {/* Floating chat bubble decoration */}
-          <FloatingChatBubble reducedMotion={!!reducedMotion} />
-        </motion.div>
       </Container>
 
     </section>
-  );
-}
-
-function ProductPreviewCard() {
-  return (
-    <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 220, damping: 24 }}
-      className={cn(
-        "group relative block w-full overflow-hidden rounded-3xl",
-        "bg-surface shadow-card",
-      )}
-    >
-      <div className="relative aspect-[16/10] w-full overflow-hidden">
-        <Image
-          src={assets.heroProduct}
-          alt="Tarsha AI receptionist dashboard showing live calls and call summaries"
-          fill
-          priority
-          sizes="(min-width: 1024px) 1080px, 92vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-        />
-        {/* Subtle gradient veneer at top for contrast */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/[0.04] to-transparent" />
-      </div>
-
-      {/* Bottom info strip */}
-      <div className="flex items-center justify-between border-t border-border/50 bg-surface px-5 py-3">
-        <div className="flex items-center gap-2 text-[13px] text-ink-muted">
-          <Sparkles className="h-3.5 w-3.5 text-accent" strokeWidth={2} />
-          <span><span className="text-accent font-semibold">Tarsha AI</span> receptionist dashboard</span>
-        </div>
-        <div className="flex items-center gap-1.5 text-[12px] font-medium text-ink-muted">
-          <span className="flex h-1.5 w-1.5 rounded-full bg-accent ring-2 ring-accent/30" />
-          <span>Live</span>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function FloatingChatBubble({ reducedMotion }: { reducedMotion: boolean }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 20, y: 10 }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8, delay: 1.4, ease: REVEAL_EASE }}
-      className="absolute -right-2 top-6 hidden md:block lg:-right-6 lg:top-10"
-      aria-hidden="true"
-    >
-      <motion.div
-        animate={
-          reducedMotion ? undefined : { y: [0, -6, 0] }
-        }
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="flex items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-white shadow-lift"
-      >
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-accent-ink">
-          <span className="font-display text-[14px] font-bold">t</span>
-        </div>
-        <div className="text-left">
-          <p className="text-[13px] font-medium leading-tight">
-            Hey — I&apos;m Tarsha.
-          </p>
-          <p className="text-[12px] leading-tight text-white/60">
-            How can I help your business?
-          </p>
-        </div>
-      </motion.div>
-    </motion.div>
   );
 }
 

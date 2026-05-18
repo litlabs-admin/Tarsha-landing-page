@@ -2,13 +2,12 @@
 
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { cn } from "@/lib/cn";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-type CardType = "tall" | "mid" | "short";
 
 interface Testimonial {
   quote: string;
@@ -16,36 +15,17 @@ interface Testimonial {
   role: string;
   company: string;
   img: string;
-  type: CardType;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "We used to miss calls every time we were in court. Tarsha AI handles every new client inquiry instantly — we've booked 3 extra consultations a week from calls we would have lost.",
-    name: "Linda Mensah",
-    role: "Managing Partner",
-    company: "Mensah & Associates Law",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=480&h=600&fit=crop&crop=faces&q=85",
-    type: "tall",
-  },
+const allTestimonials: Testimonial[] = [
+  // ── Initial 3 ──────────────────────────────────────────────────────────────
   {
     quote:
       "Working with Tarsha AI was a game-changer. Our customers actually compliment our phone service now — something we never heard before.",
     name: "David Okoro",
     role: "Partner",
     company: "Okoro Legal Group",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=360&fit=crop&crop=faces&q=85",
-    type: "short",
-  },
-  {
-    quote:
-      "In real estate, speed is everything. Tarsha AI qualifies my leads and books showings while I'm with another client. I haven't missed a hot lead in months.",
-    name: "Aisha Boateng",
-    role: "Real Estate Agent",
-    company: "Casa Real Estate",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces&q=85",
-    type: "mid",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=640&fit=crop&crop=faces&q=85",
   },
   {
     quote:
@@ -53,17 +33,7 @@ const testimonials: Testimonial[] = [
     name: "James Calloway",
     role: "Owner",
     company: "Calloway HVAC Services",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&h=600&fit=crop&crop=faces&q=85",
-    type: "tall",
-  },
-  {
-    quote:
-      "Our dental office gets flooded with appointment requests. Tarsha AI handles routine calls so our team can focus on patients who are actually in the building.",
-    name: "Sofia Andrade",
-    role: "Practice Manager",
-    company: "Andrade Family Dental",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=640&h=360&fit=crop&crop=faces&q=85",
-    type: "short",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&h=640&fit=crop&crop=faces&q=85",
   },
   {
     quote:
@@ -71,16 +41,34 @@ const testimonials: Testimonial[] = [
     name: "Michael Reeves",
     role: "Independent Agent",
     company: "Reeves Insurance Group",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=faces&q=85",
-    type: "mid",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=480&h=640&fit=crop&crop=faces&q=85",
+  },
+  // ── Extra 3 (hidden behind See More) ───────────────────────────────────────
+  {
+    quote:
+      "Reservation calls were killing us during dinner service. Tarsha AI handles every booking now — our staff focuses entirely on the guests already in the restaurant.",
+    name: "Marcus Thompson",
+    role: "Owner",
+    company: "Thompson's Bistro",
+    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=480&h=640&fit=crop&crop=faces&q=85",
+  },
+  {
+    quote:
+      "Missed calls during depositions cost us clients. Tarsha AI qualifies every lead within seconds. We've signed four new clients from calls we would have otherwise lost.",
+    name: "Ryan Patel",
+    role: "Managing Attorney",
+    company: "Patel Law Office",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=480&h=640&fit=crop&crop=faces&q=85",
+  },
+  {
+    quote:
+      "When I'm on a job site I can't pick up the phone. Tarsha AI captures every service request with all the details I need — no more playing phone tag with customers.",
+    name: "Kevin Brooks",
+    role: "Owner",
+    company: "Brooks Electric",
+    img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=480&h=640&fit=crop&crop=faces&q=85",
   },
 ];
-
-const aspectClass: Record<CardType, string> = {
-  tall: "aspect-[4/5]",
-  mid: "aspect-square",
-  short: "aspect-video",
-};
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
@@ -91,22 +79,20 @@ function TestimonialCard({ t }: { t: Testimonial }) {
       variants={{
         rest: {
           y: 0,
-          boxShadow:
-            "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)",
         },
         hovered: {
-          y: -2,
-          boxShadow:
-            "0 4px 16px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.06)",
+          y: -3,
+          boxShadow: "0 4px 16px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.06)",
         },
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="overflow-hidden rounded-2xl bg-surface cursor-default"
+      className="flex h-full flex-col overflow-hidden rounded-2xl bg-surface cursor-default"
     >
-      {/* Image block */}
-      <div className={cn("relative w-full overflow-hidden", aspectClass[t.type])}>
+      {/* Image block — uniform 3/4 portrait for all cards */}
+      <div className="relative w-full aspect-[3/4] overflow-hidden flex-shrink-0">
         <motion.div
-          variants={{ rest: { scale: 1 }, hovered: { scale: 1.08 } }}
+          variants={{ rest: { scale: 1 }, hovered: { scale: 1.06 } }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="absolute inset-0"
         >
@@ -125,7 +111,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
           className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-4"
           style={{
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)",
+              "linear-gradient(to top, rgba(0,0,0,0.60) 0%, transparent 100%)",
           }}
         >
           <p
@@ -143,9 +129,9 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
       </div>
 
-      {/* Quote block */}
-      <div className="px-4 py-3.5">
-        <p className="text-[14px] leading-[1.45] text-ink">
+      {/* Quote block — grows to fill remaining card height */}
+      <div className="flex flex-1 items-start px-4 py-4">
+        <p className="text-[14px] leading-[1.5] text-ink">
           &ldquo;{t.quote}&rdquo;
         </p>
       </div>
@@ -154,6 +140,10 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 }
 
 export function Testimonials() {
+  const [expanded, setExpanded] = useState(false);
+  const initial = allTestimonials.slice(0, 3);
+  const extra = allTestimonials.slice(3);
+
   return (
     <section
       id="testimonials"
@@ -181,20 +171,66 @@ export function Testimonials() {
           <span className="text-accent">around the world</span>
         </motion.h2>
 
-        {/* Masonry grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 pb-10">
-          {testimonials.map((t, i) => (
+        {/* Uniform CSS Grid — all cards same height per row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Always-visible initial 3 */}
+          {initial.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.05 * i }}
-              className="break-inside-avoid mb-5"
             >
               <TestimonialCard t={t} />
             </motion.div>
           ))}
+
+          {/* Extra 3 — staggered enter/exit */}
+          <AnimatePresence>
+            {expanded &&
+              extra.map((t, i) => (
+                <motion.div
+                  key={t.name}
+                  initial={{ opacity: 0, y: 32, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 16, scale: 0.97 }}
+                  transition={{ duration: 0.55, ease: EASE, delay: 0.08 * i }}
+                >
+                  <TestimonialCard t={t} />
+                </motion.div>
+              ))}
+          </AnimatePresence>
+        </div>
+
+        {/* See more / Show less button */}
+        <div className="mt-8 flex justify-center">
+          <motion.button
+            onClick={() => setExpanded((v) => !v)}
+            whileHover={{ y: -1, boxShadow: "0 4px 16px rgba(0,0,0,0.08)" }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="flex items-center gap-2.5 rounded-full border border-border bg-surface px-6 py-3 text-[14px] font-medium text-ink shadow-soft hover:border-ink/25 transition-colors duration-200"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={expanded ? "less" : "more"}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.18 }}
+              >
+                {expanded ? "Show less" : "See 3 more stories"}
+              </motion.span>
+            </AnimatePresence>
+            <motion.span
+              animate={{ rotate: expanded ? 180 : 0 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="flex items-center"
+            >
+              <ChevronDown className="h-4 w-4 text-ink-muted" strokeWidth={2} />
+            </motion.span>
+          </motion.button>
         </div>
       </Container>
     </section>
