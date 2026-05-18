@@ -132,7 +132,7 @@ export function Hero() {
             <Button size="md" variant="primary" className="sm:h-12 sm:px-6 sm:text-[15px]">
               Get started free
             </Button>
-            <Button size="md" variant="ghost" icon="arrow" className="sm:h-12 sm:px-6 sm:text-[15px]">
+            <Button size="md" variant="ghost" icon="arrow" className="border border-border sm:h-12 sm:px-6 sm:text-[15px]">
               Book a demo
             </Button>
           </motion.div>
