@@ -114,10 +114,7 @@ export function About() {
             transition={{ duration: 0.8, ease: EASE }}
             className="mb-16 flex flex-col items-center text-center md:mb-24"
           >
-            <span
-              aria-hidden
-              className="mb-6 inline-flex h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_0_5px_rgba(255,208,0,0.28)]"
-            />
+            
             <h2
               id="about-heading"
               className="font-display font-semibold tracking-[-0.025em] text-ink text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05]"

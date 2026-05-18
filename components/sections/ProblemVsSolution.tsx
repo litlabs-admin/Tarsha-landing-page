@@ -13,8 +13,7 @@ import {
   WifiOff,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
-import { type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -66,6 +65,7 @@ export function ProblemVsSolution() {
               { icon: PhoneOff, text: "62% of missed calls never call back" },
               { icon: WifiOff, text: "Voicemail conversion: under 3%" },
             ]}
+            videoSrc={assets.oldWayVideo}
           />
           <ComparisonCard
             variant="new"
@@ -76,6 +76,7 @@ export function ProblemVsSolution() {
               { icon: Zap, text: "Answers in under 0.4 seconds" },
               { icon: BadgeCheck, text: "Up to 38% lift in booked calls" },
             ]}
+            videoSrc={assets.newWayVideo}
           />
         </div>
 
@@ -90,6 +91,7 @@ interface ComparisonCardProps {
   title: string;
   description: ReactNode;
   stats: { icon: typeof Zap; text: string }[];
+  videoSrc: string;
 }
 
 function ComparisonCard({
@@ -98,8 +100,24 @@ function ComparisonCard({
   title,
   description,
   stats,
+  videoSrc,
 }: ComparisonCardProps) {
   const isNew = variant === "new";
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) el.play().catch(() => {});
+        else el.pause();
+      },
+      { threshold: 0.3 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.div
@@ -159,20 +177,21 @@ function ComparisonCard({
         )}
       </div>
 
-      {/* Image frame */}
+      {/* Video frame */}
       <div
         className={cn(
           "relative aspect-[16/10] w-full overflow-hidden rounded-2xl",
           isNew ? "bg-ink" : "bg-surface-muted",
         )}
       >
-        <Image
-          src={assets.heroProduct}
-          alt={isNew ? "Tarsha AI receptionist dashboard" : "Missed call — voicemail dead end"}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+        <video
+          ref={videoRef}
+          src={videoSrc}
+          muted
+          loop
+          playsInline
           className={cn(
-            "object-cover object-top transition-all duration-700",
+            "h-full w-full object-cover transition-all duration-700",
             !isNew && "saturate-[0.3] opacity-70",
           )}
         />

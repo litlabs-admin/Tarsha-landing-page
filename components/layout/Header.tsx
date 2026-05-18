@@ -262,22 +262,22 @@ export function Header() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden mx-3 mt-2 overflow-hidden rounded-2xl border border-border bg-[rgba(255,254,245,0.97)] backdrop-blur-xl shadow-[0_10px_30px_rgba(24,19,10,0.10)]"
           >
-            <div className="flex flex-col gap-1 px-4 py-4">
+            <div className="flex flex-col gap-1 px-4 py-5">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-3 text-[15px] font-medium text-ink/90 hover:bg-ink/5"
+                  className="flex items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="mt-2 border-t border-border pt-3">
+              <div className="mt-3 border-t border-border pt-4">
                 <Link
                   href="#login"
                   onClick={() => setMobileOpen(false)}
-                  className="flex w-full items-center justify-center rounded-xl border border-border bg-surface px-4 py-3 text-[15px] font-medium text-ink/80 hover:bg-surface-muted"
+                  className="flex w-full items-center justify-center rounded-xl border border-border bg-surface px-4 py-4 text-[17px] font-medium text-ink/80 hover:bg-surface-muted"
                 >
                   Login
                 </Link>

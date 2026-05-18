@@ -10,7 +10,10 @@
       "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Depth 3)",
       "Bash(Select-Object FullName, PSIsContainer)",
       "Bash(Sort-Object FullName)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "WebFetch(domain:upfirst.ai)",
+      "Bash(curl -s \"https://upfirst.ai\")",
+      "Bash(curl -s \"https://cdn.prod.website-files.com/6756ef196c55eb0c982fd837/css/upfirst-599d67.webflow.shared.6478fae82.css\")"
     ]
   }
 }

@@ -3,11 +3,10 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { VideoModal } from "@/components/ui/VideoModal";
 import { assets, brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import { motion, useReducedMotion } from "framer-motion";
-import { Phone, Play, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -23,7 +22,6 @@ const accentLine = {
 };
 
 export function Hero() {
-  const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const reducedMotion = useReducedMotion();
 
@@ -79,7 +77,7 @@ export function Hero() {
           className="flex flex-col items-center text-center"
         >
           <motion.div variants={itemVariants}>
-            <Eyebrow asPill icon={<Phone className="h-3 w-3" strokeWidth={2.4} />}>
+            <Eyebrow asPill>
               <span className="text-ink-muted">Call our AI receptionist · </span>
               <span className="font-semibold text-ink">{brand.phoneDisplay}</span>
             </Eyebrow>
@@ -123,13 +121,13 @@ export function Hero() {
             variants={itemVariants}
             className="mt-9 max-w-[42rem] text-balance text-[18px] leading-[1.7] text-ink-muted md:text-[19px]"
           >
-            <span className="text-accent font-semibold">Tarsha AI</span> is the answering service that keeps your phone covered, so
+            <span className="text-[#B8960A] font-semibold">Tarsha AI</span> is the answering service that keeps your phone covered, so
             you never miss a lead or leave a customer waiting.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-3"
+            className="mt-10 flex flex-row flex-wrap items-center justify-center gap-3"
           >
             <Button size="lg" variant="primary">
               Get started free
@@ -139,12 +137,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          <motion.p
-            variants={itemVariants}
-            className="mt-4 text-[13px] text-ink-muted/60"
-          >
-            No credit card required
-          </motion.p>
+          
         </motion.div>
 
         {/* Product preview card */}
@@ -158,34 +151,25 @@ export function Hero() {
           }}
           className="relative mx-auto mt-16 max-w-[1080px] md:mt-20"
         >
-          <ProductPreviewCard onPlay={() => setOpen(true)} />
+          <ProductPreviewCard />
 
           {/* Floating chat bubble decoration */}
           <FloatingChatBubble reducedMotion={!!reducedMotion} />
         </motion.div>
       </Container>
 
-      <VideoModal
-        open={open}
-        onClose={() => setOpen(false)}
-        videoSrc={assets.heroVideo}
-        poster={assets.heroProduct}
-      />
     </section>
   );
 }
 
-function ProductPreviewCard({ onPlay }: { onPlay: () => void }) {
+function ProductPreviewCard() {
   return (
-    <motion.button
-      onClick={onPlay}
-      aria-label="Play Tarsha AI product demo video"
+    <motion.div
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 220, damping: 24 }}
       className={cn(
-        "group relative block w-full overflow-hidden rounded-3xl text-left",
-        "bg-surface shadow-card focus-ring",
-        "transition-shadow duration-300 ease-out hover:shadow-lift",
+        "group relative block w-full overflow-hidden rounded-3xl",
+        "bg-surface shadow-card",
       )}
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -197,30 +181,22 @@ function ProductPreviewCard({ onPlay }: { onPlay: () => void }) {
           sizes="(min-width: 1024px) 1080px, 92vw"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
         />
-
-        {/* Play overlay — appears on hover */}
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/85 shadow-lift backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-white">
-            <Play className="h-7 w-7 translate-x-0.5 text-ink" fill="currentColor" strokeWidth={0} />
-          </div>
-        </div>
-
         {/* Subtle gradient veneer at top for contrast */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/[0.04] to-transparent" />
       </div>
 
-      {/* Bottom hint strip */}
+      {/* Bottom info strip */}
       <div className="flex items-center justify-between border-t border-border/50 bg-surface px-5 py-3">
         <div className="flex items-center gap-2 text-[13px] text-ink-muted">
           <Sparkles className="h-3.5 w-3.5 text-accent" strokeWidth={2} />
-          <span>Watch how <span className="text-accent font-semibold">Tarsha AI</span> handles a real call</span>
+          <span><span className="text-accent font-semibold">Tarsha AI</span> receptionist dashboard</span>
         </div>
         <div className="flex items-center gap-1.5 text-[12px] font-medium text-ink-muted">
           <span className="flex h-1.5 w-1.5 rounded-full bg-accent ring-2 ring-accent/30" />
-          <span>1 min preview</span>
+          <span>Live</span>
         </div>
       </div>
-    </motion.button>
+    </motion.div>
   );
 }
 
@@ -259,14 +235,10 @@ function FloatingChatBubble({ reducedMotion }: { reducedMotion: boolean }) {
 function BackdropOrnaments() {
   return (
     <>
-      {/* Central yellow radial glow — stronger on light bg */}
+      {/* Very light yellow tint */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 65% at 50% -5%, rgba(255,208,0,0.32) 0%, rgba(255,208,0,0.08) 50%, transparent 75%)",
-        }}
+        className="pointer-events-none absolute inset-0 -z-10 bg-[rgba(255,208,0,0.04)]"
       />
       {/* Subtle warm dot grid */}
       <div

@@ -2,11 +2,13 @@
 
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { motion, useReducedMotion } from "framer-motion";
+import { cn } from "@/lib/cn";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+type CardType = "tall" | "mid" | "short";
 
 interface Testimonial {
   quote: string;
@@ -14,6 +16,7 @@ interface Testimonial {
   role: string;
   company: string;
   img: string;
+  type: CardType;
 }
 
 const testimonials: Testimonial[] = [
@@ -23,7 +26,8 @@ const testimonials: Testimonial[] = [
     name: "Linda Mensah",
     role: "Managing Partner",
     company: "Mensah & Associates Law",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=480&h=600&fit=crop&crop=faces&q=85",
+    type: "tall",
   },
   {
     quote:
@@ -31,7 +35,8 @@ const testimonials: Testimonial[] = [
     name: "David Okoro",
     role: "Partner",
     company: "Okoro Legal Group",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=360&fit=crop&crop=faces&q=85",
+    type: "short",
   },
   {
     quote:
@@ -39,7 +44,8 @@ const testimonials: Testimonial[] = [
     name: "Aisha Boateng",
     role: "Real Estate Agent",
     company: "Casa Real Estate",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces&q=85",
+    type: "mid",
   },
   {
     quote:
@@ -47,7 +53,8 @@ const testimonials: Testimonial[] = [
     name: "James Calloway",
     role: "Owner",
     company: "Calloway HVAC Services",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&h=600&fit=crop&crop=faces&q=85",
+    type: "tall",
   },
   {
     quote:
@@ -55,7 +62,8 @@ const testimonials: Testimonial[] = [
     name: "Sofia Andrade",
     role: "Practice Manager",
     company: "Andrade Family Dental",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=640&h=360&fit=crop&crop=faces&q=85",
+    type: "short",
   },
   {
     quote:
@@ -63,99 +71,85 @@ const testimonials: Testimonial[] = [
     name: "Michael Reeves",
     role: "Independent Agent",
     company: "Reeves Insurance Group",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=640&h=800&fit=crop&crop=faces&q=85",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=faces&q=85",
+    type: "mid",
   },
 ];
 
-// Duplicate for seamless infinite loop
-const doubled = [...testimonials, ...testimonials];
+const aspectClass: Record<CardType, string> = {
+  tall: "aspect-[4/5]",
+  mid: "aspect-square",
+  short: "aspect-video",
+};
 
 function TestimonialCard({ t }: { t: Testimonial }) {
   return (
     <motion.article
-      whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 280, damping: 22 } }}
-      className="relative flex-shrink-0 overflow-hidden rounded-2xl w-[320px] h-[460px] shadow-lift"
+      whileHover="hovered"
+      initial="rest"
+      animate="rest"
+      variants={{
+        rest: {
+          y: 0,
+          boxShadow:
+            "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)",
+        },
+        hovered: {
+          y: -2,
+          boxShadow:
+            "0 4px 16px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.06)",
+        },
+      }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      className="overflow-hidden rounded-2xl bg-surface cursor-default"
     >
-      {/* Full-bleed portrait */}
-      <Image
-        src={t.img}
-        alt={t.name}
-        fill
-        sizes="320px"
-        quality={90}
-        className="object-cover object-top"
-      />
+      {/* Image block */}
+      <div className={cn("relative w-full overflow-hidden", aspectClass[t.type])}>
+        <motion.div
+          variants={{ rest: { scale: 1 }, hovered: { scale: 1.08 } }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={t.img}
+            alt={t.name}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            quality={90}
+            className="object-cover object-top"
+          />
+        </motion.div>
 
-      {/* Cinematic gradient — transparent top, near-black bottom */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(24,19,10,0.96) 0%, rgba(24,19,10,0.80) 28%, rgba(24,19,10,0.40) 52%, rgba(24,19,10,0.10) 68%, transparent 82%)",
-        }}
-      />
-
-      {/* Text block — pinned to card bottom */}
-      <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-5">
-        <span aria-hidden className="block font-display text-[36px] leading-none text-accent -mb-1">
-          &ldquo;
-        </span>
-        <blockquote className="text-[13px] leading-[1.65] text-white line-clamp-6">
-          {t.quote}&rdquo;
-        </blockquote>
-        <div className="mt-3 border-t border-white/15 pt-3">
-          <p className="text-[12.5px] font-semibold text-white leading-tight">{t.name}</p>
-          <p className="text-[11px] leading-tight text-white/55">
-            {t.role} &middot; {t.company}
+        {/* Name overlay */}
+        <div
+          className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-4"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)",
+          }}
+        >
+          <p
+            className="text-[18px] font-bold leading-tight text-white"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
+          >
+            {t.name}
+          </p>
+          <p
+            className="mt-0.5 text-[13px] font-medium text-white/85"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
+          >
+            {t.role} · {t.company}
           </p>
         </div>
       </div>
-    </motion.article>
-  );
-}
 
-function Ticker() {
-  const [paused, setPaused] = useState(false);
-  const reducedMotion = useReducedMotion();
-
-  return (
-    <div
-      className="relative overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {/* Left edge fade */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20"
-        style={{
-          background: "linear-gradient(to right, #FFFBEA, transparent)",
-        }}
-      />
-      {/* Right edge fade */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20"
-        style={{
-          background: "linear-gradient(to left, #FFFBEA, transparent)",
-        }}
-      />
-
-      {/* Scrolling track */}
-      <div
-        className="flex gap-5 py-4"
-        style={{
-          animation: reducedMotion ? "none" : "marquee 45s linear infinite",
-          animationPlayState: paused ? "paused" : "running",
-          width: "max-content",
-        }}
-      >
-        {doubled.map((t, i) => (
-          <TestimonialCard key={`${t.name}-${i}`} t={t} />
-        ))}
+      {/* Quote block */}
+      <div className="px-4 py-3.5">
+        <p className="text-[14px] leading-[1.45] text-ink">
+          &ldquo;{t.quote}&rdquo;
+        </p>
       </div>
-    </div>
+    </motion.article>
   );
 }
 
@@ -165,7 +159,6 @@ export function Testimonials() {
       id="testimonials"
       className="py-20 md:py-28 bg-surface-muted overflow-hidden"
     >
-      {/* Heading — inside Container */}
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -174,7 +167,7 @@ export function Testimonials() {
           transition={{ duration: 0.6, ease: EASE }}
           className="mb-4 flex justify-center"
         >
-          <Eyebrow asPill>Testimonial</Eyebrow>
+          <Eyebrow asPill>Testimonials</Eyebrow>
         </motion.div>
 
         <motion.h2
@@ -188,11 +181,22 @@ export function Testimonials() {
           <span className="text-accent">around the world</span>
         </motion.h2>
 
-        
+        {/* Masonry grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 pb-10">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={t.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.05 * i }}
+              className="break-inside-avoid mb-5"
+            >
+              <TestimonialCard t={t} />
+            </motion.div>
+          ))}
+        </div>
       </Container>
-
-      {/* Full-width ticker — no Container wrapper */}
-      <Ticker />
     </section>
   );
 }
