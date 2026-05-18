@@ -190,7 +190,7 @@ function FinalCTA() {
               Spin up <span className="text-accent font-semibold">Tarsha AI</span> in under a day. Live phone coverage, 24/7 — with a
               voice your customers will actually thank you for.
             </p>
-            <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:gap-3">
+            <div className="mt-9 flex flex-row flex-wrap items-center justify-center gap-3">
               <Button size="lg" variant="primary">
                 Get started free
               </Button>

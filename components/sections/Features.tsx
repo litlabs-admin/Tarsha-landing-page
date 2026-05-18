@@ -70,8 +70,8 @@ export function Features() {
         {/* Heading */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <ScrollReveal y={12} duration={0.7} amount={0.4}>
-            <Eyebrow asPill className="mb-6">
-              What <span className="text-accent font-bold">Tarsha AI</span> does
+            <Eyebrow asPill className="mb-6 !text-[#111111]">
+              What Tarsha AI does
             </Eyebrow>
           </ScrollReveal>
           <ScrollReveal y={22} duration={0.95} delay={0.07} amount={0.3}>
