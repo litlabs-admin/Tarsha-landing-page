@@ -16,10 +16,12 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
+import { type ReactNode } from "react";
+
 interface Feature {
   icon: LucideIcon;
   title: string;
-  body: string;
+  body: ReactNode;
   side: "left" | "right";
   position: "top" | "bottom";
 }
@@ -35,7 +37,7 @@ const features: Feature[] = [
   {
     icon: CalendarCheck,
     title: "Book appointments",
-    body: "Send callers a one-tap link to your calendar, or let Tarsha AI confirm a time directly. Bookings show up on autopilot.",
+    body: <>Send callers a one-tap link to your calendar, or let <span className="text-accent font-semibold">Tarsha AI</span> confirm a time directly. Bookings show up on autopilot.</>,
     side: "right",
     position: "top",
   },
@@ -49,7 +51,7 @@ const features: Feature[] = [
   {
     icon: PhoneForwarded,
     title: "Transfer calls",
-    body: "Need certain callers routed straight to you or a teammate? Tarsha AI sends the right person the right call, every time.",
+    body: <>Need certain callers routed straight to you or a teammate? <span className="text-accent font-semibold">Tarsha AI</span> sends the right person the right call, every time.</>,
     side: "right",
     position: "bottom",
   },

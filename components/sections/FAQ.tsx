@@ -67,7 +67,7 @@ const faqJsonLd = {
 export function FAQ() {
   // Single-active hover-to-expand (mirrors the Why Tarsha BenefitRow pattern).
   // First row is open by default — gives crawlers an above-the-fold answer.
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
 
   return (
     <section

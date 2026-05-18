@@ -13,7 +13,8 @@ import {
   WifiOff,
   Zap,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { type ReactNode } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -61,7 +62,6 @@ export function ProblemVsSolution() {
             label="The old way"
             title="Voicemail. Dead air. Lost lead."
             description="Phone rings, nobody picks up. Caller hangs up, dials the next listing, and you never know they were there."
-            videoSrc={assets.oldWayVideo}
             stats={[
               { icon: PhoneOff, text: "62% of missed calls never call back" },
               { icon: WifiOff, text: "Voicemail conversion: under 3%" },
@@ -71,8 +71,7 @@ export function ProblemVsSolution() {
             variant="new"
             label="The Tarsha AI way"
             title="Answered, qualified, and booked."
-            description="Tarsha AI picks up on the first ring, captures the details that matter, and books the next step before the caller is off the phone."
-            videoSrc={assets.newWayVideo}
+            description={<><span className="text-accent font-semibold">Tarsha AI</span> picks up on the first ring, captures the details that matter, and books the next step before the caller is off the phone.</>}
             stats={[
               { icon: Zap, text: "Answers in under 0.4 seconds" },
               { icon: BadgeCheck, text: "Up to 38% lift in booked calls" },
@@ -89,8 +88,7 @@ interface ComparisonCardProps {
   variant: "old" | "new";
   label: string;
   title: string;
-  description: string;
-  videoSrc: string;
+  description: ReactNode;
   stats: { icon: typeof Zap; text: string }[];
 }
 
@@ -99,29 +97,8 @@ function ComparisonCard({
   label,
   title,
   description,
-  videoSrc,
   stats,
 }: ComparisonCardProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    if (!videoRef.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-        if (entry.isIntersecting) {
-          videoRef.current?.play().catch(() => {});
-        } else {
-          videoRef.current?.pause();
-        }
-      },
-      { threshold: 0.35 },
-    );
-    observer.observe(videoRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   const isNew = variant === "new";
 
   return (
@@ -182,23 +159,21 @@ function ComparisonCard({
         )}
       </div>
 
-      {/* Video frame */}
+      {/* Image frame */}
       <div
         className={cn(
           "relative aspect-[16/10] w-full overflow-hidden rounded-2xl",
           isNew ? "bg-ink" : "bg-surface-muted",
         )}
       >
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          muted
-          playsInline
-          loop
-          preload="metadata"
+        <Image
+          src={assets.heroProduct}
+          alt={isNew ? "Tarsha AI receptionist dashboard" : "Missed call — voicemail dead end"}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
           className={cn(
-            "h-full w-full object-cover transition-all duration-700",
-            !isNew && "saturate-[0.55] opacity-90",
+            "object-cover object-top transition-all duration-700",
+            !isNew && "saturate-[0.3] opacity-70",
           )}
         />
 
@@ -222,14 +197,6 @@ function ComparisonCard({
             />
             LIVE
           </div>
-        )}
-
-        {/* Dim guard for "old" card to lean into the muted feel */}
-        {!isNew && inView && (
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-ink/[0.06]"
-          />
         )}
       </div>
 

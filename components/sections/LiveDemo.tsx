@@ -136,7 +136,7 @@ export function LiveDemo() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           {/* Left: heading column */}
-          <div>
+          <div className="text-center lg:text-left">
             <ScrollReveal y={16} duration={0.7}>
               <Eyebrow className="mb-5">Hear our AI receptionist in action</Eyebrow>
             </ScrollReveal>

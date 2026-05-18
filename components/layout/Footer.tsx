@@ -153,7 +153,7 @@ export function Footer() {
       {/* Bottom legal bar */}
       <Container>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-7 text-[12.5px] text-white/45 md:flex-row">
-          <p>© {new Date().getFullYear()} Tarsha AI · Voice AI for SMBs · All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <span className="text-accent font-semibold whitespace-nowrap">Tarsha AI</span> · Voice AI for SMBs · All rights reserved.</p>
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(52,211,153,0.18)]" />
