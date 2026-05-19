@@ -6,6 +6,7 @@ import {
   ArrowRight,
   CalendarCheck,
   Globe,
+  MessageCircle,
   MessageSquareText,
   Moon,
   Phone,
@@ -18,33 +19,35 @@ interface Solution {
   icon: LucideIcon;
   label: string;
   desc: string;
+  href: string;
 }
 
 const mainSolutions: Solution[] = [
-  { icon: Phone, label: "Answering service", desc: "Never miss a call again" },
-  { icon: CalendarCheck, label: "Appointment booking", desc: "Confirm times automatically" },
-  { icon: MessageSquareText, label: "Answer questions", desc: "24/7 instant answers" },
-  { icon: Route, label: "Call routing", desc: "Send calls to the right place" },
-  { icon: Globe, label: "Bilingual answering", desc: "English, Spanish & more" },
-  { icon: Moon, label: "After hours calls", desc: "Always available" },
+  { icon: Phone, label: "Answering service", desc: "Never miss a call again", href: "/solutions/answering-service" },
+  { icon: CalendarCheck, label: "Appointment booking", desc: "Confirm times automatically", href: "/solutions/appointment-booking" },
+  { icon: MessageSquareText, label: "Answer questions", desc: "24/7 instant answers", href: "/solutions/answer-questions" },
+  { icon: Route, label: "Call routing", desc: "Send calls to the right place", href: "/solutions/call-routing" },
+  { icon: Globe, label: "Bilingual answering", desc: "English, Spanish & more", href: "/solutions/bilingual-answering" },
+  { icon: Moon, label: "After hours calls", desc: "Always available", href: "/solutions/after-hours-calls" },
+  { icon: MessageCircle, label: "WhatsApp integration", desc: "AI receptionist on WhatsApp", href: "/solutions/whatsapp-integration" },
 ];
 
 const byIndustry = [
-  "Law firms",
-  "Restaurants",
-  "Real estate",
-  "Insurance",
-  "Accountants",
-  "Home services",
+  { label: "Law firms", href: "/industries/law-firms" },
+  { label: "Restaurants", href: "/industries/restaurants" },
+  { label: "Real estate", href: "/industries/real-estate" },
+  { label: "Insurance", href: "/industries/insurance" },
+  { label: "Accountants", href: "/industries/accountants" },
+  { label: "Home services", href: "/industries/home-services" },
 ];
 
 const capabilities = [
-  "Lead qualification",
-  "Appointment taking",
-  "Overflow reception",
-  "Voicemail transcription",
-  "Call recording",
-  "Client intake",
+  { label: "Lead qualification", href: "/capabilities/lead-qualification" },
+  { label: "Appointment taking", href: "/capabilities/appointment-taking" },
+  { label: "Overflow reception", href: "/capabilities/overflow-reception" },
+  { label: "Voicemail transcription", href: "/capabilities/voicemail-transcription" },
+  { label: "Call recording", href: "/capabilities/call-recording" },
+  { label: "Client intake", href: "/capabilities/client-intake" },
 ];
 
 export function SolutionsMenu({ visible }: { visible: boolean }) {
@@ -65,10 +68,10 @@ export function SolutionsMenu({ visible }: { visible: boolean }) {
                 Main solutions
               </p>
               <div className="grid grid-cols-2 gap-1.5">
-                {mainSolutions.map(({ icon: Icon, label, desc }) => (
+                {mainSolutions.map(({ icon: Icon, label, desc, href }) => (
                   <Link
                     key={label}
-                    href="#live-demo"
+                    href={href}
                     className="group flex items-start gap-2.5 rounded-xl p-2.5 transition-colors hover:bg-surface-muted"
                   >
                     <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border bg-surface shadow-sm">
@@ -89,13 +92,13 @@ export function SolutionsMenu({ visible }: { visible: boolean }) {
                 By industry
               </p>
               <ul className="space-y-2.5">
-                {byIndustry.map((item) => (
-                  <li key={item}>
+                {byIndustry.map(({ label, href }) => (
+                  <li key={label}>
                     <Link
-                      href="#live-demo"
+                      href={href}
                       className="text-[13px] text-ink/75 transition-colors hover:text-ink"
                     >
-                      {item}
+                      {label}
                     </Link>
                   </li>
                 ))}
@@ -108,13 +111,13 @@ export function SolutionsMenu({ visible }: { visible: boolean }) {
                 Capabilities
               </p>
               <ul className="space-y-2.5">
-                {capabilities.map((item) => (
-                  <li key={item}>
+                {capabilities.map(({ label, href }) => (
+                  <li key={label}>
                     <Link
-                      href="/features"
+                      href={href}
                       className="text-[13px] text-ink/75 transition-colors hover:text-ink"
                     >
-                      {item}
+                      {label}
                     </Link>
                   </li>
                 ))}

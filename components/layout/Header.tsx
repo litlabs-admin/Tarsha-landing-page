@@ -152,6 +152,36 @@ export function Header() {
     closeTimer.current = setTimeout(() => setActiveMenu(null), 80);
   }
 
+  const [mobileExpandedMenu, setMobileExpandedMenu] = useState<string | null>(null);
+
+  const mobileSolutions = [
+    { label: "Answering service", href: "/solutions/answering-service" },
+    { label: "Appointment booking", href: "/solutions/appointment-booking" },
+    { label: "Answer questions", href: "/solutions/answer-questions" },
+    { label: "Call routing", href: "/solutions/call-routing" },
+    { label: "Bilingual answering", href: "/solutions/bilingual-answering" },
+    { label: "After hours calls", href: "/solutions/after-hours-calls" },
+    { label: "WhatsApp integration", href: "/solutions/whatsapp-integration" },
+  ];
+
+  const mobileIndustries = [
+    { label: "Law firms", href: "/industries/law-firms" },
+    { label: "Restaurants", href: "/industries/restaurants" },
+    { label: "Real estate", href: "/industries/real-estate" },
+    { label: "Insurance", href: "/industries/insurance" },
+    { label: "Accountants", href: "/industries/accountants" },
+    { label: "Home services", href: "/industries/home-services" },
+  ];
+
+  const mobileCapabilities = [
+    { label: "Lead qualification", href: "/capabilities/lead-qualification" },
+    { label: "Appointment taking", href: "/capabilities/appointment-taking" },
+    { label: "Overflow reception", href: "/capabilities/overflow-reception" },
+    { label: "Voicemail transcription", href: "/capabilities/voicemail-transcription" },
+    { label: "Call recording", href: "/capabilities/call-recording" },
+    { label: "Client intake", href: "/capabilities/client-intake" },
+  ];
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -263,16 +293,158 @@ export function Header() {
             className="md:hidden mx-3 mt-2 overflow-hidden rounded-2xl border border-border bg-[rgba(255,254,245,0.97)] backdrop-blur-xl shadow-[0_10px_30px_rgba(24,19,10,0.10)]"
           >
             <div className="flex flex-col gap-1 px-4 py-5">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
+              {navItems.map((item) =>
+                item.menuId === "solutions" ? (
+                  <div key={item.label}>
+                    <button
+                      onClick={() =>
+                        setMobileExpandedMenu(
+                          mobileExpandedMenu === "solutions" ? null : "solutions",
+                        )
+                      }
+                      className="flex w-full items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
+                    >
+                      {item.label}
+                      <motion.span
+                        animate={{ rotate: mobileExpandedMenu === "solutions" ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronDown className="h-4 w-4 text-ink-muted" />
+                      </motion.span>
+                    </button>
+                    <AnimatePresence>
+                      {mobileExpandedMenu === "solutions" && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                          className="overflow-hidden"
+                        >
+                          <div className="mb-1 ml-4 flex flex-col gap-0.5 rounded-xl border border-border bg-surface-muted/60 p-2">
+                            {mobileSolutions.map(({ label, href }) => (
+                              <Link
+                                key={label}
+                                href={href}
+                                onClick={() => {
+                                  setMobileOpen(false);
+                                  setMobileExpandedMenu(null);
+                                }}
+                                className="rounded-lg px-3 py-2.5 text-[15px] font-medium text-ink/80 hover:bg-surface hover:text-ink"
+                              >
+                                {label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
+              {/* By Industry accordion */}
+              <div>
+                <button
+                  onClick={() =>
+                    setMobileExpandedMenu(
+                      mobileExpandedMenu === "industries" ? null : "industries",
+                    )
+                  }
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
                 >
-                  {item.label}
-                </Link>
-              ))}
+                  By Industry
+                  <motion.span
+                    animate={{ rotate: mobileExpandedMenu === "industries" ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="h-4 w-4 text-ink-muted" />
+                  </motion.span>
+                </button>
+                <AnimatePresence>
+                  {mobileExpandedMenu === "industries" && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mb-1 ml-4 flex flex-col gap-0.5 rounded-xl border border-border bg-surface-muted/60 p-2">
+                        {mobileIndustries.map(({ label, href }) => (
+                          <Link
+                            key={label}
+                            href={href}
+                            onClick={() => {
+                              setMobileOpen(false);
+                              setMobileExpandedMenu(null);
+                            }}
+                            className="rounded-lg px-3 py-2.5 text-[15px] font-medium text-ink/80 hover:bg-surface hover:text-ink"
+                          >
+                            {label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Capabilities accordion */}
+              <div>
+                <button
+                  onClick={() =>
+                    setMobileExpandedMenu(
+                      mobileExpandedMenu === "capabilities" ? null : "capabilities",
+                    )
+                  }
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-4 text-[17px] font-medium text-ink/90 hover:bg-ink/5"
+                >
+                  Capabilities
+                  <motion.span
+                    animate={{ rotate: mobileExpandedMenu === "capabilities" ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="h-4 w-4 text-ink-muted" />
+                  </motion.span>
+                </button>
+                <AnimatePresence>
+                  {mobileExpandedMenu === "capabilities" && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mb-1 ml-4 flex flex-col gap-0.5 rounded-xl border border-border bg-surface-muted/60 p-2">
+                        {mobileCapabilities.map(({ label, href }) => (
+                          <Link
+                            key={label}
+                            href={href}
+                            onClick={() => {
+                              setMobileOpen(false);
+                              setMobileExpandedMenu(null);
+                            }}
+                            className="rounded-lg px-3 py-2.5 text-[15px] font-medium text-ink/80 hover:bg-surface hover:text-ink"
+                          >
+                            {label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <div className="mt-3 border-t border-border pt-4">
                 <Link
                   href="#login"

@@ -13,7 +13,22 @@
       "Bash(npx tsc *)",
       "WebFetch(domain:upfirst.ai)",
       "Bash(curl -s \"https://upfirst.ai\")",
-      "Bash(curl -s \"https://cdn.prod.website-files.com/6756ef196c55eb0c982fd837/css/upfirst-599d67.webflow.shared.6478fae82.css\")"
+      "Bash(curl -s \"https://cdn.prod.website-files.com/6756ef196c55eb0c982fd837/css/upfirst-599d67.webflow.shared.6478fae82.css\")",
+      "Bash(cd /d/litlabs/\"Tarsha landing page\" && ls -la)",
+      "Read(//d/d/litlabs/**)",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Filter \"*.tsx\" -Include \"*nav*\", \"*Nav*\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\\\\components\\\\solutions\\\\mocks\\\\\" -File | Select-Object Name)",
+      "Bash(New-Item -ItemType Directory -Force \"d:\\\\litlabs\\\\Tarsha landing page\\\\app\\\\industries\\\\law-firms\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"d:\\\\litlabs\\\\Tarsha landing page\\\\app\\\\industries\\\\restaurants\")",
+      "Bash(Write-Host \"Directories created\")",
+      "Bash(Get-ChildItem -Path \"d:\\\\litlabs\\\\Tarsha landing page\" -Recurse -Depth 3 -Name)",
+      "WebFetch(domain:www.upfirst.ai)",
+      "WebFetch(domain:api.streamelements.com)",
+      "WebFetch(domain:api.elevenlabs.io)",
+      "WebFetch(domain:api.voicerss.org)",
+      "Bash(node scripts/download-voices.mjs)"
     ]
   }
 }

@@ -19,10 +19,10 @@ interface Resource {
 }
 
 const resources: Resource[] = [
-  { icon: FileText, label: "Blog", desc: "Tips for small business owners", href: "#" },
-  { icon: BookOpen, label: "Setup guides", desc: "Step-by-step call forwarding help", href: "#" },
-  { icon: Mic, label: "Voice library", desc: "Browse realistic AI voices", href: "#" },
-  { icon: HelpCircle, label: "Help center", desc: "Answers to common questions", href: "#" },
+  { icon: FileText, label: "Blog", desc: "Tips for small business owners", href: "/resources/blog" },
+  { icon: BookOpen, label: "Setup guides", desc: "Step-by-step call forwarding help", href: "/resources/setup-guides" },
+  { icon: Mic, label: "Voice library", desc: "Browse realistic AI voices", href: "/resources/voice-library" },
+  { icon: HelpCircle, label: "Help center", desc: "Answers to common questions", href: "/resources/help-center" },
 ];
 
 export function ResourcesMenu({ visible }: { visible: boolean }) {
@@ -82,7 +82,7 @@ export function ResourcesMenu({ visible }: { visible: boolean }) {
                 See how businesses use Tarsha AI to handle calls 24/7
               </p>
               <Link
-                href="#about"
+                href="/resources/customer-stories"
                 className="mt-2 inline-flex items-center gap-1 text-[12px] font-medium text-ink transition-colors hover:text-ink/60"
               >
                 Read more <ChevronRight className="h-3.5 w-3.5" />
