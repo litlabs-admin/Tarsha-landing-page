@@ -7,12 +7,9 @@ import type { Metadata, Viewport } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://tarsha.ai"),
   icons: {
-    icon: [
-      { url: "/assets/favicon.svg", type: "image/svg+xml" },
-      { url: "/assets/logo.png", type: "image/png" },
-    ],
+    icon: { url: "/assets/favicon.svg", type: "image/svg+xml" },
     shortcut: "/assets/favicon.svg",
-    apple: "/assets/logo.png",
+    apple: "/assets/favicon.svg",
   },
   title: {
     default: "Tarsha AI, AI receptionist that answers calls 24/7",

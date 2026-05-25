@@ -38,139 +38,139 @@ const PERSONALITY_COLORS: Record<string, { bg: string; text: string }> = {
 const voices: Voice[] = [
   {
     id: "aria",
-    name: "Aria",
+    name: "Ailsa",
     gender: "Female",
     language: "English",
-    accent: "American",
+    accent: "Glaswegian",
     personality: "Perfect for professional service businesses",
     personalityTag: "Professional",
-    sampleText: "Thank you for calling. This is Aria with Tarsha AI, I'm here to help. How can I assist you today?",
+    sampleText: "Thank you for calling. This is Ailsa with Tarsha AI, I'm here to help. How can I assist you today?",
     waveHeights: [3,5,8,12,7,14,9,16,11,8,14,6,10,13,7,5,9,12,8,4],
   },
   {
     id: "james",
-    name: "James",
+    name: "Hamish",
     gender: "Male",
     language: "English",
-    accent: "American",
+    accent: "Edinburgh",
     personality: "Approachable and trustworthy",
     personalityTag: "Warm",
-    sampleText: "Hey there! Thanks for calling. I'm James, your AI assistant. What can I help you with today?",
+    sampleText: "Hey there! Thanks for calling. I'm Hamish, your AI assistant. What can I help you with today?",
     waveHeights: [4,7,11,8,13,6,15,10,7,12,9,14,5,8,11,6,9,13,7,4],
   },
   {
     id: "sofia",
-    name: "Sofia",
+    name: "Iona",
     gender: "Female",
-    language: "Spanish / English",
-    accent: "Latin American",
-    personality: "Bilingual, English & Spanish seamlessly",
+    language: "English & Gaelic",
+    accent: "Highland",
+    personality: "Bilingual, English & Gaelic seamlessly",
     personalityTag: "Friendly",
-    sampleText: "Thank you for calling! This is Sofia. I speak both English and Spanish, how can I help you today?",
+    sampleText: "Thank you for calling! This is Iona. I can help you in English or Gaelic, how can I help you today?",
     waveHeights: [5,9,13,7,15,10,8,14,6,11,9,13,7,5,12,8,10,14,6,4],
   },
   {
     id: "marcus",
-    name: "Marcus",
+    name: "Angus",
     gender: "Male",
     language: "English",
-    accent: "American",
+    accent: "Aberdonian (Doric)",
     personality: "Commanding, authoritative, and clear",
     personalityTag: "Confident",
-    sampleText: "You've reached Tarsha AI. I'm Marcus, I can take a message or help answer your questions right now.",
+    sampleText: "You've reached Tarsha AI. I'm Angus, I can take a message or help answer your questions right now.",
     waveHeights: [6,10,14,9,12,7,15,11,8,13,6,10,14,8,5,11,9,13,7,5],
   },
   {
     id: "luna",
-    name: "Luna",
+    name: "Skye",
     gender: "Female",
     language: "English",
-    accent: "British",
+    accent: "Inverness",
     personality: "Soothing, measured, and precise",
     personalityTag: "Calm",
-    sampleText: "Good afternoon. You've reached our answering service. This is Luna, how may I assist you?",
+    sampleText: "Good afternoon. You've reached our answering service. This is Skye, how may I assist you?",
     waveHeights: [2,4,6,9,5,11,7,13,8,6,10,4,7,10,5,3,7,9,6,3],
   },
   {
     id: "diego",
-    name: "Diego",
+    name: "Fraser",
     gender: "Male",
-    language: "Spanish / English",
-    accent: "Mexican",
-    personality: "High-energy bilingual, full Spanish fluency",
+    language: "English & Gaelic",
+    accent: "Dundonian",
+    personality: "High-energy bilingual, full Gaelic fluency",
     personalityTag: "Energetic",
-    sampleText: "Hello! Thanks for calling. I'm Diego and I'm fully bilingual, English or Spanish, whatever works best for you!",
+    sampleText: "Hello! Thanks for calling. I'm Fraser and I'm fully bilingual, English or Gaelic, whatever works best for you!",
     waveHeights: [5,9,14,10,16,8,13,11,7,15,9,12,6,10,14,8,11,13,7,5],
   },
   {
     id: "emma",
-    name: "Emma",
+    name: "Eilidh",
     gender: "Female",
     language: "English",
-    accent: "Australian",
+    accent: "Ayrshire",
     personality: "Caring, warm, and genuinely helpful",
     personalityTag: "Empathetic",
-    sampleText: "Hi! Thanks so much for calling. I'm Emma, I want to make sure I get you exactly what you need today.",
+    sampleText: "Hi! Thanks so much for calling. I'm Eilidh, I want to make sure I get you exactly what you need today.",
     waveHeights: [3,6,9,7,12,8,14,10,7,11,5,9,13,7,4,8,11,9,6,3],
   },
   {
     id: "alex",
-    name: "Alex",
+    name: "Isla",
     gender: "Female",
     language: "English",
-    accent: "American",
+    accent: "Fife",
     personality: "Clean, versatile, and universally liked",
     personalityTag: "Neutral",
-    sampleText: "Thank you for calling. This is Alex, I can take a message or answer any questions you have right now.",
+    sampleText: "Thank you for calling. This is Isla, I can take a message or answer any questions you have right now.",
     waveHeights: [3,5,8,6,10,7,12,8,6,9,5,8,11,6,4,7,9,7,5,3],
   },
   {
     id: "valentina",
-    name: "Valentina",
+    name: "Mhairi",
     gender: "Female",
-    language: "Spanish",
-    accent: "Colombian",
-    personality: "Warm and personable, native Spanish speaker",
+    language: "English & Gaelic",
+    accent: "Hebridean",
+    personality: "Warm and personable, native Gaelic speaker",
     personalityTag: "Warm",
-    sampleText: "¡Hola! Gracias por llamar. Soy Valentina, estoy aquí para ayudarle. ¿En qué le puedo ayudar hoy?",
+    sampleText: "Hello! Thank you for calling, I'm Mhairi. I can help you in English or Gaelic, whatever you prefer.",
     waveHeights: [4,8,12,9,14,7,11,13,8,15,9,12,6,10,13,7,9,12,6,4],
   },
   {
     id: "noah",
-    name: "Noah",
+    name: "Euan",
     gender: "Male",
     language: "English",
-    accent: "Canadian",
+    accent: "Stirling",
     personality: "Polished, formal, and highly professional",
     personalityTag: "Professional",
-    sampleText: "Good day. Thank you for calling. I'm Noah, I'm here to help assist you or take a detailed message.",
+    sampleText: "Good day. Thank you for calling. I'm Euan, I'm here to help assist you or take a detailed message.",
     waveHeights: [4,7,11,8,13,7,14,10,7,12,8,11,5,9,12,7,10,12,7,4],
   },
   {
     id: "jordan",
-    name: "Jordan",
+    name: "Rory",
     gender: "Male",
     language: "English",
-    accent: "American",
+    accent: "Borders",
     personality: "High energy, great for fast-paced businesses",
     personalityTag: "Upbeat",
-    sampleText: "Hey! Thanks for calling, I'm Jordan, your AI assistant. What can I do for you today? I'm ready to help!",
+    sampleText: "Hey! Thanks for calling, I'm Rory, your AI assistant. What can I do for you today? I'm ready to help!",
     waveHeights: [6,10,14,11,16,9,14,12,8,15,10,13,7,11,15,9,12,14,8,5],
   },
   {
     id: "claire",
-    name: "Claire",
+    name: "Catriona",
     gender: "Female",
     language: "English",
-    accent: "American",
+    accent: "Perthshire",
     personality: "Conversational, natural, and easy to talk to",
     personalityTag: "Friendly",
-    sampleText: "Hi there! You've reached us. I'm Claire, I can take a message, answer questions, or help you get scheduled.",
+    sampleText: "Hi there! You've reached us. I'm Catriona, I can take a message, answer questions, or help you get scheduled.",
     waveHeights: [4,7,10,8,13,7,11,9,6,12,7,10,14,8,5,9,11,8,6,3],
   },
 ];
 
-const LANGUAGES = ["All", "English", "Spanish / English", "Spanish"];
+const LANGUAGES = ["All", "English", "English & Gaelic"];
 const GENDERS = ["All", "Female", "Male"];
 const PERSONALITIES = ["All", "Professional", "Friendly", "Calm", "Confident", "Warm", "Energetic", "Empathetic", "Upbeat", "Neutral"];
 
@@ -417,7 +417,7 @@ export default function VoiceLibraryPage() {
               transition={{ duration: 0.55, delay: 0.18, ease: EASE }}
               className="mx-auto mt-5 max-w-lg text-[17px] leading-relaxed text-ink-muted"
             >
-              {voices.length} professional AI voices, American, British, Australian, and bilingual Spanish. Every voice is trained for business calls, not chatbots.
+              {voices.length} professional AI voices in authentic Scottish accents, from Glasgow and Edinburgh to the Highlands and Islands, with English &amp; Gaelic options. Every voice is trained for business calls, not chatbots.
             </motion.p>
 
             {/* Stats pills */}
@@ -428,7 +428,7 @@ export default function VoiceLibraryPage() {
               className="mt-8 flex flex-wrap items-center justify-center gap-3"
             >
               {[
-                { icon: "🌎", label: "English & Spanish" },
+                { icon: "🗣️", label: "English & Gaelic" },
                 { icon: "🎙️", label: "Human-quality audio" },
                 { icon: "⚡", label: "Switch voice anytime" },
                 { icon: "✦", label: "Free with any plan" },
@@ -587,9 +587,9 @@ export default function VoiceLibraryPage() {
                   body: "Change your AI voice instantly from your dashboard. Your callers will notice the quality, not the switch.",
                 },
                 {
-                  icon: "🌎",
-                  title: "True bilingual",
-                  body: "Our Spanish voices are native speakers, not translated. Callers immediately feel at home.",
+                  icon: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+                  title: "Authentically Scottish",
+                  body: "Real accents from across Scotland, never generic. Your callers immediately feel at home.",
                 },
                 {
                   icon: "✦",
@@ -630,7 +630,7 @@ export default function VoiceLibraryPage() {
                 <span className="text-accent">proud of</span>.
               </h2>
               <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed text-white/60">
-                Every Tarsha plan includes full access to the voice library. Try any voice free for 14 days.
+                Every Tarsha plan includes full access to the voice library, every Scottish accent, ready to go.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <a

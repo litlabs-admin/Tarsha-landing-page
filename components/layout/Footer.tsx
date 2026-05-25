@@ -81,7 +81,7 @@ export function Footer() {
                 <TarshaLogo
                   variant="wordmark"
                   wordmarkStyle="allura"
-                  byline="BY ROSWELLIT"
+                  byline="BY ROSWELL IT"
                   theme="dark"
                   size="lg"
                 />

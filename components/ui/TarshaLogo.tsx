@@ -41,7 +41,7 @@ interface SubProps {
 
 const ICON_PX:      Record<Size, number> = { sm: 28,          md: 36,          lg: 48          };
 const TEXT_CLASS:   Record<Size, string> = { sm: "text-[15px]", md: "text-[20px]", lg: "text-[27px]" };
-const BYLINE_CLASS: Record<Size, string> = { sm: "text-[10px]", md: "text-[11px]", lg: "text-[13px]" };
+const BYLINE_CLASS: Record<Size, string> = { sm: "text-[6px]", md: "text-[7px]", lg: "text-[8px]" };
 
 // ─── Root component ───────────────────────────────────────────────────────────
 
@@ -79,7 +79,7 @@ export function TarshaLogo({
         <span
           aria-hidden
           className={cn(
-            "h-5 w-px shrink-0",
+            "h-3.5 w-px shrink-0",
             theme === "dark" ? "bg-white/20" : "bg-ink/15",
           )}
         />
