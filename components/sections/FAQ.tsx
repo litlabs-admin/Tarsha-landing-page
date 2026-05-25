@@ -24,7 +24,7 @@ const faqs: FAQItem[] = [
   {
     question: "How can Tarsha AI help my business avoid missed calls?",
     answer:
-      "Tarsha AI answers every call instantly — even after business hours — so potential customers never reach voicemail. This helps businesses capture more leads and prevent lost revenue from unanswered calls.",
+      "Tarsha AI answers every call instantly, even after business hours, so potential customers never reach voicemail. This helps businesses capture more leads and prevent lost revenue from unanswered calls.",
   },
   {
     question: "Can Tarsha AI book appointments automatically?",
@@ -49,7 +49,7 @@ const faqs: FAQItem[] = [
   },
 ];
 
-// FAQPage schema — read by Google, Bing, and AI overviews (ChatGPT/Perplexity).
+// FAQPage schema, read by Google, Bing, and AI overviews (ChatGPT/Perplexity).
 // Helps the FAQ surface in SERP rich results and in generative search answers.
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -66,7 +66,7 @@ const faqJsonLd = {
 
 export function FAQ() {
   // Single-active hover-to-expand (mirrors the Why Tarsha BenefitRow pattern).
-  // First row is open by default — gives crawlers an above-the-fold answer.
+  // First row is open by default, gives crawlers an above-the-fold answer.
   const [activeIndex, setActiveIndex] = useState<number>(-1);
 
   return (
@@ -75,7 +75,7 @@ export function FAQ() {
       aria-labelledby="faq-heading"
       className="relative isolate overflow-hidden bg-surface-muted/60 py-16 md:py-20"
     >
-      {/* Structured data — picked up by search engines + AI summarizers */}
+      {/* Structured data, picked up by search engines + AI summarizers */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -85,7 +85,7 @@ export function FAQ() {
 
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-20">
-          {/* Left — sticky on desktop so the heading stays in view while scrolling answers */}
+          {/* Left, sticky on desktop so the heading stays in view while scrolling answers */}
           <div className="lg:sticky lg:top-24 lg:self-start lg:pt-2 text-center lg:text-left">
             <ScrollReveal y={16} duration={0.7}>
               <Eyebrow asPill className="mb-6">
@@ -132,7 +132,7 @@ export function FAQ() {
             </ScrollReveal>
           </div>
 
-          {/* Right — accordion */}
+          {/* Right, accordion */}
           <div>
             <ul
               className="flex flex-col"
@@ -227,7 +227,7 @@ function FAQRow({
           {numberLabel}
         </span>
 
-        {/* Question — h3 for SEO + outline structure */}
+        {/* Question, h3 for SEO + outline structure */}
         <h3
           className={cn(
             "flex-1 font-display text-[17px] font-semibold tracking-[-0.01em] leading-snug transition-colors duration-300 md:text-[19px]",
@@ -253,7 +253,7 @@ function FAQRow({
         </motion.span>
       </button>
 
-      {/* Answer panel — always in DOM (grid trick collapses height), so SEO + GEO crawlers always see the text */}
+      {/* Answer panel, always in DOM (grid trick collapses height), so SEO + GEO crawlers always see the text */}
       <motion.div
         id={panelId}
         role="region"

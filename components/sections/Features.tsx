@@ -30,7 +30,7 @@ const features: Feature[] = [
   {
     icon: PencilLine,
     title: "Take messages",
-    body: "Choose exactly which details it captures from every caller — it lands in your inbox or as a text the moment the call ends.",
+    body: "Choose exactly which details it captures from every caller, it lands in your inbox or as a text the moment the call ends.",
     side: "left",
     position: "top",
   },
@@ -44,7 +44,7 @@ const features: Feature[] = [
   {
     icon: MessageSquareText,
     title: "Answer questions",
-    body: "Train it on the questions your business hears every day so customers get instant, accurate answers — no waiting, no hold music.",
+    body: "Train it on the questions your business hears every day so customers get instant, accurate answers, no waiting, no hold music.",
     side: "left",
     position: "bottom",
   },
@@ -85,14 +85,14 @@ export function Features() {
           <ScrollReveal y={16} duration={0.8} delay={0.15} amount={0.3}>
             <p className="mt-5 max-w-xl text-balance text-[17px] leading-[1.7] text-ink-muted md:text-[18px]">
               Every call is captured, routed, and handled like your best
-              employee answered — only faster, friendlier, and always on.
+              employee answered, only faster, friendlier, and always on.
             </p>
           </ScrollReveal>
         </div>
 
         {/* Grid: left cards | phone | right cards */}
         <div className="relative mt-16 grid grid-cols-1 gap-10 md:mt-20 lg:grid-cols-[1fr_minmax(280px,360px)_1fr] lg:gap-x-12 lg:gap-y-16">
-          {/* Left column (desktop) — top & bottom features */}
+          {/* Left column (desktop), top & bottom features */}
           <div className="order-2 flex flex-col gap-12 lg:order-1 lg:gap-20 lg:pt-8">
             {features
               .filter((f) => f.side === "left")
@@ -106,12 +106,12 @@ export function Features() {
               ))}
           </div>
 
-          {/* Phone — center */}
+          {/* Phone, center */}
           <div className="order-1 flex items-center justify-center lg:order-2">
             <PhoneShowcase />
           </div>
 
-          {/* Right column (desktop) — top & bottom features */}
+          {/* Right column (desktop), top & bottom features */}
           <div className="order-3 flex flex-col gap-12 lg:gap-20 lg:pt-8">
             {features
               .filter((f) => f.side === "right")

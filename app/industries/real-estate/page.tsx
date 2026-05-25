@@ -277,7 +277,7 @@ function MockAfterHoursRE() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Buyers call at the worst moments — when I'm in a showing, in a closing, driving between properties. Tarsha answers everything, schedules viewings into my calendar, and sends me a clean lead summary. I've closed three deals from leads that came in past 9 PM.",
+      "Buyers call at the worst moments, when I'm in a showing, in a closing, driving between properties. Tarsha answers everything, schedules viewings into my calendar, and sends me a clean lead summary. I've closed three deals from leads that came in past 9 PM.",
     author: "Kevin O.",
     role: "Senior Agent",
     company: "Pinnacle Realty Group",
@@ -293,7 +293,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Rental inquiries come in around the clock, especially for popular listings. Tarsha qualifies renters — budget, move-in date, pets, parking — before I even call back. I spend my time on qualified leads, not screening calls.",
+      "Rental inquiries come in around the clock, especially for popular listings. Tarsha qualifies renters, budget, move-in date, pets, parking, before I even call back. I spend my time on qualified leads, not screening calls.",
     author: "Eric B.",
     role: "Property Investor",
     company: "BrightPath Rentals",
@@ -305,19 +305,19 @@ const steps = [
   {
     title: "Inquiry captured within 2 seconds",
     description:
-      "Every buyer and renter call is answered instantly — with your name, professional tone, and the caller's full contact details captured before you know they called.",
+      "Every buyer and renter call is answered instantly, with your name, professional tone, and the caller's full contact details captured before you know they called.",
     Illustration: IllusStep1RealEstate,
   },
   {
     title: "Lead qualified automatically",
     description:
-      "Tarsha asks the right questions — budget, timeline, pre-approval status, property preferences — and scores each lead so you always call back the hottest ones first.",
+      "Tarsha asks the right questions, budget, timeline, pre-approval status, property preferences, and scores each lead so you always call back the hottest ones first.",
     Illustration: IllusStep2RealEstate,
   },
   {
     title: "Showing scheduled before they hang up",
     description:
-      "If a caller wants to see a property, Tarsha checks your availability and locks in the showing before the call ends — confirmation to the buyer, calendar event to you.",
+      "If a caller wants to see a property, Tarsha checks your availability and locks in the showing before the call ends, confirmation to the buyer, calendar event to you.",
     Illustration: IllusStep3RealEstate,
   },
 ];
@@ -327,7 +327,7 @@ const benefits: Benefit[] = [
     icon: UserCheck,
     title: "Instant lead qualification",
     description:
-      "Budget, timeline, pre-approval, property type — Tarsha asks and scores automatically. You always know which leads to call back first.",
+      "Budget, timeline, pre-approval, property type, Tarsha asks and scores automatically. You always know which leads to call back first.",
     MockUI: MockLeadScore,
     wide: true,
   },
@@ -349,7 +349,7 @@ const benefits: Benefit[] = [
     icon: Clock,
     title: "24/7 inquiry capture",
     description:
-      "Evening and weekend buyers are your best leads — they're actively looking. Tarsha captures and qualifies every one while you sleep.",
+      "Evening and weekend buyers are your best leads, they're actively looking. Tarsha captures and qualifies every one while you sleep.",
     MockUI: MockAfterHoursRE,
     wide: true,
   },
@@ -381,7 +381,7 @@ export default function RealEstatePage() {
           eyebrow="Real Estate"
           titleBefore="Never miss a "
           titleHighlight="showing request"
-          subtitle="Tarsha AI captures every buyer and renter inquiry, schedules showings directly into your calendar, and qualifies leads 24/7 — so you wake up with a full schedule, not a list of missed calls."
+          subtitle="Tarsha AI captures every buyer and renter inquiry, schedules showings directly into your calendar, and qualifies leads 24/7, so you wake up with a full schedule, not a list of missed calls."
           MockUI={MockRealEstateShowing}
         />
         <SolutionTestimonials
@@ -390,10 +390,10 @@ export default function RealEstatePage() {
         />
         <SolutionIntro
           eyebrow="The problem"
-          heading="In real estate, speed wins — missed calls lose deals"
+          heading="In real estate, speed wins, missed calls lose deals"
           paragraphs={[
-            "Buyers and renters move fast. If they call about a listing and go to voicemail, they call the next agent. In a competitive market, a missed call isn't just a missed conversation — it's a missed deal. And the next agent answers within seconds.",
-            "Tarsha AI answers every inquiry instantly, qualifies leads with the right questions, and schedules showings directly into your calendar — around the clock. You get a prioritized summary of every lead before you even call back. No more racing to return calls. No more lost opportunities.",
+            "Buyers and renters move fast. If they call about a listing and go to voicemail, they call the next agent. In a competitive market, a missed call isn't just a missed conversation, it's a missed deal. And the next agent answers within seconds.",
+            "Tarsha AI answers every inquiry instantly, qualifies leads with the right questions, and schedules showings directly into your calendar, around the clock. You get a prioritized summary of every lead before you even call back. No more racing to return calls. No more lost opportunities.",
           ]}
           Illustration={IllusIntroRealEstate}
         />

@@ -63,7 +63,7 @@ export function MockBookingCalendar() {
         <div className="flex items-center gap-2">
           <span className="text-[18px]">✓</span>
           <div>
-            <p className="text-[13px] font-semibold text-ink">Thu Jun 19 · 2:00 PM — confirmed</p>
+            <p className="text-[13px] font-semibold text-ink">Thu Jun 19 · 2:00 PM, confirmed</p>
             <p className="mt-0.5 text-[12px] text-ink-muted">
               Calendar invite sent · Reminder 1 hr before
             </p>

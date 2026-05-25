@@ -290,7 +290,7 @@ function MockLangRoadmap() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Over 40% of our customers are Spanish speakers. Before Tarsha, they'd hang up because no one could help them. Now every Spanish-speaking caller gets the same service as everyone else — they actually comment on how impressed they are.",
+      "Over 40% of our customers are Spanish speakers. Before Tarsha, they'd hang up because no one could help them. Now every Spanish-speaking caller gets the same service as everyone else, they actually comment on how impressed they are.",
     author: "Maria G.",
     role: "Owner",
     company: "Casa Verde Restaurant",
@@ -298,7 +298,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Our practice has a large Hispanic patient base. Bilingual staff are hard to find and expensive. Tarsha handles Spanish calls perfectly — appointment booking, FAQs, everything — without us needing to hire anyone additional.",
+      "Our practice has a large Hispanic patient base. Bilingual staff are hard to find and expensive. Tarsha handles Spanish calls perfectly, appointment booking, FAQs, everything, without us needing to hire anyone additional.",
     author: "Dr. Carlos R.",
     role: "Practice Director",
     company: "Sunrise Family Health",
@@ -306,7 +306,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Many of our tenants speak Spanish as a first language. Maintenance requests, lease questions, payment issues — they used to need a translator. Tarsha handles all of it fluently and routes correctly. Tenant satisfaction is up significantly.",
+      "Many of our tenants speak Spanish as a first language. Maintenance requests, lease questions, payment issues, they used to need a translator. Tarsha handles all of it fluently and routes correctly. Tenant satisfaction is up significantly.",
     author: "Elena M.",
     role: "Operations Manager",
     company: "Vista Property Group",
@@ -316,21 +316,21 @@ const testimonials: TestimonialItem[] = [
 
 const steps = [
   {
-    title: "Caller speaks — Tarsha listens",
+    title: "Caller speaks, Tarsha listens",
     description:
-      "Within the first sentence, Tarsha detects whether the caller is speaking English or Spanish and responds immediately in the same language — no prompts, no menus, no awkward pauses.",
+      "Within the first sentence, Tarsha detects whether the caller is speaking English or Spanish and responds immediately in the same language, no prompts, no menus, no awkward pauses.",
     Illustration: IllusLangDetect,
   },
   {
     title: "Natural conversation, their language",
     description:
-      "Tarsha holds a fully natural conversation in the caller's language — answering questions, booking appointments, qualifying leads, and routing calls — exactly as it would in English.",
+      "Tarsha holds a fully natural conversation in the caller's language, answering questions, booking appointments, qualifying leads, and routing calls, exactly as it would in English.",
     Illustration: IllusLangSwitch,
   },
   {
     title: "Same outcome, every time",
     description:
-      "Every caller gets the same result regardless of language. Bookings confirmed, questions answered, leads captured — and you receive the same clean summary, in English.",
+      "Every caller gets the same result regardless of language. Bookings confirmed, questions answered, leads captured, and you receive the same clean summary, in English.",
     Illustration: IllusLangResult,
   },
 ];
@@ -340,7 +340,7 @@ const benefits: Benefit[] = [
     icon: Languages,
     title: "Auto language detection",
     description:
-      "Identifies the caller's language from the first sentence. No 'press 1 for English' — just a seamless, natural experience from the first word.",
+      "Identifies the caller's language from the first sentence. No 'press 1 for English', just a seamless, natural experience from the first word.",
     MockUI: MockAutoDetect,
     wide: true,
   },
@@ -348,7 +348,7 @@ const benefits: Benefit[] = [
     icon: MessageCircle,
     title: "Native fluency in English & Spanish",
     description:
-      "Not translated in real time — natively trained in both languages with natural phrasing, correct idioms, and the right professional tone.",
+      "Not translated in real time, natively trained in both languages with natural phrasing, correct idioms, and the right professional tone.",
     MockUI: MockFluency,
   },
   {
@@ -362,7 +362,7 @@ const benefits: Benefit[] = [
     icon: Globe,
     title: "More languages coming",
     description:
-      "English and Spanish are live. French, Portuguese, and Mandarin are in development — giving you coverage across the widest possible customer base.",
+      "English and Spanish are live. French, Portuguese, and Mandarin are in development, giving you coverage across the widest possible customer base.",
     MockUI: MockLangRoadmap,
     wide: true,
   },
@@ -394,7 +394,7 @@ export default function BilingualAnsweringPage() {
           eyebrow="Bilingual Answering"
           titleBefore="Every caller feels at home, "
           titleHighlight="in any language"
-          subtitle="Tarsha AI speaks English and Spanish natively — detecting the caller's language from the first word and switching automatically. Every caller gets the same warm, professional experience, 24/7."
+          subtitle="Tarsha AI speaks English and Spanish natively, detecting the caller's language from the first word and switching automatically. Every caller gets the same warm, professional experience, 24/7."
           MockUI={MockBilingualCall}
         />
         <SolutionTestimonials
@@ -405,8 +405,8 @@ export default function BilingualAnsweringPage() {
           eyebrow="The problem"
           heading="Language barriers cost you customers"
           paragraphs={[
-            "When a Spanish-speaking caller reaches an English-only business, they don't wait — they hang up and call someone else. For businesses in diverse markets, this isn't an edge case. It's a consistent gap in service that costs real revenue.",
-            "Tarsha AI detects language from the very first word and responds naturally — no menu selection, no awkward pauses, no putting callers on hold to find someone bilingual. The same professional experience, in the caller's language, every single time.",
+            "When a Spanish-speaking caller reaches an English-only business, they don't wait, they hang up and call someone else. For businesses in diverse markets, this isn't an edge case. It's a consistent gap in service that costs real revenue.",
+            "Tarsha AI detects language from the very first word and responds naturally, no menu selection, no awkward pauses, no putting callers on hold to find someone bilingual. The same professional experience, in the caller's language, every single time.",
           ]}
           Illustration={IllusIntroBilingualProblem}
         />
@@ -424,7 +424,7 @@ export default function BilingualAnsweringPage() {
           heading="Built for any business serving a diverse community"
           industries={industries}
         />
-        <SolutionCTA heading="Speak every customer's language — starting today." />
+        <SolutionCTA heading="Speak every customer's language, starting today." />
       </main>
       <Footer />
     </>

@@ -115,7 +115,7 @@ const categories = [
 const faqs = [
   {
     q: "Does Tarsha really pick up within 2 seconds?",
-    a: "Yes — our average answer time is under 1.8 seconds. Your callers will never hear more than two rings before Tarsha picks up, 24 hours a day, 365 days a year.",
+    a: "Yes, our average answer time is under 1.8 seconds. Your callers will never hear more than two rings before Tarsha picks up, 24 hours a day, 365 days a year.",
   },
   {
     q: "Do I need any special equipment or tech skills?",
@@ -123,7 +123,7 @@ const faqs = [
   },
   {
     q: "Can Tarsha book appointments directly?",
-    a: "Yes — Tarsha can offer available slots, confirm appointments, and sync with Google Calendar. You can define your availability and it will only offer times you've approved.",
+    a: "Yes, Tarsha can offer available slots, confirm appointments, and sync with Google Calendar. You can define your availability and it will only offer times you've approved.",
   },
   {
     q: "What happens to my existing phone number?",
@@ -135,7 +135,7 @@ const faqs = [
   },
   {
     q: "How does the 14-day free trial work?",
-    a: "Sign up, complete setup, and forward your calls. For 14 days you get full access to every feature — no credit card required. If you love it, stay. If not, walk away.",
+    a: "Sign up, complete setup, and forward your calls. For 14 days you get full access to every feature, no credit card required. If you love it, stay. If not, walk away.",
   },
 ];
 

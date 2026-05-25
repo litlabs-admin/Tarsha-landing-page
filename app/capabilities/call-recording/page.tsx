@@ -83,7 +83,7 @@ function IllusStep2Recording() {
       <div className="rounded-xl border border-border bg-surface p-3.5">
         <p className="text-[12px] leading-relaxed text-ink">
           "I wanted to follow up on the{" "}
-          <span className="font-semibold text-ink">quote</span> we discussed — can we finalize it
+          <span className="font-semibold text-ink">quote</span> we discussed, can we finalize it
           by <span className="font-semibold text-ink">Friday</span>?"
         </p>
       </div>
@@ -327,7 +327,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Training new agents used to be slow. Now I share recordings of our best calls — real examples of how to handle objections, close a booking, resolve a complaint. Our new hires ramp 40% faster because they're learning from actual calls, not role-plays.",
+      "Training new agents used to be slow. Now I share recordings of our best calls, real examples of how to handle objections, close a booking, resolve a complaint. Our new hires ramp 40% faster because they're learning from actual calls, not role-plays.",
     author: "Monica R.",
     role: "Customer Success Lead",
     company: "Apex Insurance Group",
@@ -347,7 +347,7 @@ const steps = [
   {
     title: "Every call recorded automatically",
     description:
-      "Recording starts the moment a call connects — no activation needed, no manual steps. Every conversation is captured end-to-end and stored immediately.",
+      "Recording starts the moment a call connects, no activation needed, no manual steps. Every conversation is captured end-to-end and stored immediately.",
     Illustration: IllusStep1Recording,
   },
   {
@@ -359,7 +359,7 @@ const steps = [
   {
     title: "Organized library, always accessible",
     description:
-      "Your entire call history is organized by date, caller, and topic. Access any recording or transcript in seconds — from anywhere, on any device.",
+      "Your entire call history is organized by date, caller, and topic. Access any recording or transcript in seconds, from anywhere, on any device.",
     Illustration: IllusStep3Recording,
   },
 ];
@@ -377,7 +377,7 @@ const benefits: Benefit[] = [
     icon: Search,
     title: "Searchable by keyword",
     description:
-      "Find any call by what was said — not just who called. Search across your entire history in seconds.",
+      "Find any call by what was said, not just who called. Search across your entire history in seconds.",
     MockUI: MockSearchRecordings,
   },
   {
@@ -391,7 +391,7 @@ const benefits: Benefit[] = [
     icon: BarChart3,
     title: "Team training library",
     description:
-      "Share recordings with your team for onboarding, coaching, and quality review — real calls, not role-plays.",
+      "Share recordings with your team for onboarding, coaching, and quality review, real calls, not role-plays.",
     MockUI: MockTeamReview,
     wide: true,
   },
@@ -423,7 +423,7 @@ export default function CallRecordingPage() {
           eyebrow="Call Recording"
           titleBefore="Every conversation "
           titleHighlight="on record"
-          subtitle="Tarsha AI records every call and pairs it with a full transcript — searchable, organized, and accessible whenever you need to verify a detail, train a team member, or resolve a dispute."
+          subtitle="Tarsha AI records every call and pairs it with a full transcript, searchable, organized, and accessible whenever you need to verify a detail, train a team member, or resolve a dispute."
           MockUI={MockCallRecording}
         />
         <SolutionTestimonials
@@ -432,9 +432,9 @@ export default function CallRecordingPage() {
         />
         <SolutionIntro
           eyebrow="The capability"
-          heading="The most useful business conversations aren't written down — but they should be"
+          heading="The most useful business conversations aren't written down, but they should be"
           paragraphs={[
-            "Most critical business conversations happen on the phone — quotes accepted, commitments made, details agreed. But unless someone is taking perfect notes, the details fade. When there's a dispute, a question, or a training opportunity, the recording is the only source of truth.",
+            "Most critical business conversations happen on the phone, quotes accepted, commitments made, details agreed. But unless someone is taking perfect notes, the details fade. When there's a dispute, a question, or a training opportunity, the recording is the only source of truth.",
             "Tarsha AI records every call and pairs it with a full, searchable transcript. Your entire call history is organized, instantly accessible, and protected. Review a call in the car. Train a new hire with a real example. Resolve a dispute in minutes.",
           ]}
           Illustration={IllusIntroCallRecording}

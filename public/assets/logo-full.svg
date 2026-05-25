@@ -1,0 +1,33 @@
+<svg width="300" height="88" viewBox="0 0 300 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    tarsha.ai — full wordmark with byline
+    Colors: #18130A ink · #FFD000 accent · #4A3C10 ink-muted · #7A6420 ink-faint
+    Font: Satoshi (700 / 400) with Inter fallback
+  -->
+
+  <!-- Primary wordmark -->
+  <text
+    x="150"
+    y="50"
+    text-anchor="middle"
+    font-family="'Satoshi', 'Inter', ui-sans-serif, system-ui, sans-serif"
+    font-size="42"
+  >
+    <tspan font-weight="700" fill="#18130A" letter-spacing="-1.4">tarsha</tspan><tspan fill="#FFD000" font-weight="700" letter-spacing="-1">.</tspan><tspan fill="#4A3C10" font-weight="400" letter-spacing="-1.4">ai</tspan>
+  </text>
+
+  <!-- Hairline separator -->
+  <rect x="96" y="63" width="108" height="0.75" rx="0.375" fill="#EAD870"/>
+
+  <!-- Attribution -->
+  <text
+    x="150"
+    y="79"
+    text-anchor="middle"
+    font-family="'Inter', ui-sans-serif, system-ui, sans-serif"
+    font-size="9"
+    font-weight="500"
+    letter-spacing="3"
+    fill="#7A6420"
+  >BY ROSWELL</text>
+</svg>

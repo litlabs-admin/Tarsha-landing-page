@@ -26,7 +26,7 @@ const articles: ArticleCardData[] = [
     category: "Call Management",
     categoryColor: CATEGORY_COLORS["Call Management"],
     title: "The True Cost of a Missed Call (And How to Stop Losing Them)",
-    excerpt: "Most small businesses underestimate what a missed call actually costs. When you factor in lost revenue, repeat dials, and competitor defection, the number is sobering — here's how to fix it.",
+    excerpt: "Most small businesses underestimate what a missed call actually costs. When you factor in lost revenue, repeat dials, and competitor defection, the number is sobering, here's how to fix it.",
     imageUrl: "https://picsum.photos/seed/missed-call/800/450",
     authorName: "Sarah Chen",
     authorAvatar: "https://i.pravatar.cc/150?img=47",
@@ -62,7 +62,7 @@ const articles: ArticleCardData[] = [
     category: "Guides",
     categoryColor: CATEGORY_COLORS["Guides"],
     title: "Call Forwarding 101: Setting It Up the Right Way",
-    excerpt: "A step-by-step walkthrough for every major carrier — AT&T, Verizon, T-Mobile, and VoIP providers. Get your calls routing to Tarsha AI in under 10 minutes.",
+    excerpt: "A step-by-step walkthrough for every major carrier, AT&T, Verizon, T-Mobile, and VoIP providers. Get your calls routing to Tarsha AI in under 10 minutes.",
     imageUrl: "https://picsum.photos/seed/call-forwarding/800/450",
     authorName: "Dev Team",
     authorAvatar: "https://i.pravatar.cc/150?img=53",
@@ -74,7 +74,7 @@ const articles: ArticleCardData[] = [
     category: "AI & Technology",
     categoryColor: CATEGORY_COLORS["AI & Technology"],
     title: "AI vs. Human Receptionists: What's Right for Your Business?",
-    excerpt: "We ran the numbers on cost, availability, accuracy, and caller experience. The results may surprise you — and the right answer depends heavily on your call volume and budget.",
+    excerpt: "We ran the numbers on cost, availability, accuracy, and caller experience. The results may surprise you, and the right answer depends heavily on your call volume and budget.",
     imageUrl: "https://picsum.photos/seed/ai-receptionist/800/450",
     authorName: "Sarah Chen",
     authorAvatar: "https://i.pravatar.cc/150?img=47",
@@ -86,7 +86,7 @@ const articles: ArticleCardData[] = [
     category: "Call Management",
     categoryColor: CATEGORY_COLORS["Call Management"],
     title: "The 5 Types of Calls Every Small Business Gets (And How to Handle Each)",
-    excerpt: "New leads, existing clients, vendors, solicitors, and wrong numbers — each needs a different response. Here's how Tarsha AI handles them all so you don't have to.",
+    excerpt: "New leads, existing clients, vendors, solicitors, and wrong numbers, each needs a different response. Here's how Tarsha AI handles them all so you don't have to.",
     imageUrl: "https://picsum.photos/seed/call-types/800/450",
     authorName: "Marcus Bell",
     authorAvatar: "https://i.pravatar.cc/150?img=15",
@@ -220,7 +220,7 @@ export default function BlogPage() {
               transition={{ duration: 0.55, delay: 0.18, ease: EASE }}
               className="mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-ink-muted"
             >
-              Actionable advice on call management, AI phone answering, and growing the businesses that run on relationships — not algorithms.
+              Actionable advice on call management, AI phone answering, and growing the businesses that run on relationships, not algorithms.
             </motion.p>
           </div>
         </section>
@@ -282,7 +282,7 @@ export default function BlogPage() {
               animate={{ opacity: 1 }}
               className="py-20 text-center text-[15px] text-ink-muted"
             >
-              No articles in this category yet — check back soon.
+              No articles in this category yet, check back soon.
             </motion.p>
           )}
         </section>

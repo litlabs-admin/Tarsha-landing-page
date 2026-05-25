@@ -64,7 +64,7 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative isolate overflow-hidden bg-surface-muted pt-20 md:pt-24 lg:pt-28 pb-10 md:pb-12"
     >
-      {/* Ambient backdrop — soft conic gradient + grid */}
+      {/* Ambient backdrop, soft conic gradient + grid */}
       <BackdropOrnaments />
 
       <Container className="relative">
@@ -74,12 +74,14 @@ export function Hero() {
           animate="show"
           className="flex flex-col items-center text-center"
         >
+          {/* Hidden for now
           <motion.div variants={itemVariants}>
             <Eyebrow asPill>
               <span className="text-ink-muted">Call our AI receptionist · </span>
               <span className="font-semibold text-ink">{brand.phoneDisplay}</span>
             </Eyebrow>
           </motion.div>
+          */}
 
           <motion.h1
             id="hero-heading"
@@ -127,10 +129,13 @@ export function Hero() {
             variants={itemVariants}
             className="mt-10 flex flex-row items-center justify-center gap-3"
           >
-            <Button size="md" variant="primary" className="sm:h-12 sm:px-6 sm:text-[15px]">
-              Get started free
-            </Button>
-            <Button size="md" variant="ghost" icon="arrow" className="border border-border sm:h-12 sm:px-6 sm:text-[15px]">
+            <Button
+              size="md"
+              variant="primary"
+              icon="arrow"
+              href={brand.bookDemoUrl}
+              className="sm:h-12 sm:px-6 sm:text-[15px]"
+            >
               Book a demo
             </Button>
           </motion.div>

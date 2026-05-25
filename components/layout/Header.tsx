@@ -3,7 +3,8 @@
 import { ResourcesMenu } from "@/components/nav/ResourcesMenu";
 import { SolutionsMenu } from "@/components/nav/SolutionsMenu";
 import { Button } from "@/components/ui/Button";
-import { assets, brand } from "@/lib/assets";
+import { TarshaLogo } from "@/components/ui/TarshaLogo";
+import { brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import {
   AnimatePresence,
@@ -14,7 +15,6 @@ import {
   type MotionValue,
 } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type RefObject } from "react";
 
@@ -94,7 +94,7 @@ function MenuNavItem({
       onMouseEnter={() => openMenu(item.menuId!)}
       onMouseLeave={scheduleClose}
     >
-      {/* Only the link scales — dropdown stays at full size */}
+      {/* Only the link scales, dropdown stays at full size */}
       <motion.div style={{ scale }}>
         <Link
           href={item.href}
@@ -277,31 +277,21 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 focus-ring rounded-md"
+          className="focus-ring rounded-md"
           aria-label={`${brand.name} home`}
         >
-          <Image
-            src={assets.logo}
-            alt=""
-            width={32}
-            height={32}
-            priority
-            className={cn(
-              "object-contain transition-all duration-300",
-              scrolled ? "h-7 w-7" : "h-8 w-8",
-            )}
+          <TarshaLogo
+            variant="wordmark"
+            wordmarkStyle="allura"
+            byline="BY ROSWELLIT"
+            bylineClassName="hidden sm:flex"
+            theme="light"
+            size={scrolled ? "md" : "lg"}
+            className="transition-all duration-300"
           />
-          <span
-            className={cn(
-              "font-display font-semibold tracking-tight text-ink transition-all duration-300",
-              scrolled ? "text-[18px]" : "text-[20px]",
-            )}
-          >
-            {brand.name}
-          </span>
         </Link>
 
-        {/* Desktop nav — dock magnification applied here */}
+        {/* Desktop nav, dock magnification applied here */}
         <nav
           className="hidden md:flex items-center gap-1"
           onMouseMove={(e) => mouseX.set(e.clientX)}
@@ -323,23 +313,17 @@ export function Header() {
           )}
         </nav>
 
-        {/* CTA buttons — desktop */}
+        {/* CTA button, desktop */}
         <div className="hidden md:flex items-center gap-2">
-          <Link
-            href="#login"
-            className="rounded-lg px-3.5 py-2 text-[14px] font-medium text-ink/80 transition-colors hover:bg-ink/5 hover:text-ink"
-          >
-            Login
-          </Link>
-          <Button size="sm" variant="primary">
-            Try for free
+          <Button size="sm" variant="primary" href={brand.bookDemoUrl}>
+            Book a demo
           </Button>
         </div>
 
-        {/* Mobile: Try for free + hamburger */}
+        {/* Mobile: Book a demo + hamburger */}
         <div className="md:hidden flex items-center gap-2">
-          <Button size="sm" variant="primary">
-            Try for free
+          <Button size="sm" variant="primary" href={brand.bookDemoUrl}>
+            Book a demo
           </Button>
           <button
             onClick={() => setMobileOpen((v) => !v)}
@@ -356,7 +340,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile menu — full-height scrollable overlay */}
+      {/* Mobile menu, full-height scrollable overlay */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -417,15 +401,17 @@ export function Header() {
                 onNavigate={() => { setMobileOpen(false); setMobileExpandedMenu(null); }}
               />
 
-              {/* Divider + Login */}
+              {/* Divider + Book a demo */}
               <div className="mt-3 border-t border-border pt-3 pb-6">
-                <Link
-                  href="#login"
+                <Button
+                  href={brand.bookDemoUrl}
+                  variant="primary"
+                  size="md"
                   onClick={() => setMobileOpen(false)}
-                  className="flex w-full items-center justify-center rounded-xl border border-border bg-surface px-4 py-3.5 text-[16px] font-medium text-ink/80 hover:bg-surface-muted"
+                  className="w-full"
                 >
-                  Login
-                </Link>
+                  Book a demo
+                </Button>
               </div>
             </div>
           </motion.div>

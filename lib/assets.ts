@@ -1,5 +1,4 @@
 export const assets = {
-  logo: "/assets/logo.png",
   heroProduct: "/assets/hero-product.webp",
   featurePhone: "/assets/feature-phone.webp",
   oldWayVideo: "/assets/old-way.mp4",
@@ -15,4 +14,5 @@ export const brand = {
   tagline: "AI receptionist for small businesses",
   phone: "(833) 827-7421",
   phoneDisplay: "(833) TARSHA-1",
+  bookDemoUrl: "https://cal.com/vandan-mandloi/30min?user=vandan-mandloi",
 } as const;

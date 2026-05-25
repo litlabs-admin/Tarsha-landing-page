@@ -22,6 +22,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-satoshi)", "ui-sans-serif", "system-ui"],
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        allura: ["var(--font-allura)", "cursive"],
       },
       letterSpacing: {
         tightest: "-0.04em",

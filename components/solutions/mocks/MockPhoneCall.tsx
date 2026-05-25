@@ -13,7 +13,7 @@ const lines = [
   { speaker: "Caller", text: "It's Michael Reed, (619) 555-0182." },
   {
     speaker: "Tarsha AI",
-    text: "Got it. I've noted everything — someone from the team will follow up shortly.",
+    text: "Got it. I've noted everything, someone from the team will follow up shortly.",
   },
 ];
 

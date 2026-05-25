@@ -7,7 +7,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const messages = [
   { text: "Hi! Are you open for appointments this week?", side: "left" as const },
   { text: "Hi! Yes, we have availability. Are you a new or returning client?", side: "right" as const },
-  { text: "New client — I'd like a consultation please", side: "left" as const },
+  { text: "New client, I'd like a consultation please", side: "left" as const },
   {
     text: "Great! I have Thursday 2:00 PM or Friday 10:30 AM available. Which works better?",
     side: "right" as const,

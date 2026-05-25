@@ -54,7 +54,7 @@ function IllusStep1LawFirm() {
 function IllusStep2LawFirm() {
   const fields = [
     { label: "Caller", value: "Claire Anderson" },
-    { label: "Matter type", value: "Family law — divorce" },
+    { label: "Matter type", value: "Family law, divorce" },
     { label: "Urgency", value: "Initial consultation" },
     { label: "Best time", value: "Mornings" },
   ];
@@ -156,7 +156,7 @@ function IllusIntroLawFirm() {
       >
         <span className="text-[15px]">⚠️</span>
         <p className="text-[12px] text-ink-muted">
-          Each missed call is a potential case — and revenue — walking away
+          Each missed call is a potential case, and revenue, walking away
         </p>
       </motion.div>
     </div>
@@ -169,7 +169,7 @@ function MockIntakeCapture() {
   const fields = [
     { label: "Caller name", value: "Claire Anderson" },
     { label: "Contact number", value: "(619) 555-0204" },
-    { label: "Matter type", value: "Family law — divorce" },
+    { label: "Matter type", value: "Family law, divorce" },
     { label: "Urgency", value: "Initial consultation" },
   ];
   return (
@@ -289,7 +289,7 @@ function MockCallLog() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Client intake was consuming 3 hours of my paralegal's day. Calls coming in during depositions, court appearances, consultations — all going to voicemail. Tarsha now answers every single one, gathers intake info, and routes correctly. We haven't missed a new client inquiry in four months.",
+      "Client intake was consuming 3 hours of my paralegal's day. Calls coming in during depositions, court appearances, consultations, all going to voicemail. Tarsha now answers every single one, gathers intake info, and routes correctly. We haven't missed a new client inquiry in four months.",
     author: "Rebecca M.",
     role: "Managing Partner",
     company: "Morrison & Associates",
@@ -305,7 +305,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We do criminal defense — calls come at all hours, often urgent. Tarsha screens and routes them immediately. Emergency calls reach someone. Routine inquiries are captured and queued. I haven't missed a single urgent call since we switched.",
+      "We do criminal defense, calls come at all hours, often urgent. Tarsha screens and routes them immediately. Emergency calls reach someone. Routine inquiries are captured and queued. I haven't missed a single urgent call since we switched.",
     author: "Marcus J.",
     role: "Partner",
     company: "Jensen Criminal Defense",
@@ -317,19 +317,19 @@ const steps = [
   {
     title: "Every call answered, professionally",
     description:
-      "Tarsha answers in your firm's name within 2 seconds — day, night, and weekends. Callers in distress hear a warm, professional voice immediately, not a voicemail prompt.",
+      "Tarsha answers in your firm's name within 2 seconds, day, night, and weekends. Callers in distress hear a warm, professional voice immediately, not a voicemail prompt.",
     Illustration: IllusStep1LawFirm,
   },
   {
     title: "Precise intake captured",
     description:
-      "Tarsha collects the caller's name, contact details, matter type, and urgency level — everything your team needs to prepare for a callback or consultation.",
+      "Tarsha collects the caller's name, contact details, matter type, and urgency level, everything your team needs to prepare for a callback or consultation.",
     Illustration: IllusStep2LawFirm,
   },
   {
     title: "Routed to the right attorney",
     description:
-      "Family law, criminal defense, estate planning — Tarsha routes each caller to the right practice area instantly, with a full summary so whoever picks up is already briefed.",
+      "Family law, criminal defense, estate planning, Tarsha routes each caller to the right practice area instantly, with a full summary so whoever picks up is already briefed.",
     Illustration: IllusStep3LawFirm,
   },
 ];
@@ -339,7 +339,7 @@ const benefits: Benefit[] = [
     icon: FileText,
     title: "Accurate intake on every call",
     description:
-      "Name, contact, matter type, urgency — captured precisely and delivered to your inbox before you call back.",
+      "Name, contact, matter type, urgency, captured precisely and delivered to your inbox before you call back.",
     MockUI: MockIntakeCapture,
     wide: true,
   },
@@ -347,7 +347,7 @@ const benefits: Benefit[] = [
     icon: PhoneCall,
     title: "Urgent matter escalation",
     description:
-      "Time-sensitive calls — custody emergencies, bail requests, court deadlines — are escalated immediately to the right attorney.",
+      "Time-sensitive calls, custody emergencies, bail requests, court deadlines, are escalated immediately to the right attorney.",
     MockUI: MockUrgentEscalation,
   },
   {
@@ -393,7 +393,7 @@ export default function LawFirmsPage() {
           eyebrow="Law Firms"
           titleBefore="Never let a potential client "
           titleHighlight="reach your voicemail"
-          subtitle="Tarsha AI handles every call to your firm with discretion and professionalism — capturing intake details, routing to the right attorney, and covering after-hours without compromising your reputation."
+          subtitle="Tarsha AI handles every call to your firm with discretion and professionalism, capturing intake details, routing to the right attorney, and covering after-hours without compromising your reputation."
           MockUI={MockLegalIntake}
         />
         <SolutionTestimonials
@@ -402,10 +402,10 @@ export default function LawFirmsPage() {
         />
         <SolutionIntro
           eyebrow="The problem"
-          heading="Missed calls cost law firms clients — and reputation"
+          heading="Missed calls cost law firms clients, and reputation"
           paragraphs={[
-            "When someone calls a law firm, they're often in a stressful situation. They need to feel heard. If that call goes to voicemail, they call the next firm on the list — and your chance at that client is gone. For high-stakes referral businesses like law, first impressions are everything.",
-            "Tarsha AI answers every call professionally in your firm's name, captures accurate intake information, and routes callers to the right attorney or team. Urgent matters are escalated immediately. After-hours calls are handled with the same professionalism as business-hours calls — and every interaction is logged with full context.",
+            "When someone calls a law firm, they're often in a stressful situation. They need to feel heard. If that call goes to voicemail, they call the next firm on the list, and your chance at that client is gone. For high-stakes referral businesses like law, first impressions are everything.",
+            "Tarsha AI answers every call professionally in your firm's name, captures accurate intake information, and routes callers to the right attorney or team. Urgent matters are escalated immediately. After-hours calls are handled with the same professionalism as business-hours calls, and every interaction is logged with full context.",
           ]}
           Illustration={IllusIntroLawFirm}
         />
@@ -423,7 +423,7 @@ export default function LawFirmsPage() {
           heading="Built for any professional services firm"
           industries={industries}
         />
-        <SolutionCTA heading="Every potential client deserves to be heard — starting with the first call." />
+        <SolutionCTA heading="Every potential client deserves to be heard, starting with the first call." />
       </main>
       <Footer />
     </>

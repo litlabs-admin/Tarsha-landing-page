@@ -39,7 +39,7 @@ export function ResourcesMenu({ visible }: { visible: boolean }) {
           <div className="grid grid-cols-[188px_1fr]">
             {/* Left: Featured story card */}
             <div className="border-r border-border p-4">
-              {/* Mock thumbnail — simulated customer story card */}
+              {/* Mock thumbnail, simulated customer story card */}
               <div className="mb-3 h-[120px] w-full overflow-hidden rounded-xl bg-[#1a1f14]">
                 {/* Dark scene with a "call dashboard" mock */}
                 <div className="relative flex h-full w-full flex-col justify-between p-3">

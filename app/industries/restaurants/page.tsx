@@ -306,7 +306,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Half our customers speak Spanish. We couldn't always find bilingual staff for every shift. Tarsha answers in whichever language the caller uses — automatically. Our Spanish-speaking regulars love it, and our Yelp reviews even mention the phone experience now.",
+      "Half our customers speak Spanish. We couldn't always find bilingual staff for every shift. Tarsha answers in whichever language the caller uses, automatically. Our Spanish-speaking regulars love it, and our Yelp reviews even mention the phone experience now.",
     author: "Rosa M.",
     role: "Owner & Head Chef",
     company: "La Cocina de Rosa",
@@ -326,13 +326,13 @@ const steps = [
   {
     title: "Questions answered instantly",
     description:
-      "Hours, menu, dietary options, parking, directions — Tarsha knows your restaurant inside and out and answers any question in seconds, without pulling anyone from the floor.",
+      "Hours, menu, dietary options, parking, directions, Tarsha knows your restaurant inside and out and answers any question in seconds, without pulling anyone from the floor.",
     Illustration: IllusStep1Restaurant,
   },
   {
     title: "Reservations taken automatically",
     description:
-      "Callers can book a table directly over the phone. Tarsha checks availability, confirms the reservation, and sends a reminder — all within the call.",
+      "Callers can book a table directly over the phone. Tarsha checks availability, confirms the reservation, and sends a reminder, all within the call.",
     Illustration: IllusStep2Restaurant,
   },
   {
@@ -348,7 +348,7 @@ const benefits: Benefit[] = [
     icon: UtensilsCrossed,
     title: "24/7 menu & FAQ answers",
     description:
-      "Hours, menu items, dietary info, directions — answered instantly, around the clock, without any staff involvement.",
+      "Hours, menu items, dietary info, directions, answered instantly, around the clock, without any staff involvement.",
     MockUI: MockMenuFAQ,
     wide: true,
   },
@@ -363,7 +363,7 @@ const benefits: Benefit[] = [
     icon: Globe,
     title: "English & Spanish",
     description:
-      "Tarsha switches languages automatically based on how the caller speaks — no button presses, no separate number needed.",
+      "Tarsha switches languages automatically based on how the caller speaks, no button presses, no separate number needed.",
     MockUI: MockBilingualRestaurant,
   },
   {
@@ -402,7 +402,7 @@ export default function RestaurantsPage() {
           eyebrow="Restaurants & Cafes"
           titleBefore="Answer every table question "
           titleHighlight="without leaving the kitchen"
-          subtitle="Tarsha AI handles reservations, menu questions, and hours inquiries so your staff can focus on food and service — in English and Spanish, 24/7."
+          subtitle="Tarsha AI handles reservations, menu questions, and hours inquiries so your staff can focus on food and service, in English and Spanish, 24/7."
           MockUI={MockRestaurantReservation}
         />
         <SolutionTestimonials
@@ -413,8 +413,8 @@ export default function RestaurantsPage() {
           eyebrow="The problem"
           heading="Your staff should be serving, not answering phones"
           paragraphs={[
-            "Restaurant phones ring all day — the same questions, over and over. Are you open? Do you have gluten-free options? Can I make a reservation for Saturday? Every time a staff member picks up that phone, they're not taking an order, running food, or serving a table.",
-            "Tarsha AI answers every call instantly — reservations, menu questions, dietary info, hours, directions. In English and Spanish. It takes bookings directly into your calendar and handles peak-hour overflow when your line is ringing off the hook.",
+            "Restaurant phones ring all day, the same questions, over and over. Are you open? Do you have gluten-free options? Can I make a reservation for Saturday? Every time a staff member picks up that phone, they're not taking an order, running food, or serving a table.",
+            "Tarsha AI answers every call instantly, reservations, menu questions, dietary info, hours, directions. In English and Spanish. It takes bookings directly into your calendar and handles peak-hour overflow when your line is ringing off the hook.",
           ]}
           Illustration={IllusIntroRestaurant}
         />

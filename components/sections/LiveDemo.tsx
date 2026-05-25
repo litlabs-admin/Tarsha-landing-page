@@ -162,7 +162,7 @@ export function LiveDemo() {
                 >
                   <NowPlayingPulse />
                   <span className="text-[13px] font-medium text-ink">
-                    Now playing —{" "}
+                    Now playing ,{" "}
                     <span className="text-ink-muted">
                       {industries.find((i) => i.id === activeId)?.scenario}
                     </span>
@@ -346,7 +346,7 @@ function IndustryCard({
         </AnimatePresence>
       </div>
 
-      {/* Bottom progress bar — fills as audio plays */}
+      {/* Bottom progress bar, fills as audio plays */}
       <span
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] overflow-hidden"

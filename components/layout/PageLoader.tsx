@@ -1,8 +1,7 @@
 "use client";
 
-import { assets, brand } from "@/lib/assets";
+import { TarshaLogo } from "@/components/ui/TarshaLogo";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -83,51 +82,26 @@ export function PageLoader() {
             {/* Concentric pulse rings */}
             <PulseRings exiting={exiting} />
 
-            {/* Logo + brand */}
-            <div className="relative flex items-center gap-3 px-2 py-1">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={
-                  exiting
-                    ? { opacity: 0, scale: 0.96 }
-                    : { opacity: 1, scale: 1 }
-                }
-                transition={{ duration: 0.6, ease: EASE }}
-                className="relative"
-              >
-                <motion.div
-                  animate={{ scale: [1, 1.04, 1] }}
-                  transition={{
-                    duration: 2.4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="relative h-12 w-12"
-                >
-                  <Image
-                    src={assets.logo}
-                    alt=""
-                    fill
-                    sizes="48px"
-                    priority
-                    className="object-contain"
-                  />
-                </motion.div>
-              </motion.div>
+            {/* Wordmark */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={
+                exiting
+                  ? { opacity: 0, scale: 0.96 }
+                  : { opacity: 1, scale: 1 }
+              }
+              transition={{ duration: 0.6, ease: EASE }}
+              className="relative px-2 py-1"
+            >
+              <TarshaLogo
+                variant="wordmark"
+                wordmarkStyle="allura"
+                theme="light"
+                size="lg"
+              />
+            </motion.div>
 
-              <motion.span
-                initial={{ opacity: 0, x: -8 }}
-                animate={
-                  exiting ? { opacity: 0, x: -4 } : { opacity: 1, x: 0 }
-                }
-                transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-                className="font-display text-[26px] font-semibold tracking-tight text-ink"
-              >
-                {brand.name.toLowerCase()}
-              </motion.span>
-            </div>
-
-            {/* Voice waveform — 7 bars with offset height loops */}
+            {/* Voice waveform, 7 bars with offset height loops */}
             <div className="mt-6 flex items-center gap-[3px] h-7">
               {[0.45, 0.85, 0.6, 1, 0.7, 0.9, 0.5].map((peak, i) => (
                 <motion.span
@@ -147,7 +121,7 @@ export function PageLoader() {
               ))}
             </div>
 
-            {/* Caption — slow type-loop feel via opacity dot trail */}
+            {/* Caption, slow type-loop feel via opacity dot trail */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={exiting ? { opacity: 0 } : { opacity: 1 }}
@@ -161,7 +135,7 @@ export function PageLoader() {
             </motion.div>
           </div>
 
-          {/* Bottom progress hairline — fills from 0 to ~95% over the hold window */}
+          {/* Bottom progress hairline, fills from 0 to ~95% over the hold window */}
           <ProgressHairline exiting={exiting} />
         </motion.div>
       )}

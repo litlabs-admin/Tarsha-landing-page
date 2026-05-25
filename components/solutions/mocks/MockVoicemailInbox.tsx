@@ -11,7 +11,7 @@ const messages = [
     name: "Sarah Mitchell",
     duration: "0:52",
     time: "2:14 PM",
-    transcript: `"Hi, calling about a quote for office cleaning — about 2,400 sq ft, weekly service..."`,
+    transcript: `"Hi, calling about a quote for office cleaning, about 2,400 sq ft, weekly service..."`,
     active: true,
   },
   {

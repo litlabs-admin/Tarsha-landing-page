@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import { motion } from "framer-motion";
 import {
@@ -31,7 +32,7 @@ function MockTranscript() {
           { label: "Phone", value: "(619) 555-0142" },
           {
             label: "Message",
-            value: "Calling about a quote for landscaping — backyard, roughly 3,000 sq ft.",
+            value: "Calling about a quote for landscaping, backyard, roughly 3,000 sq ft.",
           },
         ].map(({ label, value }) => (
           <div key={label} className="flex items-start gap-3 px-4 py-3">
@@ -118,7 +119,7 @@ const chatBubbles = [
     text: "We're open Mon–Fri, 8 am–6 pm. I can also book you an appointment right now if you'd like!",
     side: "right" as const,
   },
-  { text: '"Yes please — tomorrow afternoon?"', side: "left" as const },
+  { text: '"Yes please, tomorrow afternoon?"', side: "left" as const },
   { text: "I've got 2 PM open. Shall I book that for you?", side: "right" as const },
 ];
 
@@ -385,17 +386,14 @@ export default function FeaturesPage() {
             </ScrollReveal>
             <ScrollReveal y={16} duration={0.85} delay={0.14} amount={0.3}>
               <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-ink-muted">
-                From answering calls to booking appointments and transferring to your team — Tarsha
+                From answering calls to booking appointments and transferring to your team, Tarsha
                 AI handles it all, 24/7, in any language.
               </p>
             </ScrollReveal>
             <ScrollReveal y={12} duration={0.7} delay={0.2} amount={0.4}>
               <div className="mt-8 flex items-center justify-center gap-3">
-                <Button size="md" variant="primary" icon="arrow">
-                  Start free trial
-                </Button>
-                <Button size="md" variant="outline">
-                  See a demo
+                <Button size="md" variant="primary" icon="arrow" href={brand.bookDemoUrl}>
+                  Book a demo
                 </Button>
               </div>
             </ScrollReveal>
@@ -431,7 +429,7 @@ export default function FeaturesPage() {
             <BentoCard
               icon={<MessageSquareText className="h-4 w-4 text-ink/60" strokeWidth={1.5} />}
               title="Answer questions"
-              desc="Train Tarsha AI on your FAQ so customers get instant, accurate answers — no hold music, no waiting."
+              desc="Train Tarsha AI on your FAQ so customers get instant, accurate answers, no hold music, no waiting."
               delay={0.08}
             >
               <MockChat />
@@ -440,7 +438,7 @@ export default function FeaturesPage() {
             <BentoCard
               icon={<Globe className="h-4 w-4 text-ink/60" strokeWidth={1.5} />}
               title="Bilingual answering"
-              desc="Speak with callers in their preferred language — English, Spanish, French and 35+ others, automatically detected."
+              desc="Speak with callers in their preferred language, English, Spanish, French and 35+ others, automatically detected."
               className="md:col-span-2"
               delay={0.12}
             >
@@ -453,7 +451,7 @@ export default function FeaturesPage() {
             <BentoCard
               icon={<PhoneForwarded className="h-4 w-4 text-ink/60" strokeWidth={1.5} />}
               title="Transfer calls"
-              desc="Route the right callers directly to you or a teammate — every time, instantly."
+              desc="Route the right callers directly to you or a teammate, every time, instantly."
               delay={0.1}
             >
               <MockTransfer />

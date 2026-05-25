@@ -2,6 +2,7 @@
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { brand } from "@/lib/assets";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ArrowRight, ChevronRight, Quote, Star } from "lucide-react";
 import Image from "next/image";
@@ -92,7 +93,7 @@ const stories: Story[] = [
       { label: "Patient wait time", value: "−40%", delta: "on hold" },
       { label: "Staff satisfaction", value: "9.4/10", delta: "↑ from 6.1" },
     ],
-    description: "Lakewood Family Medicine sees 120+ patients per week. The front desk was perpetually overwhelmed. Tarsha now handles appointment confirmation, hours inquiries, and after-hours messages — letting staff focus on in-person care.",
+    description: "Lakewood Family Medicine sees 120+ patients per week. The front desk was perpetually overwhelmed. Tarsha now handles appointment confirmation, hours inquiries, and after-hours messages, letting staff focus on in-person care.",
   },
   {
     id: "jennifer-harbor-real-estate",
@@ -118,7 +119,7 @@ const stories: Story[] = [
     company: "Buena Vista Restaurant",
     location: "Chicago, IL",
     photo: "https://i.pravatar.cc/400?img=33",
-    quote: "During dinner rush, my staff can't be answering phones. Tarsha handles reservations, dietary questions, and hours calls — and we haven't missed a reservation inquiry since we set it up.",
+    quote: "During dinner rush, my staff can't be answering phones. Tarsha handles reservations, dietary questions, and hours calls, and we haven't missed a reservation inquiry since we set it up.",
     metrics: [
       { label: "Reservations captured", value: "100%", delta: "zero missed" },
       { label: "Staff interruptions", value: "−78%", delta: "during service" },
@@ -140,7 +141,7 @@ const stories: Story[] = [
       { label: "New matters/month", value: "+22%", delta: "increase" },
       { label: "After-hours leads", value: "31%", delta: "of total intake" },
     ],
-    description: "Sterling Law Group handles personal injury and employment law. A significant portion of client inquiries happen outside business hours — evenings and weekends. Tarsha captures every call and delivers structured intake summaries each morning.",
+    description: "Sterling Law Group handles personal injury and employment law. A significant portion of client inquiries happen outside business hours, evenings and weekends. Tarsha captures every call and delivers structured intake summaries each morning.",
   },
   {
     id: "rosa-sunrise",
@@ -150,7 +151,7 @@ const stories: Story[] = [
     company: "Sunrise Home Services",
     location: "Miami, FL",
     photo: "https://i.pravatar.cc/400?img=38",
-    quote: "Most of my clients speak Spanish. Tarsha handles both English and Spanish calls flawlessly. I've picked up three times more Spanish-speaking clients since switching — it's been a game changer.",
+    quote: "Most of my clients speak Spanish. Tarsha handles both English and Spanish calls flawlessly. I've picked up three times more Spanish-speaking clients since switching, it's been a game changer.",
     metrics: [
       { label: "Spanish leads captured", value: "3×", delta: "more per month" },
       { label: "Bilingual coverage", value: "24/7", delta: "English & Spanish" },
@@ -475,21 +476,17 @@ export default function CustomerStoriesPage() {
                 <span className="text-accent">next</span>.
               </h2>
               <p className="mx-auto mt-4 max-w-md text-[16px] leading-relaxed text-white/60">
-                Join 1,200+ small businesses that never miss a call. Try Tarsha AI free for 14 days — no credit card required.
+                Join 1,200+ small businesses that never miss a call. Try Tarsha AI free for 14 days, no credit card required.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/#pricing"
+                <a
+                  href={brand.bookDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 text-[15px] font-semibold text-ink transition-opacity hover:opacity-90"
                 >
-                  Start free trial <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="/#demo"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-white/10"
-                >
-                  Book a demo
-                </Link>
+                  Book a demo <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </motion.div>
           </div>

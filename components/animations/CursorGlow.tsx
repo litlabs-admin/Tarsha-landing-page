@@ -64,7 +64,7 @@ export function CursorGlow({ size = 560, intensity = 1 }: CursorGlowProps) {
       aria-hidden
       className="pointer-events-none absolute inset-0 z-[1] overflow-hidden"
     >
-      {/* Primary cloudy lime tint — multiply blend so it sinks into the page */}
+      {/* Primary cloudy lime tint, multiply blend so it sinks into the page */}
       <motion.div
         style={{
           x: sx,
@@ -82,7 +82,7 @@ export function CursorGlow({ size = 560, intensity = 1 }: CursorGlowProps) {
         transition={{ opacity: { duration: 0.6, ease: "easeOut" } }}
         className="absolute left-0 top-0 rounded-full"
       />
-      {/* Soft white core — soft-light blend so it brightens the underlying surface */}
+      {/* Soft white core, soft-light blend so it brightens the underlying surface */}
       <motion.div
         style={{
           x: sx,

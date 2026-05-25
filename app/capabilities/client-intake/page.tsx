@@ -256,7 +256,7 @@ function MockIntakeSummary() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Before Tarsha, every new client meeting started with 10 minutes of 'let me get your details.' Now those details are already in the intake summary — collected during the first call. We get right to work immediately. Clients notice and appreciate it.",
+      "Before Tarsha, every new client meeting started with 10 minutes of 'let me get your details.' Now those details are already in the intake summary, collected during the first call. We get right to work immediately. Clients notice and appreciate it.",
     author: "Olivia K.",
     role: "Senior Attorney",
     company: "Keller & Park Family Law",
@@ -264,7 +264,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We're a therapy practice. Intake is sensitive and important. Tarsha collects the basics professionally — name, contact, reason for seeking services, insurance — without being clinical or robotic. It actually does it better than some staff I've had.",
+      "We're a therapy practice. Intake is sensitive and important. Tarsha collects the basics professionally, name, contact, reason for seeking services, insurance, without being clinical or robotic. It actually does it better than some staff I've had.",
     author: "Dr. Marcus A.",
     role: "Clinical Director",
     company: "Waverly Counseling Center",
@@ -284,13 +284,13 @@ const steps = [
   {
     title: "Natural intake conversation",
     description:
-      "Tarsha collects intake details through normal conversation — not a robotic form-filling exercise. Callers feel heard, not interrogated, and provide more accurate information.",
+      "Tarsha collects intake details through normal conversation, not a robotic form-filling exercise. Callers feel heard, not interrogated, and provide more accurate information.",
     Illustration: IllusStep1Intake,
   },
   {
     title: "Every field captured accurately",
     description:
-      "Name, contact, reason, urgency, relevant specifics — all captured and structured automatically. No handwritten notes, no transcription errors, no missing information.",
+      "Name, contact, reason, urgency, relevant specifics, all captured and structured automatically. No handwritten notes, no transcription errors, no missing information.",
     Illustration: IllusStep2Intake,
   },
   {
@@ -306,7 +306,7 @@ const benefits: Benefit[] = [
     icon: ClipboardList,
     title: "Complete intake on the first call",
     description:
-      "Every new caller's details collected naturally and accurately — before your team ever makes contact.",
+      "Every new caller's details collected naturally and accurately, before your team ever makes contact.",
     MockUI: MockIntakeForm,
     wide: true,
   },
@@ -314,21 +314,21 @@ const benefits: Benefit[] = [
     icon: UserCheck,
     title: "Custom intake fields",
     description:
-      "Configure Tarsha to collect exactly what your business needs — matter type for law, insurance details for healthcare, whatever your intake process requires.",
+      "Configure Tarsha to collect exactly what your business needs, matter type for law, insurance details for healthcare, whatever your intake process requires.",
     MockUI: MockCustomFields,
   },
   {
     icon: Database,
     title: "CRM-ready structured data",
     description:
-      "Intake summaries are formatted for your CRM or workflow tool — no manual data entry, no reformatting needed.",
+      "Intake summaries are formatted for your CRM or workflow tool, no manual data entry, no reformatting needed.",
     MockUI: MockCRMReady,
   },
   {
     icon: Zap,
     title: "Team briefed before first contact",
     description:
-      "Your team receives the complete intake summary instantly — so every first meeting starts informed, not from scratch.",
+      "Your team receives the complete intake summary instantly, so every first meeting starts informed, not from scratch.",
     MockUI: MockIntakeSummary,
     wide: true,
   },
@@ -360,7 +360,7 @@ export default function ClientIntakePage() {
           eyebrow="Client Intake"
           titleBefore="First meetings start "
           titleHighlight="fully informed"
-          subtitle="Tarsha AI collects every detail from a new caller's first contact — name, contact info, reason for calling, and relevant context — so your team walks into every conversation already prepared."
+          subtitle="Tarsha AI collects every detail from a new caller's first contact, name, contact info, reason for calling, and relevant context, so your team walks into every conversation already prepared."
           MockUI={MockClientIntakeForm}
         />
         <SolutionTestimonials
@@ -371,8 +371,8 @@ export default function ClientIntakePage() {
           eyebrow="The capability"
           heading="Your team shouldn't learn who a client is after they've already arrived"
           paragraphs={[
-            "The first meeting with a new client should feel prepared and professional. But when intake happens during the meeting itself — scrambling for contact details, asking why they're there, learning their history on the fly — it undermines trust before you've said anything meaningful.",
-            "Tarsha AI handles intake in the first call. Name, contact information, reason for reaching out, specific details relevant to your business — all collected naturally through conversation and delivered as a structured summary before your team makes contact. Every first impression is prepared.",
+            "The first meeting with a new client should feel prepared and professional. But when intake happens during the meeting itself, scrambling for contact details, asking why they're there, learning their history on the fly, it undermines trust before you've said anything meaningful.",
+            "Tarsha AI handles intake in the first call. Name, contact information, reason for reaching out, specific details relevant to your business, all collected naturally through conversation and delivered as a structured summary before your team makes contact. Every first impression is prepared.",
           ]}
           Illustration={IllusIntroIntake}
         />

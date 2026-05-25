@@ -301,7 +301,7 @@ function MockUpdateBadge() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Our team was spending 40% of their time answering the same 10 questions over and over — hours, pricing, insurance. Tarsha handles all of it instantly now. Patient satisfaction scores went up, and so did our productivity.",
+      "Our team was spending 40% of their time answering the same 10 questions over and over, hours, pricing, insurance. Tarsha handles all of it instantly now. Patient satisfaction scores went up, and so did our productivity.",
     author: "Dr. Rachel K.",
     role: "Practice Manager",
     company: "Sunrise Dental",
@@ -309,7 +309,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "People called constantly asking if we were open or what was on the menu. Tarsha handles those instantly in English and Spanish. Our phone is quiet, and my staff are actually cooking and serving — not answering the same question for the hundredth time.",
+      "People called constantly asking if we were open or what was on the menu. Tarsha handles those instantly in English and Spanish. Our phone is quiet, and my staff are actually cooking and serving, not answering the same question for the hundredth time.",
     author: "Carlos M.",
     role: "Owner",
     company: "The Local Table",
@@ -329,13 +329,13 @@ const steps = [
   {
     title: "Upload your FAQ",
     description:
-      "Add your hours, pricing, services, policies — anything callers ask about. Takes under 5 minutes, and you can update it any time from your dashboard.",
+      "Add your hours, pricing, services, policies, anything callers ask about. Takes under 5 minutes, and you can update it any time from your dashboard.",
     Illustration: IllusFAQUpload,
   },
   {
     title: "A caller asks a question",
     description:
-      "Any question, at any time, in any language. Tarsha AI understands natural speech — no menus, no prompts, no frustrating hold music.",
+      "Any question, at any time, in any language. Tarsha AI understands natural speech, no menus, no prompts, no frustrating hold music.",
     Illustration: IllusCallerAsking,
   },
   {
@@ -351,7 +351,7 @@ const benefits: Benefit[] = [
     icon: Brain,
     title: "Custom knowledge base",
     description:
-      "Train Tarsha on your exact answers, your tone, and your business — not generic responses.",
+      "Train Tarsha on your exact answers, your tone, and your business, not generic responses.",
     MockUI: MockKnowledgeBase,
     wide: true,
   },
@@ -359,21 +359,21 @@ const benefits: Benefit[] = [
     icon: MessageCircle,
     title: "Natural conversation",
     description:
-      "Sounds human. No reading from a script, no robotic menus — just a natural, helpful exchange.",
+      "Sounds human. No reading from a script, no robotic menus, just a natural, helpful exchange.",
     MockUI: MockNaturalChat,
   },
   {
     icon: ArrowUpRight,
     title: "Smart escalation",
     description:
-      "When a question needs a human, Tarsha hands off seamlessly — with a full context summary attached.",
+      "When a question needs a human, Tarsha hands off seamlessly, with a full context summary attached.",
     MockUI: MockEscalation,
   },
   {
     icon: RefreshCw,
     title: "Always up to date",
     description:
-      "Change your hours, add a new service, update pricing — every caller gets the new answer instantly.",
+      "Change your hours, add a new service, update pricing, every caller gets the new answer instantly.",
     MockUI: MockUpdateBadge,
     wide: true,
   },
@@ -406,7 +406,7 @@ export default function AnswerQuestionsPage() {
           titleBefore="Train once. Answer "
           titleHighlight="every question"
           titleAfter=" forever."
-          subtitle="Upload your FAQ and business info. Tarsha AI gives every caller an instant, accurate answer — no hold music, no waiting, no staff needed."
+          subtitle="Upload your FAQ and business info. Tarsha AI gives every caller an instant, accurate answer, no hold music, no waiting, no staff needed."
           MockUI={MockQAConversation}
         />
         <SolutionTestimonials
@@ -417,8 +417,8 @@ export default function AnswerQuestionsPage() {
           eyebrow="The problem"
           heading="The same 10 questions shouldn't take 2 hours a day"
           paragraphs={[
-            "Most businesses answer the same handful of questions on every call — hours, pricing, services, location. These are necessary calls, but they consume time your staff could be spending on higher-value work.",
-            "Tarsha AI learns your business inside and out. Upload your FAQ, policies, and service details once, and it will answer any version of those questions instantly, accurately, and around the clock — in any language. When something genuinely requires a human, Tarsha escalates immediately with full context.",
+            "Most businesses answer the same handful of questions on every call, hours, pricing, services, location. These are necessary calls, but they consume time your staff could be spending on higher-value work.",
+            "Tarsha AI learns your business inside and out. Upload your FAQ, policies, and service details once, and it will answer any version of those questions instantly, accurately, and around the clock, in any language. When something genuinely requires a human, Tarsha escalates immediately with full context.",
           ]}
           Illustration={IllusIntroRepeatQuestions}
         />

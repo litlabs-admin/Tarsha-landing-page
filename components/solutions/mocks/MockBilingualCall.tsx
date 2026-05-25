@@ -7,7 +7,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const messages = [
   { text: "Hola, ¿hablan español?", side: "left" as const, lang: "ES" },
   { text: "¡Por supuesto! ¿En qué le puedo ayudar hoy?", side: "right" as const, lang: "ES" },
-  { text: "Actually, I prefer English — can you switch?", side: "left" as const, lang: "EN" },
+  { text: "Actually, I prefer English, can you switch?", side: "left" as const, lang: "EN" },
   { text: "Of course! How can I help you today?", side: "right" as const, lang: "EN" },
 ];
 

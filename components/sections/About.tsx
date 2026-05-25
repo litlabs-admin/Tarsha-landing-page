@@ -12,7 +12,7 @@ import {
 import { Fragment, useMemo, useRef } from "react";
 
 const PARAGRAPHS: string[] = [
-  "Tarsha AI helps businesses **never miss another customer call**. Powered by real-time Voice AI, Tarsha AI answers instantly, qualifies leads, and books appointments — all with a **natural, human-like voice**.",
+  "Tarsha AI helps businesses **never miss another customer call**. Powered by real-time Voice AI, Tarsha AI answers instantly, qualifies leads, and books appointments, all with a **natural, human-like voice**.",
   "Built for SMBs that can't justify full-time reception staff, Tarsha AI replaces voicemail dead ends with **intelligent conversations** that scale customer support **without scaling headcount**.",
 ];
 
@@ -106,7 +106,7 @@ export function About() {
 
       <Container>
         <div className="mx-auto max-w-[860px]">
-          {/* Section heading — centered */}
+          {/* Section heading, centered */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export function About() {
             </h2>
           </motion.div>
 
-          {/* Body — two large editorial paragraphs with per-word scroll reveal */}
+          {/* Body, two large editorial paragraphs with per-word scroll reveal */}
           <div className="flex flex-col gap-14 md:gap-18">
             {parsed.map((paragraph, pIdx) => (
               <p
@@ -187,7 +187,7 @@ export function About() {
   );
 }
 
-// Color constants — warm tan to full ink. Avoids variable references
+// Color constants, warm tan to full ink. Avoids variable references
 // inside useTransform which only accepts resolved values.
 const COLOR_UNREVEALED = "rgb(180, 155, 80)"; // warm golden tan, visible on --bg
 const COLOR_REVEALED = "rgb(24, 19, 10)";      // --ink

@@ -3,11 +3,11 @@
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { assets, brand } from "@/lib/assets";
+import { TarshaLogo } from "@/components/ui/TarshaLogo";
+import { brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Twitter, Youtube } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -75,23 +75,20 @@ export function Footer() {
             <ScrollReveal y={16} duration={0.7}>
               <Link
                 href="#top"
-                className="inline-flex items-center gap-2 focus-ring rounded-md"
+                className="inline-block focus-ring rounded-md"
                 aria-label={`${brand.name} home`}
               >
-                <Image
-                  src={assets.logo}
-                  alt=""
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 object-contain"
+                <TarshaLogo
+                  variant="wordmark"
+                  wordmarkStyle="allura"
+                  byline="BY ROSWELLIT"
+                  theme="dark"
+                  size="lg"
                 />
-                <span className="font-display text-[20px] font-semibold tracking-tight">
-                  {brand.name}
-                </span>
               </Link>
 
               <p className="mt-5 max-w-[34ch] text-[14px] leading-[1.6] text-white/60">
-                The AI voice receptionist that keeps your phone covered — so
+                The AI voice receptionist that keeps your phone covered, so
                 you never miss a lead or leave a customer waiting.
               </p>
 
@@ -147,7 +144,7 @@ export function Footer() {
         </div>
       </Container>
 
-      {/* Oversized brand wordmark — "Feather-style" */}
+      {/* Oversized brand wordmark, "Feather-style" */}
       <BrandWordmark />
 
       {/* Bottom legal bar */}
@@ -187,20 +184,14 @@ function FinalCTA() {
               .
             </h2>
             <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-white/65 md:text-[18px]">
-              Spin up <span className="text-accent font-semibold">Tarsha AI</span> in under a day. Live phone coverage, 24/7 — with a
+              Spin up <span className="text-accent font-semibold">Tarsha AI</span> in under a day. Live phone coverage, 24/7, with a
               voice your customers will actually thank you for.
             </p>
             <div className="mt-9 flex flex-row flex-wrap items-center justify-center gap-3">
-              <Button size="lg" variant="primary">
-                Get started free
-              </Button>
-              <Button size="lg" variant="ghost" icon="arrow" className="text-white hover:bg-white/10">
+              <Button size="lg" variant="primary" icon="arrow" href={brand.bookDemoUrl}>
                 Book a demo
               </Button>
             </div>
-            <p className="mt-4 text-[12.5px] text-white/40">
-              No credit card · 14-day free trial · Cancel anytime
-            </p>
           </div>
         </ScrollReveal>
       </div>
@@ -226,7 +217,7 @@ function BrandWordmark() {
       aria-hidden
       className="relative mt-20 overflow-hidden md:mt-28"
     >
-      {/* Vertical lime stripes — slowly drift on scroll, give the Feather-style ribbon feel */}
+      {/* Vertical lime stripes, slowly drift on scroll, give the Feather-style ribbon feel */}
       <motion.div
         style={
           reducedMotion ? undefined : { backgroundPositionX: stripeShift }
@@ -259,7 +250,7 @@ function BrandWordmark() {
         />
       </motion.div>
 
-      {/* The wordmark itself — sits ON TOP of the stripe band, with the bar
+      {/* The wordmark itself, sits ON TOP of the stripe band, with the bar
           revealed only WITHIN the letterforms via mix-blend modes. */}
       <motion.div
         style={reducedMotion ? undefined : { y: wordmarkY }}

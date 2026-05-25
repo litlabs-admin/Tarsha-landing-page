@@ -7,7 +7,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const fields = [
   { label: "Name", value: "Sarah Mitchell" },
   { label: "Matter type", value: "Personal injury" },
-  { label: "Conflict check", value: "Clear — no conflicts" },
+  { label: "Conflict check", value: "Clear, no conflicts" },
 ];
 
 export function MockLegalIntake() {

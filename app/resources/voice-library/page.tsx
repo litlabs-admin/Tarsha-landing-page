@@ -3,8 +3,8 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import { brand } from "@/lib/assets";
 import { ArrowRight, Mic, Pause, Play, Search, Sparkles } from "lucide-react";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -44,7 +44,7 @@ const voices: Voice[] = [
     accent: "American",
     personality: "Perfect for professional service businesses",
     personalityTag: "Professional",
-    sampleText: "Thank you for calling. This is Aria with Tarsha AI — I'm here to help. How can I assist you today?",
+    sampleText: "Thank you for calling. This is Aria with Tarsha AI, I'm here to help. How can I assist you today?",
     waveHeights: [3,5,8,12,7,14,9,16,11,8,14,6,10,13,7,5,9,12,8,4],
   },
   {
@@ -55,7 +55,7 @@ const voices: Voice[] = [
     accent: "American",
     personality: "Approachable and trustworthy",
     personalityTag: "Warm",
-    sampleText: "Hey there! Thanks for calling. I'm James — your AI assistant. What can I help you with today?",
+    sampleText: "Hey there! Thanks for calling. I'm James, your AI assistant. What can I help you with today?",
     waveHeights: [4,7,11,8,13,6,15,10,7,12,9,14,5,8,11,6,9,13,7,4],
   },
   {
@@ -64,9 +64,9 @@ const voices: Voice[] = [
     gender: "Female",
     language: "Spanish / English",
     accent: "Latin American",
-    personality: "Bilingual — English & Spanish seamlessly",
+    personality: "Bilingual, English & Spanish seamlessly",
     personalityTag: "Friendly",
-    sampleText: "Thank you for calling! This is Sofia. I speak both English and Spanish — how can I help you today?",
+    sampleText: "Thank you for calling! This is Sofia. I speak both English and Spanish, how can I help you today?",
     waveHeights: [5,9,13,7,15,10,8,14,6,11,9,13,7,5,12,8,10,14,6,4],
   },
   {
@@ -77,7 +77,7 @@ const voices: Voice[] = [
     accent: "American",
     personality: "Commanding, authoritative, and clear",
     personalityTag: "Confident",
-    sampleText: "You've reached Tarsha AI. I'm Marcus — I can take a message or help answer your questions right now.",
+    sampleText: "You've reached Tarsha AI. I'm Marcus, I can take a message or help answer your questions right now.",
     waveHeights: [6,10,14,9,12,7,15,11,8,13,6,10,14,8,5,11,9,13,7,5],
   },
   {
@@ -88,7 +88,7 @@ const voices: Voice[] = [
     accent: "British",
     personality: "Soothing, measured, and precise",
     personalityTag: "Calm",
-    sampleText: "Good afternoon. You've reached our answering service. This is Luna — how may I assist you?",
+    sampleText: "Good afternoon. You've reached our answering service. This is Luna, how may I assist you?",
     waveHeights: [2,4,6,9,5,11,7,13,8,6,10,4,7,10,5,3,7,9,6,3],
   },
   {
@@ -97,9 +97,9 @@ const voices: Voice[] = [
     gender: "Male",
     language: "Spanish / English",
     accent: "Mexican",
-    personality: "High-energy bilingual — full Spanish fluency",
+    personality: "High-energy bilingual, full Spanish fluency",
     personalityTag: "Energetic",
-    sampleText: "Hello! Thanks for calling. I'm Diego and I'm fully bilingual — English or Spanish, whatever works best for you!",
+    sampleText: "Hello! Thanks for calling. I'm Diego and I'm fully bilingual, English or Spanish, whatever works best for you!",
     waveHeights: [5,9,14,10,16,8,13,11,7,15,9,12,6,10,14,8,11,13,7,5],
   },
   {
@@ -110,7 +110,7 @@ const voices: Voice[] = [
     accent: "Australian",
     personality: "Caring, warm, and genuinely helpful",
     personalityTag: "Empathetic",
-    sampleText: "Hi! Thanks so much for calling. I'm Emma — I want to make sure I get you exactly what you need today.",
+    sampleText: "Hi! Thanks so much for calling. I'm Emma, I want to make sure I get you exactly what you need today.",
     waveHeights: [3,6,9,7,12,8,14,10,7,11,5,9,13,7,4,8,11,9,6,3],
   },
   {
@@ -121,7 +121,7 @@ const voices: Voice[] = [
     accent: "American",
     personality: "Clean, versatile, and universally liked",
     personalityTag: "Neutral",
-    sampleText: "Thank you for calling. This is Alex — I can take a message or answer any questions you have right now.",
+    sampleText: "Thank you for calling. This is Alex, I can take a message or answer any questions you have right now.",
     waveHeights: [3,5,8,6,10,7,12,8,6,9,5,8,11,6,4,7,9,7,5,3],
   },
   {
@@ -130,9 +130,9 @@ const voices: Voice[] = [
     gender: "Female",
     language: "Spanish",
     accent: "Colombian",
-    personality: "Warm and personable — native Spanish speaker",
+    personality: "Warm and personable, native Spanish speaker",
     personalityTag: "Warm",
-    sampleText: "¡Hola! Gracias por llamar. Soy Valentina — estoy aquí para ayudarle. ¿En qué le puedo ayudar hoy?",
+    sampleText: "¡Hola! Gracias por llamar. Soy Valentina, estoy aquí para ayudarle. ¿En qué le puedo ayudar hoy?",
     waveHeights: [4,8,12,9,14,7,11,13,8,15,9,12,6,10,13,7,9,12,6,4],
   },
   {
@@ -143,7 +143,7 @@ const voices: Voice[] = [
     accent: "Canadian",
     personality: "Polished, formal, and highly professional",
     personalityTag: "Professional",
-    sampleText: "Good day. Thank you for calling. I'm Noah — I'm here to help assist you or take a detailed message.",
+    sampleText: "Good day. Thank you for calling. I'm Noah, I'm here to help assist you or take a detailed message.",
     waveHeights: [4,7,11,8,13,7,14,10,7,12,8,11,5,9,12,7,10,12,7,4],
   },
   {
@@ -152,9 +152,9 @@ const voices: Voice[] = [
     gender: "Male",
     language: "English",
     accent: "American",
-    personality: "High energy — great for fast-paced businesses",
+    personality: "High energy, great for fast-paced businesses",
     personalityTag: "Upbeat",
-    sampleText: "Hey! Thanks for calling — I'm Jordan, your AI assistant. What can I do for you today? I'm ready to help!",
+    sampleText: "Hey! Thanks for calling, I'm Jordan, your AI assistant. What can I do for you today? I'm ready to help!",
     waveHeights: [6,10,14,11,16,9,14,12,8,15,10,13,7,11,15,9,12,14,8,5],
   },
   {
@@ -165,7 +165,7 @@ const voices: Voice[] = [
     accent: "American",
     personality: "Conversational, natural, and easy to talk to",
     personalityTag: "Friendly",
-    sampleText: "Hi there! You've reached us. I'm Claire — I can take a message, answer questions, or help you get scheduled.",
+    sampleText: "Hi there! You've reached us. I'm Claire, I can take a message, answer questions, or help you get scheduled.",
     waveHeights: [4,7,10,8,13,7,11,9,6,12,7,10,14,8,5,9,11,8,6,3],
   },
 ];
@@ -417,7 +417,7 @@ export default function VoiceLibraryPage() {
               transition={{ duration: 0.55, delay: 0.18, ease: EASE }}
               className="mx-auto mt-5 max-w-lg text-[17px] leading-relaxed text-ink-muted"
             >
-              {voices.length} professional AI voices — American, British, Australian, and bilingual Spanish. Every voice is trained for business calls, not chatbots.
+              {voices.length} professional AI voices, American, British, Australian, and bilingual Spanish. Every voice is trained for business calls, not chatbots.
             </motion.p>
 
             {/* Stats pills */}
@@ -584,7 +584,7 @@ export default function VoiceLibraryPage() {
                 {
                   icon: "🎙️",
                   title: "Switch anytime",
-                  body: "Change your AI voice instantly from your dashboard. Your callers will notice the quality — not the switch.",
+                  body: "Change your AI voice instantly from your dashboard. Your callers will notice the quality, not the switch.",
                 },
                 {
                   icon: "🌎",
@@ -633,12 +633,14 @@ export default function VoiceLibraryPage() {
                 Every Tarsha plan includes full access to the voice library. Try any voice free for 14 days.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/#pricing"
+                <a
+                  href={brand.bookDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 text-[15px] font-semibold text-ink transition-opacity hover:opacity-90"
                 >
-                  Start free trial <ArrowRight className="h-4 w-4" />
-                </Link>
+                  Book a demo <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </motion.div>
           </div>

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next *)",
+      "Bash(node -e \"const g = require\\('next/font/google'\\); console.log\\(typeof g.Cedarville_Cursive\\)\")",
+      "Bash(xargs grep -li \"cedarville\")",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:smith.ai)",
+      "WebFetch(domain:uploads-ssl.webflow.com)",
+      "WebFetch(domain:cdn.prod.website-files.com)",
+      "WebSearch",
+      "WebFetch(domain:brandfetch.com)",
+      "Bash(Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue)",
+      "Bash(npx kill-port *)",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill -9)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

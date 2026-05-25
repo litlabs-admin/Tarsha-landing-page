@@ -59,7 +59,7 @@ function IllusStep1Accountants() {
         className="flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/10 px-3 py-2"
       >
         <span className="text-[13px]">✓</span>
-        <span className="text-[12px] font-medium text-ink">Wednesday 2 PM — selected</span>
+        <span className="text-[12px] font-medium text-ink">Wednesday 2 PM, selected</span>
       </motion.div>
     </div>
   );
@@ -333,7 +333,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We get the same questions every season — deadlines, document requirements, extension options. Tarsha answers them all instantly and confidently. My team is focused on work that actually requires their expertise, not answering 'when's the last day to file?'",
+      "We get the same questions every season, deadlines, document requirements, extension options. Tarsha answers them all instantly and confidently. My team is focused on work that actually requires their expertise, not answering 'when's the last day to file?'",
     author: "Diana C.",
     role: "Managing Partner",
     company: "Chen & Clarke CPAs",
@@ -341,7 +341,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "I'm a solo practitioner. I can't answer calls while I'm with a client. Tarsha is my front office — it books consultations, answers questions, and never lets a new business owner feel ignored. My client list grew 40% this year, partly because I was available every time someone tried to reach me.",
+      "I'm a solo practitioner. I can't answer calls while I'm with a client. Tarsha is my front office, it books consultations, answers questions, and never lets a new business owner feel ignored. My client list grew 40% this year, partly because I was available every time someone tried to reach me.",
     author: "Thomas B.",
     role: "Independent CPA",
     company: "Blanchard Accounting",
@@ -353,13 +353,13 @@ const steps = [
   {
     title: "Consultations booked automatically",
     description:
-      "New clients can book a consultation while you're deep in a tax return. Tarsha checks your calendar in real time and locks in the appointment — no interruptions, no callbacks needed.",
+      "New clients can book a consultation while you're deep in a tax return. Tarsha checks your calendar in real time and locks in the appointment, no interruptions, no callbacks needed.",
     Illustration: IllusStep1Accountants,
   },
   {
     title: "Deadline and FAQ questions answered",
     description:
-      "Filing deadlines, extension rules, required documents, business entity differences — Tarsha answers these instantly so callers get information without tying up your team.",
+      "Filing deadlines, extension rules, required documents, business entity differences, Tarsha answers these instantly so callers get information without tying up your team.",
     Illustration: IllusStep2Accountants,
   },
   {
@@ -375,7 +375,7 @@ const benefits: Benefit[] = [
     icon: Clock,
     title: "Peak season overflow handling",
     description:
-      "Tax season phone volume stops being a problem. Every call is answered, every lead is captured — regardless of how many come in at once.",
+      "Tax season phone volume stops being a problem. Every call is answered, every lead is captured, regardless of how many come in at once.",
     MockUI: MockSeasonalOverflow,
     wide: true,
   },
@@ -383,14 +383,14 @@ const benefits: Benefit[] = [
     icon: MessageSquare,
     title: "Instant FAQ answers",
     description:
-      "Deadlines, extensions, documents, business structures — answered instantly from your knowledge base, 24/7.",
+      "Deadlines, extensions, documents, business structures, answered instantly from your knowledge base, 24/7.",
     MockUI: MockFAQAccounting,
   },
   {
     icon: CalendarCheck,
     title: "New client booking",
     description:
-      "Consultations book directly into your calendar. New clients are ready to meet — not waiting on a callback.",
+      "Consultations book directly into your calendar. New clients are ready to meet, not waiting on a callback.",
     MockUI: MockConsultationBooking,
   },
   {
@@ -429,7 +429,7 @@ export default function AccountantsPage() {
           eyebrow="Accountants & CPA Firms"
           titleBefore="Keep your calendar full "
           titleHighlight="through every tax season"
-          subtitle="Tarsha AI handles appointment scheduling, client FAQs, and overflow calls year-round — so you can focus on the work, not the phone."
+          subtitle="Tarsha AI handles appointment scheduling, client FAQs, and overflow calls year-round, so you can focus on the work, not the phone."
           MockUI={MockAccountantBooking}
         />
         <SolutionTestimonials
@@ -438,10 +438,10 @@ export default function AccountantsPage() {
         />
         <SolutionIntro
           eyebrow="The problem"
-          heading="Tax season floods your phone — off-season dries it up. Neither should cost you clients."
+          heading="Tax season floods your phone, off-season dries it up. Neither should cost you clients."
           paragraphs={[
             "For accounting firms, the phone is feast or famine. During tax season, calls come in faster than anyone can handle. Off-season, you're chasing appointment requests that slipped through. Either way, the result is the same: potential clients who couldn't reach you and went elsewhere.",
-            "Tarsha AI manages your phone intelligently year-round. During peak season it handles overflow instantly so no call is missed. Off-season it books consultations, answers deadlines questions, and keeps your pipeline moving. One consistent, professional voice — whatever the volume.",
+            "Tarsha AI manages your phone intelligently year-round. During peak season it handles overflow instantly so no call is missed. Off-season it books consultations, answers deadlines questions, and keeps your pipeline moving. One consistent, professional voice, whatever the volume.",
           ]}
           Illustration={IllusIntroAccountants}
         />

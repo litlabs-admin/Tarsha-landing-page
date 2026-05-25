@@ -332,7 +332,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Electricians in the field, phone ringing off the hook. Tarsha handles it all — new jobs, existing job questions, emergency calls. The emergency calls reach whoever is available. The routine bookings go on the schedule. I don't miss anything anymore.",
+      "Electricians in the field, phone ringing off the hook. Tarsha handles it all, new jobs, existing job questions, emergency calls. The emergency calls reach whoever is available. The routine bookings go on the schedule. I don't miss anything anymore.",
     author: "Derek S.",
     role: "Owner",
     company: "Spark Electrical Services",
@@ -344,19 +344,19 @@ const steps = [
   {
     title: "Every call answered in the field",
     description:
-      "Whether your technicians are on a roof, under a sink, or in a basement — every call is answered within 2 seconds by Tarsha AI with your business name and professional tone.",
+      "Whether your technicians are on a roof, under a sink, or in a basement, every call is answered within 2 seconds by Tarsha AI with your business name and professional tone.",
     Illustration: IllusStep1HomeServices,
   },
   {
     title: "Urgency detected and dispatched",
     description:
-      "Burst pipes, electrical hazards, no heat in winter — Tarsha identifies genuine emergencies and routes them to whoever is available immediately. Routine calls are handled differently.",
+      "Burst pipes, electrical hazards, no heat in winter, Tarsha identifies genuine emergencies and routes them to whoever is available immediately. Routine calls are handled differently.",
     Illustration: IllusStep2HomeServices,
   },
   {
     title: "New jobs booked automatically",
     description:
-      "Quote requests and new job inquiries are captured with full details and booked into your schedule — customer notified, team informed, nothing missed.",
+      "Quote requests and new job inquiries are captured with full details and booked into your schedule, customer notified, team informed, nothing missed.",
     Illustration: IllusStep3HomeServices,
   },
 ];
@@ -366,7 +366,7 @@ const benefits: Benefit[] = [
     icon: Zap,
     title: "Emergency dispatch in seconds",
     description:
-      "True emergencies — burst pipes, no heat, electrical hazards — reach your available technician in seconds. Not the next morning.",
+      "True emergencies, burst pipes, no heat, electrical hazards, reach your available technician in seconds. Not the next morning.",
     MockUI: MockEmergencyDispatch,
     wide: true,
   },
@@ -374,21 +374,21 @@ const benefits: Benefit[] = [
     icon: Clock,
     title: "After-hours emergency coverage",
     description:
-      "Home emergencies happen at 11 PM on Sundays. Tarsha answers and dispatches around the clock — urgent calls reach your on-call tech immediately.",
+      "Home emergencies happen at 11 PM on Sundays. Tarsha answers and dispatches around the clock, urgent calls reach your on-call tech immediately.",
     MockUI: MockAfterHoursDispatch,
   },
   {
     icon: Route,
     title: "Smart technician routing",
     description:
-      "Tarsha routes to the closest available technician based on job type, location, and availability — no dispatcher needed.",
+      "Tarsha routes to the closest available technician based on job type, location, and availability, no dispatcher needed.",
     MockUI: MockUrgencyTriage,
   },
   {
     icon: Wrench,
     title: "New job scheduling",
     description:
-      "Quote requests and new job bookings are captured in full and added to your schedule automatically — customer confirmation sent instantly.",
+      "Quote requests and new job bookings are captured in full and added to your schedule automatically, customer confirmation sent instantly.",
     MockUI: MockJobQueue,
     wide: true,
   },
@@ -420,7 +420,7 @@ export default function HomeServicesPage() {
           eyebrow="Home Services"
           titleBefore="Answer every emergency call "
           titleHighlight="even when you're on the job"
-          subtitle="Tarsha AI answers calls from job sites, dispatches to the right technician, and captures every new booking request — so nothing falls through the cracks while your team is in the field."
+          subtitle="Tarsha AI answers calls from job sites, dispatches to the right technician, and captures every new booking request, so nothing falls through the cracks while your team is in the field."
           MockUI={MockDispatchBoard}
         />
         <SolutionTestimonials
@@ -431,7 +431,7 @@ export default function HomeServicesPage() {
           eyebrow="The problem"
           heading="Your best technicians are always the least available to answer the phone"
           paragraphs={[
-            "Home service businesses live on the phone. New jobs, emergency calls, existing customer questions — all coming in while your team is on ladders, under sinks, and in attics. The person most qualified to help is the last person who can pick up.",
+            "Home service businesses live on the phone. New jobs, emergency calls, existing customer questions, all coming in while your team is on ladders, under sinks, and in attics. The person most qualified to help is the last person who can pick up.",
             "Tarsha AI answers every call within 2 seconds, triages urgency, dispatches to the right technician, and books new jobs directly into your schedule. Emergencies reach the field immediately. Routine calls are captured cleanly. You come off the job to a clear inbox, not a list of missed opportunities.",
           ]}
           Illustration={IllusIntroHomeServices}

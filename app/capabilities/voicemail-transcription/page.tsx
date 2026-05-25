@@ -273,7 +273,7 @@ function MockUrgentFlag() {
           </span>
         </div>
         <p className="text-[12px] italic text-ink/70">
-          "This is Sarah, it&apos;s <span className="font-semibold text-red-600">urgent</span> — I have a medication question and need a callback today..."
+          "This is Sarah, it&apos;s <span className="font-semibold text-red-600">urgent</span>, I have a medication question and need a callback today..."
         </p>
       </div>
       <div className="overflow-hidden rounded-xl border border-border bg-surface p-3.5">
@@ -296,7 +296,7 @@ function MockUrgentFlag() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "I used to dread coming back from a week off — voicemails stacking up, no idea which were urgent. Now I have a text inbox of every message, sorted by what matters. I triaged 47 messages in 12 minutes flat. It would have taken me two hours otherwise.",
+      "I used to dread coming back from a week off, voicemails stacking up, no idea which were urgent. Now I have a text inbox of every message, sorted by what matters. I triaged 47 messages in 12 minutes flat. It would have taken me two hours otherwise.",
     author: "James F.",
     role: "Attorney",
     company: "Fox & McAllister Legal",
@@ -304,7 +304,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We're a medical office. Accurate transcription is non-negotiable — patient names, medication questions, callback numbers. Tarsha gets everything right and flags anything that sounds urgent. Our nurses review the inbox in the morning instead of listening through recordings.",
+      "We're a medical office. Accurate transcription is non-negotiable, patient names, medication questions, callback numbers. Tarsha gets everything right and flags anything that sounds urgent. Our nurses review the inbox in the morning instead of listening through recordings.",
     author: "Dr. Wendy P.",
     role: "Practice Director",
     company: "Lakeside Family Medicine",
@@ -324,19 +324,19 @@ const steps = [
   {
     title: "Caller leaves a message",
     description:
-      "When your line is unavailable, Tarsha records the voicemail with the same professional greeting — no awkward system prompts, just a seamless experience for the caller.",
+      "When your line is unavailable, Tarsha records the voicemail with the same professional greeting, no awkward system prompts, just a seamless experience for the caller.",
     Illustration: IllusStep1Trans,
   },
   {
     title: "Transcribed instantly, automatically",
     description:
-      "The moment the call ends, Tarsha transcribes the message with high accuracy. Caller name, phone number, and key details are extracted automatically — no manual review needed.",
+      "The moment the call ends, Tarsha transcribes the message with high accuracy. Caller name, phone number, and key details are extracted automatically, no manual review needed.",
     Illustration: IllusStep2Trans,
   },
   {
     title: "Delivered to your inbox",
     description:
-      "A clean text summary lands in your inbox before you even knew the call came in. Read it, prioritize it, forward it to a team member — all without ever pressing play.",
+      "A clean text summary lands in your inbox before you even knew the call came in. Read it, prioritize it, forward it to a team member, all without ever pressing play.",
     Illustration: IllusStep3Trans,
   },
 ];
@@ -354,14 +354,14 @@ const benefits: Benefit[] = [
     icon: Clock,
     title: "Key details auto-extracted",
     description:
-      "Name, phone number, reason for calling, and urgency level — pulled automatically from the transcript and formatted for fast action.",
+      "Name, phone number, reason for calling, and urgency level, pulled automatically from the transcript and formatted for fast action.",
     MockUI: MockNumberExtract,
   },
   {
     icon: Search,
     title: "Searchable archive",
     description:
-      "Every transcription is stored and searchable. Find any message by name, topic, date, or keyword — instantly.",
+      "Every transcription is stored and searchable. Find any message by name, topic, date, or keyword, instantly.",
     MockUI: MockSearchable,
   },
   {
@@ -400,7 +400,7 @@ export default function VoicemailTranscriptionPage() {
           eyebrow="Voicemail Transcription"
           titleBefore="Read every voicemail "
           titleHighlight="in seconds, not minutes"
-          subtitle="Tarsha AI transcribes every voicemail instantly and delivers a clean, searchable text summary to your inbox — so you never have to listen to a message to understand what it says."
+          subtitle="Tarsha AI transcribes every voicemail instantly and delivers a clean, searchable text summary to your inbox, so you never have to listen to a message to understand what it says."
           MockUI={MockVoicemailInbox}
         />
         <SolutionTestimonials
@@ -411,13 +411,13 @@ export default function VoicemailTranscriptionPage() {
           eyebrow="The capability"
           heading="Listening to voicemails is a surprisingly expensive habit"
           paragraphs={[
-            "The average voicemail takes 90 seconds to listen to and requires you to replay it twice to catch the callback number. Multiply that by 15 messages a day and you've spent 45 minutes just reviewing voicemails — before you've returned a single call. That's a recurring daily tax on everyone's time.",
-            "Tarsha AI transcribes every voicemail instantly, with high accuracy. You get a text version of the message, the caller's number extracted automatically, and an urgency assessment — delivered to your inbox the moment the call ends. Reading is 5× faster than listening.",
+            "The average voicemail takes 90 seconds to listen to and requires you to replay it twice to catch the callback number. Multiply that by 15 messages a day and you've spent 45 minutes just reviewing voicemails, before you've returned a single call. That's a recurring daily tax on everyone's time.",
+            "Tarsha AI transcribes every voicemail instantly, with high accuracy. You get a text version of the message, the caller's number extracted automatically, and an urgency assessment, delivered to your inbox the moment the call ends. Reading is 5× faster than listening.",
           ]}
           Illustration={IllusIntroTranscription}
         />
         <SolutionHowItWorks
-          heading="From voicemail to text in your inbox — automatically"
+          heading="From voicemail to text in your inbox, automatically"
           steps={steps}
         />
         <SolutionBenefits

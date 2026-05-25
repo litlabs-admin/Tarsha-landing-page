@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand-yellow rounded square -->
+  <rect width="40" height="40" rx="9" fill="#FFD000"/>
+  <!-- Lowercase "t" letter mark -->
+  <path d="M21.4 9.5v6.1h5.1v4.3h-5.1v7.2c0 1.7.8 2.5 2.4 2.5.9 0 1.8-.2 2.7-.6v4.3c-1.2.5-2.5.7-3.9.7-4.1 0-6.4-2.2-6.4-6.4v-7.7h-3.2v-4.3h3.2V11l5.2-1.5Z" fill="#18130A"/>
+</svg>

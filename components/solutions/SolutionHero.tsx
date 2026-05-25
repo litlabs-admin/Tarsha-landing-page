@@ -3,6 +3,7 @@
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { brand } from "@/lib/assets";
 import { motion } from "framer-motion";
 import type { ComponentType } from "react";
 
@@ -14,7 +15,6 @@ interface SolutionHeroProps {
   subtitle: string;
   MockUI: ComponentType;
   primaryCta?: string;
-  secondaryCta?: string;
 }
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -26,8 +26,7 @@ export function SolutionHero({
   titleAfter = "",
   subtitle,
   MockUI,
-  primaryCta = "Start free trial",
-  secondaryCta = "See a demo",
+  primaryCta = "Book a demo",
 }: SolutionHeroProps) {
   return (
     <section className="relative overflow-hidden bg-bg py-20 md:py-28">
@@ -75,11 +74,8 @@ export function SolutionHero({
 
             <ScrollReveal y={12} duration={0.7} delay={0.2} amount={0.4} once>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Button size="lg" variant="primary" icon="arrow">
+                <Button size="lg" variant="primary" icon="arrow" href={brand.bookDemoUrl}>
                   {primaryCta}
-                </Button>
-                <Button size="lg" variant="outline">
-                  {secondaryCta}
                 </Button>
               </div>
             </ScrollReveal>

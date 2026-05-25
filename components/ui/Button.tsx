@@ -18,6 +18,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: "arrow" | "none";
   children: ReactNode;
   asMotion?: boolean;
+  /** When set, the button renders as an anchor linking to this URL. */
+  href?: string;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -37,7 +39,7 @@ const sizeStyles: Record<Size, string> = {
   lg: "h-12 px-6 text-[15px]",
 };
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   function Button(
     {
       variant = "primary",
@@ -45,25 +47,21 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       icon = "none",
       className,
       children,
+      href,
       ...props
     },
     ref,
   ) {
-    return (
-      <motion.button
-        ref={ref}
-        whileHover={{ y: -1 }}
-        whileTap={{ y: 0, scale: 0.985 }}
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
-        className={cn(
-          "group/btn inline-flex items-center justify-center gap-2 rounded-xl font-medium",
-          "transition-colors duration-200 ease-out focus-ring",
-          variantStyles[variant],
-          sizeStyles[size],
-          className,
-        )}
-        {...(props as React.ComponentProps<typeof motion.button>)}
-      >
+    const classes = cn(
+      "group/btn inline-flex items-center justify-center gap-2 rounded-xl font-medium",
+      "transition-colors duration-200 ease-out focus-ring",
+      variantStyles[variant],
+      sizeStyles[size],
+      className,
+    );
+
+    const inner = (
+      <>
         <span>{children}</span>
         {icon === "arrow" && (
           <ArrowUpRight
@@ -71,6 +69,39 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             strokeWidth={2}
           />
         )}
+      </>
+    );
+
+    const motionProps = {
+      whileHover: { y: -1 },
+      whileTap: { y: 0, scale: 0.985 },
+      transition: { type: "spring" as const, stiffness: 500, damping: 30 },
+      className: classes,
+    };
+
+    if (href) {
+      // External links open in a new tab; internal links stay in place.
+      const isExternal = /^https?:\/\//.test(href);
+      return (
+        <motion.a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={href}
+          {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+          {...motionProps}
+          {...(props as React.ComponentProps<typeof motion.a>)}
+        >
+          {inner}
+        </motion.a>
+      );
+    }
+
+    return (
+      <motion.button
+        ref={ref as React.Ref<HTMLButtonElement>}
+        {...motionProps}
+        {...(props as React.ComponentProps<typeof motion.button>)}
+      >
+        {inner}
       </motion.button>
     );
   },

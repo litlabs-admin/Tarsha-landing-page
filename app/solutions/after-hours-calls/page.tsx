@@ -173,7 +173,7 @@ function IllusIntroAfterHours() {
       >
         <span className="text-[15px]">⚠️</span>
         <p className="text-[12px] text-ink-muted">
-          4 potential customers waited until morning — or didn't
+          4 potential customers waited until morning, or didn't
         </p>
       </motion.div>
     </div>
@@ -298,7 +298,7 @@ function MockOvernightReport() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "HVAC emergencies don't care about business hours. Before Tarsha, I was getting woken up at 2 AM by calls that weren't actually urgent. Now Tarsha screens everything — real emergencies reach me, everything else is ready in my inbox at 7 AM.",
+      "HVAC emergencies don't care about business hours. Before Tarsha, I was getting woken up at 2 AM by calls that weren't actually urgent. Now Tarsha screens everything, real emergencies reach me, everything else is ready in my inbox at 7 AM.",
     author: "Jake T.",
     role: "Owner",
     company: "Apex HVAC & Cooling",
@@ -306,7 +306,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Patients call after hours anxious about symptoms. Tarsha handles the triage conversation, flags anything truly urgent to our on-call physician, and takes detailed messages for everything else. We wake up informed — not overwhelmed.",
+      "Patients call after hours anxious about symptoms. Tarsha handles the triage conversation, flags anything truly urgent to our on-call physician, and takes detailed messages for everything else. We wake up informed, not overwhelmed.",
     author: "Dr. Sarah M.",
     role: "Practice Manager",
     company: "Lakeside Medical Group",
@@ -326,19 +326,19 @@ const steps = [
   {
     title: "Call comes in after hours",
     description:
-      "Day or night, weekday or weekend — Tarsha answers every call within 2 seconds with your custom after-hours greeting. No voicemail, no missed opportunities.",
+      "Day or night, weekday or weekend, Tarsha answers every call within 2 seconds with your custom after-hours greeting. No voicemail, no missed opportunities.",
     Illustration: IllusAfterHoursAnswered,
   },
   {
     title: "Smart urgency detection",
     description:
-      "Tarsha listens to understand the nature of the call. Genuinely urgent situations — broken pipes, medical concerns, security issues — are escalated immediately. Everything else is handled gracefully.",
+      "Tarsha listens to understand the nature of the call. Genuinely urgent situations, broken pipes, medical concerns, security issues, are escalated immediately. Everything else is handled gracefully.",
     Illustration: IllusUrgencyTriage,
   },
   {
     title: "Morning summary waiting for you",
     description:
-      "Every after-hours call is documented. Urgent ones were handled. Routine ones have full context. You start each day with a clean inbox — not a list of missed calls to chase.",
+      "Every after-hours call is documented. Urgent ones were handled. Routine ones have full context. You start each day with a clean inbox, not a list of missed calls to chase.",
     Illustration: IllusMorningSummary,
   },
 ];
@@ -348,7 +348,7 @@ const benefits: Benefit[] = [
     icon: Moon,
     title: "Custom after-hours mode",
     description:
-      "Set a different greeting, routing logic, and escalation rules for evenings, weekends, and holidays — separate from your regular business hours.",
+      "Set a different greeting, routing logic, and escalation rules for evenings, weekends, and holidays, separate from your regular business hours.",
     MockUI: MockAfterHoursMode,
     wide: true,
   },
@@ -363,7 +363,7 @@ const benefits: Benefit[] = [
     icon: CalendarCheck,
     title: "24/7 appointment booking",
     description:
-      "Callers can book appointments around the clock. Tarsha locks in the next available slot and sends confirmation — without waking anyone up.",
+      "Callers can book appointments around the clock. Tarsha locks in the next available slot and sends confirmation, without waking anyone up.",
     MockUI: MockOvernightBooking,
   },
   {
@@ -414,7 +414,7 @@ export default function AfterHoursCallsPage() {
           heading="Your competitors don't close when you do"
           paragraphs={[
             "Customers don't limit their needs to business hours. Urgent issues, new inquiries, and booking requests come in at 9 PM on a Tuesday, on a Saturday morning, and through the holidays. If those calls hit voicemail, you're telling customers their time doesn't matter.",
-            "Tarsha AI runs 24/7 — fully configurable for your after-hours scenarios. Truly urgent calls reach your on-call line. Appointments are booked for the next available slot. Routine inquiries are answered and captured. You decide exactly how every after-hours call is handled — and you wake up to a clean summary.",
+            "Tarsha AI runs 24/7, fully configurable for your after-hours scenarios. Truly urgent calls reach your on-call line. Appointments are booked for the next available slot. Routine inquiries are answered and captured. You decide exactly how every after-hours call is handled, and you wake up to a clean summary.",
           ]}
           Illustration={IllusIntroAfterHours}
         />

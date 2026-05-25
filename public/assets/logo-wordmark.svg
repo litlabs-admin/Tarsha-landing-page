@@ -1,0 +1,28 @@
+<svg width="288" height="56" viewBox="0 0 288 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    tarsha.ai — horizontal logo (icon mark + wordmark)
+    Icon: 56 × 56 yellow square, T + voice-waveform glyph
+    Wordmark: Satoshi 700 / 400, tight tracking
+  -->
+
+  <!-- ── Icon mark ─────────────────────────────────────── -->
+  <rect width="56" height="56" rx="12.5" fill="#FFD000"/>
+  <!-- T crossbar -->
+  <rect x="9.8"  y="14"   width="14"  height="7.7"  rx="2"    fill="#18130A"/>
+  <!-- T stem -->
+  <rect x="23.8" y="14"   width="8.4" height="29.4" rx="2"    fill="#18130A"/>
+  <!-- Voice waveform bars (bottoms aligned to crossbar base y=21.7) -->
+  <rect x="36.4" y="17.5" width="3.5" height="4.2"  rx="1.4"  fill="#18130A"/>
+  <rect x="41.3" y="13.3" width="3.5" height="8.4"  rx="1.4"  fill="#18130A"/>
+  <rect x="46.2" y="15.7" width="3.5" height="6"    rx="1.4"  fill="#18130A"/>
+
+  <!-- ── Wordmark ──────────────────────────────────────── -->
+  <text
+    x="72"
+    y="39"
+    font-family="'Satoshi', 'Inter', ui-sans-serif, system-ui, sans-serif"
+    font-size="30"
+  >
+    <tspan font-weight="700" fill="#18130A" letter-spacing="-0.9">tarsha</tspan><tspan fill="#FFD000" font-weight="700" letter-spacing="-0.7">.</tspan><tspan fill="#4A3C10" font-weight="400" letter-spacing="-0.9">ai</tspan>
+  </text>
+</svg>

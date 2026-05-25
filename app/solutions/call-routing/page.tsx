@@ -311,7 +311,7 @@ function MockVoicemailFallback() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "We have sales, support, and billing — and callers used to end up in the wrong place constantly. Tarsha figures out exactly what they need and routes them perfectly every time. My team has stopped dreading the phone.",
+      "We have sales, support, and billing, and callers used to end up in the wrong place constantly. Tarsha figures out exactly what they need and routes them perfectly every time. My team has stopped dreading the phone.",
     author: "Tom B.",
     role: "Operations Manager",
     company: "Greenfield Business Services",
@@ -327,7 +327,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We practice in three areas of law. Before Tarsha, clients calling about litigation would end up with our family law team by mistake. That doesn't happen anymore. Every call gets where it needs to go — in under a second.",
+      "We practice in three areas of law. Before Tarsha, clients calling about litigation would end up with our family law team by mistake. That doesn't happen anymore. Every call gets where it needs to go, in under a second.",
     author: "James W.",
     role: "Managing Partner",
     company: "Whitfield Legal",
@@ -339,7 +339,7 @@ const steps = [
   {
     title: "A call comes in",
     description:
-      "Tarsha AI answers immediately with a warm, professional greeting in your business name — day, night, or weekend.",
+      "Tarsha AI answers immediately with a warm, professional greeting in your business name, day, night, or weekend.",
     Illustration: IllusCallGreeting,
   },
   {
@@ -351,7 +351,7 @@ const steps = [
   {
     title: "Transferred in under a second",
     description:
-      "No hold music. No confusion. The right person picks up — already briefed on why the caller is reaching out.",
+      "No hold music. No confusion. The right person picks up, already briefed on why the caller is reaching out.",
     Illustration: IllusTransferResult,
   },
 ];
@@ -361,7 +361,7 @@ const benefits: Benefit[] = [
     icon: Route,
     title: "Smart routing rules",
     description:
-      "Route by topic, urgency, VIP status, or any custom rule you define — and update them in real time.",
+      "Route by topic, urgency, VIP status, or any custom rule you define, and update them in real time.",
     MockUI: MockSmartRules,
     wide: true,
   },
@@ -369,14 +369,14 @@ const benefits: Benefit[] = [
     icon: Zap,
     title: "Instant transfers",
     description:
-      "Calls are transferred in under a second. No hold music, no confusion — just the right person picking up.",
+      "Calls are transferred in under a second. No hold music, no confusion, just the right person picking up.",
     MockUI: MockInstantTransfer,
   },
   {
     icon: Layers,
     title: "Overflow handling",
     description:
-      "When a line is busy, calls are automatically routed to the next available option — no caller left waiting.",
+      "When a line is busy, calls are automatically routed to the next available option, no caller left waiting.",
     MockUI: MockOverflow,
   },
   {
@@ -415,7 +415,7 @@ export default function CallRoutingPage() {
           eyebrow="Call Routing"
           titleBefore="Every call goes "
           titleHighlight="exactly where it needs to"
-          subtitle="Tarsha AI greets every caller, understands their need, and routes them to the right person or team — instantly, every time, 24/7."
+          subtitle="Tarsha AI greets every caller, understands their need, and routes them to the right person or team, instantly, every time, 24/7."
           MockUI={MockRouteFlow}
         />
         <SolutionTestimonials
@@ -426,8 +426,8 @@ export default function CallRoutingPage() {
           eyebrow="The problem"
           heading="The wrong person picking up costs everyone time"
           paragraphs={[
-            "When callers reach the wrong department, they have to explain their situation twice — and your team wastes time transferring calls they shouldn't have taken. Multiply that across a full week and the hidden cost is significant.",
-            "Tarsha AI answers every call, listens to understand what the caller actually needs, and routes them to exactly the right person in under a second — with a brief handoff summary so whoever answers is already informed. No phone trees, no confusion, no wasted time.",
+            "When callers reach the wrong department, they have to explain their situation twice, and your team wastes time transferring calls they shouldn't have taken. Multiply that across a full week and the hidden cost is significant.",
+            "Tarsha AI answers every call, listens to understand what the caller actually needs, and routes them to exactly the right person in under a second, with a brief handoff summary so whoever answers is already informed. No phone trees, no confusion, no wasted time.",
           ]}
           Illustration={IllusIntroWrongRoute}
         />

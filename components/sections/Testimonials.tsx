@@ -3,7 +3,7 @@
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -21,32 +21,32 @@ const allTestimonials: Testimonial[] = [
   // ── Initial 3 ──────────────────────────────────────────────────────────────
   {
     quote:
-      "Working with Tarsha AI was a game-changer. Our customers actually compliment our phone service now — something we never heard before.",
-    name: "David Okoro",
-    role: "Partner",
-    company: "Okoro Legal Group",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=640&fit=crop&crop=faces&q=85",
+      "Working with Tarsha AI was a game-changer. Our customers actually compliment our phone service now, something we never heard before.",
+    name: "Will Sinclair",
+    role: "Sales Director",
+    company: "Sales Geek",
+    img: "/assets/william.png",
   },
   {
     quote:
       "I was losing jobs to competitors who answered faster. Now Tarsha AI picks up every call, captures the job details, and I follow up when I'm free.",
-    name: "James Calloway",
-    role: "Owner",
-    company: "Calloway HVAC Services",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&h=640&fit=crop&crop=faces&q=85",
+    name: "Calum Maguire",
+    role: "Director",
+    company: "RACAM Security & Communications Ltd",
+    img: "/assets/callum.png",
   },
   {
     quote:
       "Clients call at all hours for policy questions. Tarsha AI is professional, never makes a caller feel ignored. My client retention has visibly improved.",
-    name: "Michael Reeves",
-    role: "Independent Agent",
-    company: "Reeves Insurance Group",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=480&h=640&fit=crop&crop=faces&q=85",
+    name: "Jim Craig",
+    role: "Managing Director",
+    company: "RoswellIt",
+    img: "/assets/jim.png",
   },
   // ── Extra 3 (hidden behind See More) ───────────────────────────────────────
   {
     quote:
-      "Reservation calls were killing us during dinner service. Tarsha AI handles every booking now — our staff focuses entirely on the guests already in the restaurant.",
+      "Reservation calls were killing us during dinner service. Tarsha AI handles every booking now, our staff focuses entirely on the guests already in the restaurant.",
     name: "Marcus Thompson",
     role: "Owner",
     company: "Thompson's Bistro",
@@ -62,7 +62,7 @@ const allTestimonials: Testimonial[] = [
   },
   {
     quote:
-      "When I'm on a job site I can't pick up the phone. Tarsha AI captures every service request with all the details I need — no more playing phone tag with customers.",
+      "When I'm on a job site I can't pick up the phone. Tarsha AI captures every service request with all the details I need, no more playing phone tag with customers.",
     name: "Kevin Brooks",
     role: "Owner",
     company: "Brooks Electric",
@@ -79,21 +79,23 @@ function TestimonialCard({ t }: { t: Testimonial }) {
       variants={{
         rest: {
           y: 0,
-          boxShadow: "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04)",
+          boxShadow:
+            "0 1px 3px rgba(24,19,10,0.05), 0 6px 20px rgba(24,19,10,0.05)",
         },
         hovered: {
-          y: -3,
-          boxShadow: "0 4px 16px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.06)",
+          y: -4,
+          boxShadow:
+            "0 0 0 1px rgba(234,216,112,0.7), 0 14px 34px rgba(24,19,10,0.12)",
         },
       }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
-      className="flex h-full flex-col overflow-hidden rounded-2xl bg-surface cursor-default"
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface cursor-default"
     >
-      {/* Image block — uniform 3/4 portrait for all cards */}
+      {/* Image block, uniform 3/4 portrait for all cards */}
       <div className="relative w-full aspect-[3/4] overflow-hidden flex-shrink-0">
         <motion.div
           variants={{ rest: { scale: 1 }, hovered: { scale: 1.06 } }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="absolute inset-0"
         >
           <Image
@@ -108,31 +110,51 @@ function TestimonialCard({ t }: { t: Testimonial }) {
 
         {/* Name overlay */}
         <div
-          className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-4"
+          className="absolute inset-x-0 bottom-0 px-5 pb-4 pt-14"
           style={{
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.60) 0%, transparent 100%)",
+              "linear-gradient(to top, rgba(15,12,3,0.82) 0%, rgba(15,12,3,0.30) 55%, transparent 100%)",
           }}
         >
           <p
-            className="text-[18px] font-bold leading-tight text-white"
-            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
+            className="font-display text-[19px] font-bold leading-tight text-white"
+            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.35)" }}
           >
             {t.name}
           </p>
           <p
-            className="mt-0.5 text-[13px] font-medium text-white/85"
-            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}
+            className="mt-1 text-[12.5px] font-medium leading-snug text-white/85"
+            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.35)" }}
           >
             {t.role} · {t.company}
           </p>
         </div>
       </div>
 
-      {/* Quote block — grows to fill remaining card height */}
-      <div className="flex flex-1 items-start px-4 py-4">
-        <p className="text-[14px] leading-[1.5] text-ink">
-          &ldquo;{t.quote}&rdquo;
+      {/* Quote block, grows to fill remaining card height */}
+      <div className="relative flex flex-1 flex-col px-5 pb-6 pt-5">
+        {/* Decorative quotation mark */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute right-4 top-1 select-none font-display text-[64px] leading-none"
+          style={{ color: "rgba(255,208,0,0.32)" }}
+        >
+          &rdquo;
+        </span>
+
+        {/* Star rating */}
+        <div className="mb-3 flex items-center gap-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className="h-3.5 w-3.5 fill-accent text-accent"
+              strokeWidth={0}
+            />
+          ))}
+        </div>
+
+        <p className="relative text-[14.5px] leading-[1.65] text-ink/90">
+          {t.quote}
         </p>
       </div>
     </motion.article>
@@ -171,7 +193,7 @@ export function Testimonials() {
           <span className="text-accent">around the world</span>
         </motion.h2>
 
-        {/* Uniform CSS Grid — all cards same height per row */}
+        {/* Uniform CSS Grid, all cards same height per row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Always-visible initial 3 */}
           {initial.map((t, i) => (
@@ -186,7 +208,7 @@ export function Testimonials() {
             </motion.div>
           ))}
 
-          {/* Extra 3 — staggered enter/exit */}
+          {/* Extra 3, staggered enter/exit */}
           <AnimatePresence>
             {expanded &&
               extra.map((t, i) => (

@@ -1,4 +1,4 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Allura, Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -15,4 +15,12 @@ export const satoshi = Plus_Jakarta_Sans({
   variable: "--font-satoshi",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+// Allura — refined signature script for the wordmark logo (single weight).
+export const allura = Allura({
+  subsets: ["latin"],
+  variable: "--font-allura",
+  display: "swap",
+  weight: ["400"],
 });

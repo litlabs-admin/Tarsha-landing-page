@@ -280,7 +280,7 @@ function MockWhatsAppHandoff() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Our customers are young and they don't call — they message. Since adding Tarsha to our WhatsApp, we've seen booking requests triple. It answers instantly, books them in, and sends a confirmation — all without us touching a phone.",
+      "Our customers are young and they don't call, they message. Since adding Tarsha to our WhatsApp, we've seen booking requests triple. It answers instantly, books them in, and sends a confirmation, all without us touching a phone.",
     author: "Priya K.",
     role: "Owner",
     company: "Bloom Beauty Studio",
@@ -296,7 +296,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Buyers send WhatsApp messages at all hours asking about listings. Tarsha answers every single one, qualifies the lead, and schedules viewings automatically. I've closed two deals from leads that came in at 11 PM — deals I would have missed before.",
+      "Buyers send WhatsApp messages at all hours asking about listings. Tarsha answers every single one, qualifies the lead, and schedules viewings automatically. I've closed two deals from leads that came in at 11 PM, deals I would have missed before.",
     author: "Rachel S.",
     role: "Senior Agent",
     company: "Horizon Real Estate",
@@ -308,13 +308,13 @@ const steps = [
   {
     title: "Customer messages your WhatsApp",
     description:
-      "No forms, no phone calls, no waiting. The customer sends a message and Tarsha AI responds instantly — 24/7, in English or Spanish, with the same professional experience every time.",
+      "No forms, no phone calls, no waiting. The customer sends a message and Tarsha AI responds instantly, 24/7, in English or Spanish, with the same professional experience every time.",
     Illustration: IllusWhatsAppIncoming,
   },
   {
     title: "Full conversation handled",
     description:
-      "Tarsha understands intent, answers questions from your knowledge base, and books appointments — all within the WhatsApp thread. No switching apps, no friction.",
+      "Tarsha understands intent, answers questions from your knowledge base, and books appointments, all within the WhatsApp thread. No switching apps, no friction.",
     Illustration: IllusWhatsAppHandles,
   },
   {
@@ -330,7 +330,7 @@ const benefits: Benefit[] = [
     icon: MessageCircle,
     title: "Instant WhatsApp responses",
     description:
-      "No delays, no bots with slow menus — a natural, helpful conversation from the first message, around the clock.",
+      "No delays, no bots with slow menus, a natural, helpful conversation from the first message, around the clock.",
     MockUI: MockInstantResponse,
     wide: true,
   },
@@ -338,21 +338,21 @@ const benefits: Benefit[] = [
     icon: CalendarCheck,
     title: "Bookings inside the chat",
     description:
-      "Customers never leave WhatsApp. Tarsha checks availability, offers slots, confirms the booking, and sends reminders — entirely in-thread.",
+      "Customers never leave WhatsApp. Tarsha checks availability, offers slots, confirms the booking, and sends reminders, entirely in-thread.",
     MockUI: MockInChatBooking,
   },
   {
     icon: Globe,
     title: "English & Spanish",
     description:
-      "Tarsha responds in the customer's language automatically — no language selection needed, no separate number required.",
+      "Tarsha responds in the customer's language automatically, no language selection needed, no separate number required.",
     MockUI: MockWhatsAppBilingual,
   },
   {
     icon: ArrowUpRight,
     title: "Seamless human handoff",
     description:
-      "When a conversation needs a human, Tarsha hands it off instantly — with the complete message history and a context summary so your team picks up without missing a beat.",
+      "When a conversation needs a human, Tarsha hands it off instantly, with the complete message history and a context summary so your team picks up without missing a beat.",
     MockUI: MockWhatsAppHandoff,
     wide: true,
   },
@@ -384,7 +384,7 @@ export default function WhatsAppIntegrationPage() {
           eyebrow="WhatsApp Integration"
           titleBefore="Your AI receptionist, "
           titleHighlight="now on WhatsApp"
-          subtitle="Tarsha AI handles customer conversations on WhatsApp — answering questions, booking appointments, and routing inquiries automatically. Same intelligence as the phone, in the chat."
+          subtitle="Tarsha AI handles customer conversations on WhatsApp, answering questions, booking appointments, and routing inquiries automatically. Same intelligence as the phone, in the chat."
           MockUI={MockWhatsAppChat}
         />
         <SolutionTestimonials
@@ -395,8 +395,8 @@ export default function WhatsAppIntegrationPage() {
           eyebrow="The problem"
           heading="Customers prefer to message. Most businesses aren't ready."
           paragraphs={[
-            "WhatsApp has over 2 billion users. For a growing number of customers — especially younger and international audiences — messaging is the default way they reach out. Businesses that only offer phone support are invisible to this segment.",
-            "Tarsha AI connects to your WhatsApp Business account and handles conversations automatically. Questions get instant answers. Appointments get booked in the thread. Leads get qualified. Complex issues get escalated to your team with full context. Same intelligence as the phone — now in the chat.",
+            "WhatsApp has over 2 billion users. For a growing number of customers, especially younger and international audiences, messaging is the default way they reach out. Businesses that only offer phone support are invisible to this segment.",
+            "Tarsha AI connects to your WhatsApp Business account and handles conversations automatically. Questions get instant answers. Appointments get booked in the thread. Leads get qualified. Complex issues get escalated to your team with full context. Same intelligence as the phone, now in the chat.",
           ]}
           Illustration={IllusIntroWhatsAppGap}
         />

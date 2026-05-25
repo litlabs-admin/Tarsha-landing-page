@@ -54,7 +54,7 @@ export function NewsletterSignup() {
                 transition={{ duration: 0.4, ease: EASE }}
                 className="mt-8 flex items-center gap-2 rounded-full border border-border bg-surface-muted px-6 py-3 text-[14px] font-medium text-ink"
               >
-                <span className="text-green-500">✓</span> You&apos;re in — check your inbox!
+                <span className="text-green-500">✓</span> You&apos;re in, check your inbox!
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-md gap-2">

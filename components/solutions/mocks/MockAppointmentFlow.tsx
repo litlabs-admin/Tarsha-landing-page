@@ -42,7 +42,7 @@ export function MockAppointmentFlow() {
           transition={{ delay: 0.22, duration: 0.35, ease: EASE }}
           className="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm border border-accent/30 bg-accent/10 px-3 py-2"
         >
-          <p className="text-[12px] text-ink">"Wednesday at 10 AM works — shall I book it?"</p>
+          <p className="text-[12px] text-ink">"Wednesday at 10 AM works, shall I book it?"</p>
         </motion.div>
       </div>
 

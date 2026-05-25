@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { brand } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -119,7 +120,7 @@ export function Pricing() {
             </h2>
             <p className="mt-5 max-w-xl text-balance text-[16px] leading-[1.65] text-ink-muted md:text-[17px]">
               Pick the plan that fits your call volume. Upgrade, downgrade, or
-              cancel anytime — no fine print.
+              cancel anytime, no fine print.
             </p>
           </div>
         </ScrollReveal>
@@ -143,13 +144,6 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Trust line */}
-        <ScrollReveal y={12} duration={0.6} delay={0.2}>
-          <p className="mt-12 text-center text-[13px] text-ink-muted md:mt-14">
-            No credit card required · Cancel anytime · 14-day free trial on
-            every plan
-          </p>
-        </ScrollReveal>
       </Container>
     </section>
   );
@@ -169,7 +163,7 @@ function BillingToggle({
         aria-label="Billing period"
         className="relative inline-flex items-center rounded-full border border-border bg-surface p-1 shadow-soft"
       >
-        {/* Sliding pill — sits behind the two equal-width buttons */}
+        {/* Sliding pill, sits behind the two equal-width buttons */}
         <motion.span
           aria-hidden
           animate={{ x: billing === "monthly" ? "0%" : "100%" }}
@@ -318,7 +312,7 @@ function TierCard({
           )}
         </div>
 
-        {/* Call quota — big number */}
+        {/* Call quota, big number */}
         <div className="mt-4">
           <p
             className={cn(
@@ -415,12 +409,12 @@ function TierCard({
         {/* CTA */}
         <div className="mt-6">
           {isPopular ? (
-            <Button variant="primary" size="md" className="w-full">
-              Try for free
+            <Button variant="primary" size="md" className="w-full" href={brand.bookDemoUrl}>
+              Book a demo
             </Button>
           ) : (
-            <Button variant="dark" size="md" className="w-full">
-              Try for free
+            <Button variant="dark" size="md" className="w-full" href={brand.bookDemoUrl}>
+              Book a demo
             </Button>
           )}
         </div>

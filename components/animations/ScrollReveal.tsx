@@ -82,7 +82,7 @@ export function ScrollReveal({
 }
 
 /**
- * Child variant matching ScrollReveal's stagger — wrap each staggered child
+ * Child variant matching ScrollReveal's stagger, wrap each staggered child
  * in <RevealItem> when using stagger on the parent.
  */
 export const revealItem: Variants = {

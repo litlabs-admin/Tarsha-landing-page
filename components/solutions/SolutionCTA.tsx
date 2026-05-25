@@ -2,6 +2,7 @@
 
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { brand } from "@/lib/assets";
 
 interface SolutionCTAProps {
   heading: string;
@@ -37,16 +38,10 @@ export function SolutionCTA({
             <p className="mt-4 text-[16px] text-ink-muted">{subheading}</p>
           )}
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Button size="lg" variant="primary" icon="arrow">
-              Start free trial
-            </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="primary" icon="arrow" href={brand.bookDemoUrl}>
               Book a demo
             </Button>
           </div>
-          <p className="mt-5 text-[13px] text-ink-faint">
-            14-day free trial · No credit card required
-          </p>
         </ScrollReveal>
       </div>
     </section>

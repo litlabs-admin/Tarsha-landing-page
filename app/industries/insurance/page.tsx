@@ -276,7 +276,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We were losing quote requests constantly — callers going to voicemail during busy periods and never calling back. Tarsha answers every single one, captures the prospect's details and coverage needs, and queues them for callbacks. Our conversion rate went up 28% in 60 days.",
+      "We were losing quote requests constantly, callers going to voicemail during busy periods and never calling back. Tarsha answers every single one, captures the prospect's details and coverage needs, and queues them for callbacks. Our conversion rate went up 28% in 60 days.",
     author: "Brian M.",
     role: "Principal Broker",
     company: "Meridian Insurance Group",
@@ -296,19 +296,19 @@ const steps = [
   {
     title: "Claim calls answered instantly",
     description:
-      "First-notice calls are answered immediately, 24 hours a day. No voicemail, no hold music — a calm, professional voice that reassures your client from the first second.",
+      "First-notice calls are answered immediately, 24 hours a day. No voicemail, no hold music, a calm, professional voice that reassures your client from the first second.",
     Illustration: IllusStep1Insurance,
   },
   {
     title: "Every detail accurately captured",
     description:
-      "Policy number, incident details, contact information, urgency level — Tarsha collects everything your claims team needs before they pick up the phone.",
+      "Policy number, incident details, contact information, urgency level, Tarsha collects everything your claims team needs before they pick up the phone.",
     Illustration: IllusStep2Insurance,
   },
   {
     title: "Routed to the right team",
     description:
-      "Auto, home, commercial, life — Tarsha routes each caller to the right specialist instantly, with a complete summary so your agent is already prepared.",
+      "Auto, home, commercial, life, Tarsha routes each caller to the right specialist instantly, with a complete summary so your agent is already prepared.",
     Illustration: IllusStep3Insurance,
   },
 ];
@@ -318,7 +318,7 @@ const benefits: Benefit[] = [
     icon: ShieldCheck,
     title: "Accurate first-notice documentation",
     description:
-      "Every claim detail captured precisely the first time — no missing information, no follow-up calls just to collect basics.",
+      "Every claim detail captured precisely the first time, no missing information, no follow-up calls just to collect basics.",
     MockUI: MockClaimCapture,
     wide: true,
   },
@@ -333,14 +333,14 @@ const benefits: Benefit[] = [
     icon: Route,
     title: "Smart product-line routing",
     description:
-      "Auto, home, commercial, life — every caller reaches the right specialist instantly, without being transferred twice.",
+      "Auto, home, commercial, life, every caller reaches the right specialist instantly, without being transferred twice.",
     MockUI: MockLineRouting,
   },
   {
     icon: FileText,
     title: "Every interaction logged",
     description:
-      "Clean records of every call, claim, and quote request — organized in your inbox and ready for your team.",
+      "Clean records of every call, claim, and quote request, organized in your inbox and ready for your team.",
     MockUI: MockClaimLog,
     wide: true,
   },
@@ -372,7 +372,7 @@ export default function InsurancePage() {
           eyebrow="Insurance Agencies"
           titleBefore="Every claim call "
           titleHighlight="answered immediately"
-          subtitle="Tarsha AI handles first-notice calls, routes to the right agent, and captures every quote request — with the professionalism and accuracy that insurance clients expect, 24/7."
+          subtitle="Tarsha AI handles first-notice calls, routes to the right agent, and captures every quote request, with the professionalism and accuracy that insurance clients expect, 24/7."
           MockUI={MockInsuranceClaim}
         />
         <SolutionTestimonials
@@ -381,10 +381,10 @@ export default function InsurancePage() {
         />
         <SolutionIntro
           eyebrow="The problem"
-          heading="Insurance clients call when something goes wrong — they can't wait"
+          heading="Insurance clients call when something goes wrong, they can't wait"
           paragraphs={[
-            "A burst pipe at midnight. A fender bender during rush hour. A business break-in on a Saturday. Insurance clients call in moments of stress — and if they reach voicemail, you haven't just missed a call. You've damaged trust at the worst possible moment.",
-            "Tarsha AI answers every call instantly, with calm professionalism. First-notice calls are documented and escalated appropriately. Quote requests are captured in full. Existing clients are routed to the right agent. Your agency stays responsive around the clock — without adding headcount.",
+            "A burst pipe at midnight. A fender bender during rush hour. A business break-in on a Saturday. Insurance clients call in moments of stress, and if they reach voicemail, you haven't just missed a call. You've damaged trust at the worst possible moment.",
+            "Tarsha AI answers every call instantly, with calm professionalism. First-notice calls are documented and escalated appropriately. Quote requests are captured in full. Existing clients are routed to the right agent. Your agency stays responsive around the clock, without adding headcount.",
           ]}
           Illustration={IllusIntroInsurance}
         />

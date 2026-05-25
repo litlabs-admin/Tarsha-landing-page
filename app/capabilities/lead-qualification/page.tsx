@@ -312,7 +312,7 @@ function MockConversionStats() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "We were spending 40% of our sales team's time calling back leads that were never going to convert. Tarsha asks the right questions before they even reach us. Now we only call back qualified leads — our close rate doubled in 90 days.",
+      "We were spending 40% of our sales team's time calling back leads that were never going to convert. Tarsha asks the right questions before they even reach us. Now we only call back qualified leads, our close rate doubled in 90 days.",
     author: "Nathan R.",
     role: "Head of Sales",
     company: "Vantage Solutions",
@@ -320,7 +320,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "As a solo broker I can't spend three hours a day returning calls only to discover the caller was just browsing. Tarsha qualifies every inquiry — budget confirmed, timeline clear, decision maker on the line. I work smarter now, not harder.",
+      "As a solo broker I can't spend three hours a day returning calls only to discover the caller was just browsing. Tarsha qualifies every inquiry, budget confirmed, timeline clear, decision maker on the line. I work smarter now, not harder.",
     author: "Patricia L.",
     role: "Independent Broker",
     company: "Landmark Real Estate",
@@ -328,7 +328,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Our team used to treat every inbound the same. Now Tarsha flags hot leads — the ones with budget, urgency, and clear intent — and we respond to those within minutes. Our revenue per call went up significantly because we prioritize correctly.",
+      "Our team used to treat every inbound the same. Now Tarsha flags hot leads, the ones with budget, urgency, and clear intent, and we respond to those within minutes. Our revenue per call went up significantly because we prioritize correctly.",
     author: "Mike S.",
     role: "VP of Sales",
     company: "Clearfield Technologies",
@@ -340,7 +340,7 @@ const steps = [
   {
     title: "Natural qualifying conversation",
     description:
-      "Tarsha asks your custom qualifying questions through natural conversation — budget, timeline, decision-maker status, specific needs. No scripts that feel like a quiz, just a helpful exchange.",
+      "Tarsha asks your custom qualifying questions through natural conversation, budget, timeline, decision-maker status, specific needs. No scripts that feel like a quiz, just a helpful exchange.",
     Illustration: IllusStep1LeadQual,
   },
   {
@@ -352,7 +352,7 @@ const steps = [
   {
     title: "Prioritized callback queue delivered",
     description:
-      "Your team receives a ranked list of leads — hottest at the top, with full context. No wasted time on cold callbacks. No missed opportunities on hot ones.",
+      "Your team receives a ranked list of leads, hottest at the top, with full context. No wasted time on cold callbacks. No missed opportunities on hot ones.",
     Illustration: IllusStep3LeadQual,
   },
 ];
@@ -362,7 +362,7 @@ const benefits: Benefit[] = [
     icon: UserCheck,
     title: "Custom qualification questions",
     description:
-      "Define the exact questions Tarsha asks for your business — budget, timeline, company size, decision authority. Any criteria that matters to you.",
+      "Define the exact questions Tarsha asks for your business, budget, timeline, company size, decision authority. Any criteria that matters to you.",
     MockUI: MockQualifyingScript,
     wide: true,
   },
@@ -370,21 +370,21 @@ const benefits: Benefit[] = [
     icon: Zap,
     title: "Instant lead scoring",
     description:
-      "Every lead is scored in real time during the call — no manual review, no data entry. Hot leads are flagged before the call even ends.",
+      "Every lead is scored in real time during the call, no manual review, no data entry. Hot leads are flagged before the call even ends.",
     MockUI: MockLeadScoreCard,
   },
   {
     icon: ArrowUpRight,
     title: "Prioritized callback queue",
     description:
-      "Your team gets a ranked list every time. Hottest leads at the top, full context included — so the right person gets called back within minutes.",
+      "Your team gets a ranked list every time. Hottest leads at the top, full context included, so the right person gets called back within minutes.",
     MockUI: MockCallbackQueue,
   },
   {
     icon: BarChart3,
     title: "Conversion intelligence",
     description:
-      "See which lead types convert best, how quickly hot leads are reached, and where your pipeline is strongest — built from every qualified call.",
+      "See which lead types convert best, how quickly hot leads are reached, and where your pipeline is strongest, built from every qualified call.",
     MockUI: MockConversionStats,
     wide: true,
   },
@@ -416,7 +416,7 @@ export default function LeadQualificationPage() {
           eyebrow="Lead Qualification"
           titleBefore="Know which leads are "
           titleHighlight="worth calling back first"
-          subtitle="Tarsha AI qualifies every caller with the right questions — scoring leads by budget, intent, and urgency so your team spends time on opportunities, not tire-kickers."
+          subtitle="Tarsha AI qualifies every caller with the right questions, scoring leads by budget, intent, and urgency so your team spends time on opportunities, not tire-kickers."
           MockUI={MockLeadQualScore}
         />
         <SolutionTestimonials
@@ -427,8 +427,8 @@ export default function LeadQualificationPage() {
           eyebrow="The capability"
           heading="Not every caller is worth the same callback time"
           paragraphs={[
-            "Most businesses treat every inbound call the same — log it, call it back, discover it wasn't a real opportunity. That's expensive. A serious buyer with budget and urgency should reach you within minutes. Someone just browsing can wait — or be handled fully by Tarsha.",
-            "Tarsha AI qualifies callers through natural conversation. It asks the right questions for your business, identifies intent and urgency, and scores each lead. You receive a prioritized summary — hot, warm, or routine — so your team knows exactly who to call back first and why.",
+            "Most businesses treat every inbound call the same, log it, call it back, discover it wasn't a real opportunity. That's expensive. A serious buyer with budget and urgency should reach you within minutes. Someone just browsing can wait, or be handled fully by Tarsha.",
+            "Tarsha AI qualifies callers through natural conversation. It asks the right questions for your business, identifies intent and urgency, and scores each lead. You receive a prioritized summary, hot, warm, or routine, so your team knows exactly who to call back first and why.",
           ]}
           Illustration={IllusIntroLeadQual}
         />

@@ -58,7 +58,7 @@ export function MockRestaurantReservation() {
           transition={{ delay: 0.38, duration: 0.35, ease: EASE }}
           className="ml-auto max-w-[85%] rounded-2xl rounded-tr-sm border border-accent/30 bg-accent/10 px-3 py-2"
         >
-          <p className="text-[12px] text-ink">"Window table secured for you — noted!"</p>
+          <p className="text-[12px] text-ink">"Window table secured for you, noted!"</p>
         </motion.div>
       </div>
 

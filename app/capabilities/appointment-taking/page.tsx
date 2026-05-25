@@ -299,7 +299,7 @@ function MockNoShowStats() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "My front desk was spending 3 hours a day just booking appointments over the phone. Tarsha does it all automatically now — the calendar stays full, my team stays focused, and patients actually say scheduling has never been easier.",
+      "My front desk was spending 3 hours a day just booking appointments over the phone. Tarsha does it all automatically now, the calendar stays full, my team stays focused, and patients actually say scheduling has never been easier.",
     author: "Dr. Amy C.",
     role: "Practice Owner",
     company: "Westside Chiropractic",
@@ -307,7 +307,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We do high-volume appointment booking — hundreds a week. Before Tarsha we needed two dedicated staff members just to manage the phone schedule. Now it's fully automated, double-bookings are zero, and our no-show rate dropped 55% with the reminders.",
+      "We do high-volume appointment booking, hundreds a week. Before Tarsha we needed two dedicated staff members just to manage the phone schedule. Now it's fully automated, double-bookings are zero, and our no-show rate dropped 55% with the reminders.",
     author: "Mark F.",
     role: "Operations Director",
     company: "FitLife Studios Network",
@@ -327,19 +327,19 @@ const steps = [
   {
     title: "Live availability checked instantly",
     description:
-      "Tarsha reads your real-time calendar — Google Calendar, Outlook, Acuity, Calendly. No outdated slots, no double-bookings, ever.",
+      "Tarsha reads your real-time calendar, Google Calendar, Outlook, Acuity, Calendly. No outdated slots, no double-bookings, ever.",
     Illustration: IllusStep1Appt,
   },
   {
     title: "Booking conversation handled",
     description:
-      "Tarsha offers available slots, qualifies the appointment type, collects the caller's details, and confirms the time — entirely within the phone call.",
+      "Tarsha offers available slots, qualifies the appointment type, collects the caller's details, and confirms the time, entirely within the phone call.",
     Illustration: IllusStep2Appt,
   },
   {
     title: "Confirmation and reminders sent automatically",
     description:
-      "The moment the booking is confirmed, a calendar event is created, the caller gets a confirmation, and a reminder sequence starts — reducing no-shows by up to 60%.",
+      "The moment the booking is confirmed, a calendar event is created, the caller gets a confirmation, and a reminder sequence starts, reducing no-shows by up to 60%.",
     Illustration: IllusStep3Appt,
   },
 ];
@@ -349,7 +349,7 @@ const benefits: Benefit[] = [
     icon: CalendarCheck,
     title: "Real-time calendar sync",
     description:
-      "Connects to Google Calendar, Outlook, Acuity, Calendly, and more. Always shows live availability — no back-and-forth, no double-bookings.",
+      "Connects to Google Calendar, Outlook, Acuity, Calendly, and more. Always shows live availability, no back-and-forth, no double-bookings.",
     MockUI: MockRealTimeCalendar,
     wide: true,
   },
@@ -357,14 +357,14 @@ const benefits: Benefit[] = [
     icon: Bell,
     title: "Automated reminder sequences",
     description:
-      "Confirmation email, 24-hour SMS reminder, 1-hour final reminder — sent automatically, reducing no-shows by up to 60%.",
+      "Confirmation email, 24-hour SMS reminder, 1-hour final reminder, sent automatically, reducing no-shows by up to 60%.",
     MockUI: MockReminderFlow,
   },
   {
     icon: Settings,
     title: "Booking rules you control",
     description:
-      "Buffer time, max daily bookings, advance booking window, service types — your calendar, your rules.",
+      "Buffer time, max daily bookings, advance booking window, service types, your calendar, your rules.",
     MockUI: MockBookingRulesCapability,
   },
   {
@@ -403,7 +403,7 @@ export default function AppointmentTakingPage() {
           eyebrow="Appointment Taking"
           titleBefore="Book appointments "
           titleHighlight="without lifting a finger"
-          subtitle="Tarsha AI handles the entire booking conversation in real time — checking availability, offering slots, confirming the appointment, and sending reminders automatically."
+          subtitle="Tarsha AI handles the entire booking conversation in real time, checking availability, offering slots, confirming the appointment, and sending reminders automatically."
           MockUI={MockAppointmentFlow}
         />
         <SolutionTestimonials
@@ -415,7 +415,7 @@ export default function AppointmentTakingPage() {
           heading="Every booking call takes 3–8 minutes of someone's time. It doesn't have to."
           paragraphs={[
             "Booking an appointment over the phone is deceptively expensive. A staff member stops what they're doing, checks the calendar, offers times, waits for the caller to decide, confirms details, hangs up, and logs it. Multiply that by 20 bookings a day and you've spent 2 hours on pure scheduling.",
-            "Tarsha AI handles every step of the booking call automatically. It checks your live calendar, offers available slots, confirms the booking, and sends reminders that reduce no-shows — all within the call, with no human involvement required.",
+            "Tarsha AI handles every step of the booking call automatically. It checks your live calendar, offers available slots, confirms the booking, and sends reminders that reduce no-shows, all within the call, with no human involvement required.",
           ]}
           Illustration={IllusIntroAppointment}
         />
@@ -433,7 +433,7 @@ export default function AppointmentTakingPage() {
           heading="Any business where bookings mean revenue"
           industries={industries}
         />
-        <SolutionCTA heading="Fill your calendar automatically — without interrupting your day." />
+        <SolutionCTA heading="Fill your calendar automatically, without interrupting your day." />
       </main>
       <Footer />
     </>

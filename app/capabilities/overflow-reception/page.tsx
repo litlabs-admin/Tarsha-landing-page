@@ -75,7 +75,7 @@ function IllusStep2Overflow() {
       </div>
       <div className="rounded-xl border border-border bg-surface p-3 text-[12px] leading-relaxed text-ink">
         "Thank you for calling{" "}
-        <span className="font-semibold">[Your Business]</span>. This is Tarsha — how can I help
+        <span className="font-semibold">[Your Business]</span>. This is Tarsha, how can I help
         you today?"
       </div>
     </div>
@@ -290,7 +290,7 @@ function MockOverflowSummary() {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Friday afternoons used to be chaos. Every line busy, calls going to voicemail, angry callbacks Monday morning. Tarsha catches every overflow call instantly, handles it professionally, and I come in Monday to a clean list — not a damage control situation.",
+      "Friday afternoons used to be chaos. Every line busy, calls going to voicemail, angry callbacks Monday morning. Tarsha catches every overflow call instantly, handles it professionally, and I come in Monday to a clean list, not a damage control situation.",
     author: "Angela T.",
     role: "Office Manager",
     company: "Riverside Medical Group",
@@ -298,7 +298,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "We have a 5-person reception team but during peak hours they're all occupied. Tarsha acts as an unlimited overflow capacity — the sixth, seventh, tenth receptionist if needed. No caller ever gets a busy signal from us anymore.",
+      "We have a 5-person reception team but during peak hours they're all occupied. Tarsha acts as an unlimited overflow capacity, the sixth, seventh, tenth receptionist if needed. No caller ever gets a busy signal from us anymore.",
     author: "Robert H.",
     role: "CEO",
     company: "Hamilton Property Management",
@@ -306,7 +306,7 @@ const testimonials: TestimonialItem[] = [
   },
   {
     quote:
-      "Trade show season floods our inbound lines for two weeks a year. Previously we'd hire temp staff and still miss calls. Now Tarsha handles the overflow completely — same quality, same information, instantly. We don't even notice the volume spike anymore.",
+      "Trade show season floods our inbound lines for two weeks a year. Previously we'd hire temp staff and still miss calls. Now Tarsha handles the overflow completely, same quality, same information, instantly. We don't even notice the volume spike anymore.",
     author: "Lauren K.",
     role: "Director of Operations",
     company: "Pacific Exhibits",
@@ -316,7 +316,7 @@ const testimonials: TestimonialItem[] = [
 
 const steps = [
   {
-    title: "Lines full — Tarsha takes over instantly",
+    title: "Lines full, Tarsha takes over instantly",
     description:
       "The moment your lines reach capacity, calls automatically route to Tarsha. No busy signal, no hold music, no missed calls. The transition is seamless and instant.",
     Illustration: IllusStep1Overflow,
@@ -324,13 +324,13 @@ const steps = [
   {
     title: "Same professional handling every time",
     description:
-      "Overflow callers hear your business name, receive the same information, and get the same professional experience — whether it's your staff or Tarsha answering.",
+      "Overflow callers hear your business name, receive the same information, and get the same professional experience, whether it's your staff or Tarsha answering.",
     Illustration: IllusStep2Overflow,
   },
   {
     title: "Every overflow call logged and summarized",
     description:
-      "At the end of each day, you see exactly what Tarsha handled during overflow periods — who called, why, what was captured, and what needs follow-up.",
+      "At the end of each day, you see exactly what Tarsha handled during overflow periods, who called, why, what was captured, and what needs follow-up.",
     Illustration: IllusStep3Overflow,
   },
 ];
@@ -355,14 +355,14 @@ const benefits: Benefit[] = [
     icon: Clock,
     title: "Scheduled overflow windows",
     description:
-      "Know your peak hours? Configure overflow to activate automatically during those windows — no manual switching needed.",
+      "Know your peak hours? Configure overflow to activate automatically during those windows, no manual switching needed.",
     MockUI: MockOverflowSchedule,
   },
   {
     icon: PhoneForwarded,
     title: "Daily overflow reports",
     description:
-      "See every call Tarsha handled as overflow — who called, what they needed, and what your team needs to follow up on.",
+      "See every call Tarsha handled as overflow, who called, what they needed, and what your team needs to follow up on.",
     MockUI: MockOverflowSummary,
     wide: true,
   },
@@ -394,7 +394,7 @@ export default function OverflowReceptionPage() {
           eyebrow="Overflow Reception"
           titleBefore="Never put a caller "
           titleHighlight="on hold again"
-          subtitle="When your lines are busy, Tarsha AI catches every overflow call instantly — answering professionally, capturing details, and routing appropriately so no one ever waits."
+          subtitle="When your lines are busy, Tarsha AI catches every overflow call instantly, answering professionally, capturing details, and routing appropriately so no one ever waits."
           MockUI={MockOverflowDashboard}
         />
         <SolutionTestimonials
@@ -405,8 +405,8 @@ export default function OverflowReceptionPage() {
           eyebrow="The capability"
           heading="Every busy signal is a customer experience failure"
           paragraphs={[
-            "When a caller gets a busy signal or sits on hold, they don't wait patiently — they hang up and try a competitor. For most businesses, peak call hours are predictable. But the solution shouldn't be to overstaff your reception desk for every busy Friday afternoon.",
-            "Tarsha AI acts as your overflow safety net. When your lines are at capacity, calls flow to Tarsha instantly — with the same professional greeting, the same information, the same quality of handling. Callers never know the difference, and you never miss an opportunity.",
+            "When a caller gets a busy signal or sits on hold, they don't wait patiently, they hang up and try a competitor. For most businesses, peak call hours are predictable. But the solution shouldn't be to overstaff your reception desk for every busy Friday afternoon.",
+            "Tarsha AI acts as your overflow safety net. When your lines are at capacity, calls flow to Tarsha instantly, with the same professional greeting, the same information, the same quality of handling. Callers never know the difference, and you never miss an opportunity.",
           ]}
           Illustration={IllusIntroOverflow}
         />

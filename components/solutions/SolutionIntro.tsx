@@ -18,7 +18,7 @@ export function SolutionIntro({ eyebrow, heading, paragraphs, Illustration }: So
     <section className="bg-bg py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 md:grid-cols-3 md:gap-16">
-          {/* Text — spans 2 of 3 columns */}
+          {/* Text, spans 2 of 3 columns */}
           <div className="md:col-span-2">
             {eyebrow && (
               <ScrollReveal y={10} amount={0.5} once>

@@ -13,7 +13,7 @@ const messages = [
   },
   { text: "Do you offer free consultations?", side: "left" as const },
   {
-    text: "Yes — first consultations are always free. Want me to book one for you?",
+    text: "Yes, first consultations are always free. Want me to book one for you?",
     side: "right" as const,
   },
   { text: "Yes please, tomorrow works.", side: "left" as const },

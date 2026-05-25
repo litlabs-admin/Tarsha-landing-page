@@ -25,7 +25,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 // ─── Step illustration mocks ──────────────────────────────────────────────────
 
 function IllusForwarding() {
-  const digits = ["**21*", "8 3 3", "– – –", "8 2 7", "#"];
+  const digits = ["**21*", "8 3 3", "–, –", "8 2 7", "#"];
   return (
     <div className="rounded-2xl border border-border bg-surface-muted/60 p-5 shadow-soft">
       <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-muted">
@@ -57,7 +57,7 @@ function IllusForwarding() {
           transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
           className="h-2 w-2 rounded-full bg-green-500 shadow-[0_0_0_4px_rgba(34,197,94,0.15)]"
         />
-        <span className="text-[12px] font-medium text-green-700">Forwarding active — all carriers</span>
+        <span className="text-[12px] font-medium text-green-700">Forwarding active, all carriers</span>
       </motion.div>
       <div className="mt-3 space-y-1.5">
         {["AT&T", "Verizon", "T-Mobile"].map((c, i) => (
@@ -94,7 +94,7 @@ function IllusGreeting() {
           🎙️
         </div>
         <div>
-          <p className="text-[13px] font-semibold text-ink">Aria — Professional</p>
+          <p className="text-[13px] font-semibold text-ink">Aria, Professional</p>
           <div className="mt-0.5 flex items-center gap-1">
             <motion.span
               animate={{ opacity: [1, 0.2, 1] }}
@@ -186,7 +186,7 @@ function IllusCapture() {
         transition={{ delay: 0.9, duration: 0.4, ease: EASE }}
         className="rounded-xl border border-accent/30 bg-accent/10 px-4 py-2.5 text-[13px] font-semibold text-ink"
       >
-        🔥 Hot lead — marked for priority callback
+        🔥 Hot lead, marked for priority callback
       </motion.div>
     </div>
   );
@@ -323,7 +323,7 @@ function HeroSetupMock() {
                 transition={{ duration: 1.2, repeat: Infinity }}
                 className="h-2 w-2 rounded-full bg-green-500"
               />
-              <span className="text-[10px] font-semibold text-green-700">Live — calls being answered</span>
+              <span className="text-[10px] font-semibold text-green-700">Live, calls being answered</span>
             </motion.div>
           </div>
         </div>
@@ -358,7 +358,7 @@ const quickStartSteps = [
     step: "01",
     icon: Phone,
     title: "Forward your calls",
-    description: "Dial a simple code from your phone to forward calls to your Tarsha number. Takes under 2 minutes on any carrier — AT&T, Verizon, T-Mobile, or landline.",
+    description: "Dial a simple code from your phone to forward calls to your Tarsha number. Takes under 2 minutes on any carrier, AT&T, Verizon, T-Mobile, or landline.",
     time: "~2 min",
     Illustration: IllusForwarding,
   },
@@ -366,7 +366,7 @@ const quickStartSteps = [
     step: "02",
     icon: Mic,
     title: "Set your greeting",
-    description: "Tell Tarsha your business name and pick a voice. Your customized greeting goes live instantly — no recording required.",
+    description: "Tell Tarsha your business name and pick a voice. Your customized greeting goes live instantly, no recording required.",
     time: "~3 min",
     Illustration: IllusGreeting,
   },
@@ -619,7 +619,7 @@ export default function SetupGuidesPage() {
                   transition={{ duration: 0.55, delay: 0.18, ease: EASE }}
                   className="mt-5 text-[17px] leading-relaxed text-ink-muted"
                 >
-                  Three steps. Any carrier. No tech skills. Our step-by-step guides walk you through forwarding your calls, setting your greeting, and going live — in under 10 minutes flat.
+                  Three steps. Any carrier. No tech skills. Our step-by-step guides walk you through forwarding your calls, setting your greeting, and going live, in under 10 minutes flat.
                 </motion.p>
 
                 <motion.div
@@ -656,7 +656,7 @@ export default function SetupGuidesPage() {
                 </motion.div>
               </div>
 
-              {/* Hero illustration — setup progress mock */}
+              {/* Hero illustration, setup progress mock */}
               <HeroSetupMock />
             </div>
           </div>
@@ -704,7 +704,7 @@ export default function SetupGuidesPage() {
                   Watch: Setup from zero to live in 8 minutes
                 </h3>
                 <p className="mt-2 text-[14px] text-white/60">
-                  Our most popular guide — a full screen recording of the entire setup process.
+                  Our most popular guide, a full screen recording of the entire setup process.
                 </p>
               </div>
               <motion.button

@@ -1,18 +1,21 @@
 import "./globals.css";
 import { LenisProvider } from "@/components/animations/LenisProvider";
 import { PageLoader } from "@/components/layout/PageLoader";
-import { inter, satoshi } from "@/lib/fonts";
+import { allura, inter, satoshi } from "@/lib/fonts";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tarsha.ai"),
   icons: {
-    icon: "/assets/logo.png",
-    shortcut: "/assets/logo.png",
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+      { url: "/assets/logo.png", type: "image/png" },
+    ],
+    shortcut: "/assets/favicon.svg",
     apple: "/assets/logo.png",
   },
   title: {
-    default: "Tarsha AI — AI receptionist that answers calls 24/7",
+    default: "Tarsha AI, AI receptionist that answers calls 24/7",
     template: "%s · Tarsha AI",
   },
   description:
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
     "Missed call recovery",
   ],
   openGraph: {
-    title: "Tarsha AI — AI receptionist that answers calls 24/7",
+    title: "Tarsha AI, AI receptionist that answers calls 24/7",
     description:
       "Never miss another customer call. Tarsha AI answers instantly, qualifies leads, and books appointments, all with a natural, human-like voice.",
     url: "https://tarsha.ai",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tarsha AI — AI receptionist for small businesses",
+    title: "Tarsha AI, AI receptionist for small businesses",
     description:
       "Never miss another customer call. Tarsha AI answers instantly and books appointments 24/7.",
   },
@@ -54,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${satoshi.variable}`}>
+    <html lang="en" className={`${inter.variable} ${satoshi.variable} ${allura.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -65,7 +68,7 @@ export default function RootLayout({
               name: "Tarsha AI",
               url: "https://tarsha.ai",
               description:
-                "AI voice receptionist for small businesses — answers calls 24/7, qualifies leads, books appointments.",
+                "AI voice receptionist for small businesses, answers calls 24/7, qualifies leads, books appointments.",
             }),
           }}
         />
