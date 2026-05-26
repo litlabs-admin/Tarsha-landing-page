@@ -5,6 +5,12 @@ export const assets = {
   newWayVideo: "/assets/new-way.mp4",
   insuranceAudio: "/assets/insurance.mp3",
   realEstateAudio: "/assets/real-estate.mp3",
+  lawFirmAudio: "/assets/law-firm-conversation.mp3",
+  restaurantAudio: "/assets/restaurant-conversation.mp3",
+  realEstateConvAudio: "/assets/real-estate-conversation.mp3",
+  insuranceConvAudio: "/assets/insurance-conversation.mp3",
+  accountingAudio: "/assets/accounting-conversation.mp3",
+  electricianAudio: "/assets/electrician-conversation.mp3",
   // Hero modal video — stub until provided
   heroVideo: undefined as string | undefined,
 } as const;
