@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       "Never miss another customer call. Tarsha AI answers instantly and books appointments 24/7.",
   },
   robots: { index: true, follow: true },
+  other: {
+    "facebook-domain-verification": "cli6iedfrgu6zyjc8yiea7lqcwt1v4",
+  },
 };
 
 export const viewport: Viewport = {
